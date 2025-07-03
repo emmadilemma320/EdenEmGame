@@ -1,0 +1,24 @@
+General Game Outline/Summary:
+	In this game, "Working Title", you play as a forest witch, foraging and gardening for ingrediants, 
+	making potions, and using them to help ther people in the local town. You can give/sell potions to the 
+	townsfolk in exchange for various gameplay and cosmetic items.
+	
+* = low priority, ** = medium priority, *** = high priority
+Planned:
+	- character creation
+	- character animations (tool use, etc.)
+	- foraging
+	- gardening
+	- town w/ npcs
+	- npc ailments
+	- npc gifts
+	- potion making ***
+	- wood/metal shops
+	- shopkeeps harvest goods
+
+In Progess:
+	- physics & collision (em)
+	
+Done:
+	- character movement (em)
+	- basic terrain (em)

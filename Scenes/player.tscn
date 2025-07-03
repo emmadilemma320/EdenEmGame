@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://cgkys2yocbk4n"]
 
-[ext_resource type="Script" uid="uid://b51m7hboymnrw" path="res://Scenes/character_body_2d.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://b51m7hboymnrw" path="res://Scripts/character_body_2d.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://db6utsfxwwvul" path="res://Assets/Character/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_v0iea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
