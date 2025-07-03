@@ -22,8 +22,9 @@ Planned Features:
 To Do:
 	- main menu
 	- game icon
-	- test front/back (i.e. is the player in front of or behind a rock, etc.)
-	- window resizing / fullscreen mode
+	- draw based on front/back for collisions
+	 	- lower y value = behind
+	- Add animated tiles (water) to Terrain TileSet
 
 In Progess:
 	- physics & collision
@@ -32,3 +33,4 @@ Done:
 	- character movement
 	- basic terrain
 	- make camera follow player
+	- window resizing / fullscreen mode
