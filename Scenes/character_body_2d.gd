@@ -1,0 +1,40 @@
+extends CharacterBody2D
+
+
+const SPEED = 300.0
+
+
+func _physics_process(delta: float) -> void:
+
+	# left & right
+	if Input.is_action_pressed("move_left"):
+		velocity.x = SPEED*-1 #move left
+		$AnimatedSprite2D.play("left_facing_walk")
+	elif Input.is_action_pressed("move_right"):
+		velocity.x = SPEED #move right
+		$AnimatedSprite2D.play("right_facing_walk")
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	#up & down
+	if Input.is_action_pressed("move_up"):
+		velocity.y = SPEED*-1 #move up
+		$AnimatedSprite2D.play("back_facing_walk")
+	elif Input.is_action_pressed("move_down"):
+		velocity.y = SPEED #move down
+		$AnimatedSprite2D.play("front_facing_walk")
+	else:
+		velocity.y = move_toward(velocity.y, 0, SPEED)
+
+	if velocity.length() == 0:
+		match ($AnimatedSprite2D.animation):
+			"front_facing_walk": 
+				$AnimatedSprite2D.play("front_facing_idle")
+			"back_facing_walk":
+				$AnimatedSprite2D.play("back_facing_idle")
+			"left_facing_walk":
+				$AnimatedSprite2D.play("left_facing_idle")
+			"right_facing_walk":
+				$AnimatedSprite2D.play("right_facing_idle")
+	
+	move_and_slide()

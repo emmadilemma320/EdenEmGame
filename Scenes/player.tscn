@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://cgkys2yocbk4n"]
+[gd_scene load_steps=21 format=3 uid="uid://cgkys2yocbk4n"]
 
+[ext_resource type="Script" uid="uid://b51m7hboymnrw" path="res://Scenes/character_body_2d.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://db6utsfxwwvul" path="res://Assets/Character/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_v0iea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
@@ -163,11 +164,14 @@ animations = [{
 [node name="Player" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_cvnsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_fs7ks")
-animation = &"right_facing_walk"
+animation = &"front_facing_idle"
 autoplay = "front_facing_idle"
