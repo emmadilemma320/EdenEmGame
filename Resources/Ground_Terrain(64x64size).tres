@@ -1,6 +1,9 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://qavwmbkuyrlo"]
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://qavwmbkuyrlo"]
 
 [ext_resource type="Texture2D" uid="uid://i108pjojih5n" path="res://Assets/Terrain-and-Buildings/Raven Fantasy/64x64.png" id="1_4taog"]
+[ext_resource type="PackedScene" uid="uid://cm8mpp8jdahj4" path="res://Scenes/Items/large_waterfall_64x64.tscn" id="2_f635j"]
+[ext_resource type="PackedScene" uid="uid://jx8dgtgwdsy4" path="res://Scenes/Items/skinny_waterfall_64x64.tscn" id="3_8ag51"]
+[ext_resource type="PackedScene" uid="uid://dyul0i4iq6rbg" path="res://Scenes/Items/pond_64x64.tscn" id="4_8ag51"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2ck3"]
 resource_name = "Raven Fantasy"
@@ -249,7 +252,14 @@ texture_region_size = Vector2i(64, 64)
 5:10/size_in_atlas = Vector2i(1, 2)
 5:10/0 = 0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_racwn"]
+resource_name = "Water"
+scenes/3/scene = ExtResource("2_f635j")
+scenes/4/scene = ExtResource("3_8ag51")
+scenes/6/scene = ExtResource("4_8ag51")
+
 [resource]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_h2ck3")
+sources/1 = SubResource("TileSetScenesCollectionSource_racwn")

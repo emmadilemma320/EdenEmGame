@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://cm8mpp8jdahj4"]
+
+[ext_resource type="Texture2D" uid="uid://i108pjojih5n" path="res://Assets/Terrain-and-Buildings/Raven Fantasy/64x64.png" id="1_fiqpb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygwac"]
+atlas = ExtResource("1_fiqpb")
+region = Rect2(704, 704, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo4a1"]
+atlas = ExtResource("1_fiqpb")
+region = Rect2(896, 704, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ew06"]
+atlas = ExtResource("1_fiqpb")
+region = Rect2(1088, 704, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sk05d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygwac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eo4a1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ew06")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_sk05d")
+autoplay = "default"
+frame_progress = 0.906749

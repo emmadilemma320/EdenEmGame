@@ -24,13 +24,16 @@ To Do:
 	- game icon
 	- draw based on front/back for collisions
 	 	- lower y value = behind
-	- Add animated tiles (water) to Terrain TileSet
+	- fix animated pond collision
+	
 
 In Progess:
-	- physics & collision
+	
 	
 Done:
 	- character movement
 	- basic terrain
 	- make camera follow player
 	- window resizing / fullscreen mode
+	- physics & collision (initial)
+	- Add animated tiles (water) to Terrain TileSet
