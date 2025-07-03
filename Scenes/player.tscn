@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://db6utsfxwwvul" path="res://Assets/Character/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_v0iea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
-size = Vector2(14, 16)
+size = Vector2(42, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("1_v0iea")
@@ -161,17 +161,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_cvnsp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-scale = Vector2(3, 3)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_cvnsp")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_fs7ks")
 animation = &"front_facing_idle"
 autoplay = "front_facing_idle"
+
+[node name="Player" type="Node2D" parent="."]

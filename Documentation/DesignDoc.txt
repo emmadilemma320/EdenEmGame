@@ -4,21 +4,31 @@ General Game Outline/Summary:
 	townsfolk in exchange for various gameplay and cosmetic items.
 	
 * = low priority, ** = medium priority, *** = high priority
-Planned:
+Planned Features:
 	- character creation
+	- buyable furniture
+	- build menu
 	- character animations (tool use, etc.)
 	- foraging
 	- gardening
 	- town w/ npcs
 	- npc ailments
+	- friendship
 	- npc gifts
 	- potion making ***
 	- wood/metal shops
 	- shopkeeps harvest goods
 
+To Do:
+	- main menu
+	- game icon
+	- test front/back (i.e. is the player in front of or behind a rock, etc.)
+	- window resizing / fullscreen mode
+
 In Progess:
-	- physics & collision (em)
+	- physics & collision
 	
 Done:
-	- character movement (em)
-	- basic terrain (em)
+	- character movement
+	- basic terrain
+	- make camera follow player
