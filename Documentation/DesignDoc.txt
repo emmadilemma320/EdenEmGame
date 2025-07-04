@@ -8,16 +8,31 @@ Planned Features:
 	- character creation
 	- buyable furniture
 	- build menu
-	- character animations (tool use, etc.)
-	- foraging
-	- gardening
-	- town w/ npcs
-	- npc ailments
+	- character animations (tool use, etc.) ***
+	- foraging ***
+	- gardening **
+	- town w/ npcs **
+	- npc ailments **
 	- friendship
+	- romance *
 	- npc gifts
 	- potion making ***
 	- wood/metal shops
 	- shopkeeps harvest goods
+	- pets
+	- familiars 
+	- woodland creatures
+	- pet/creature clothing 
+	- pet/creature friendship
+	- mushroom status effects
+	- frog licking effect: talk to animals
+		- animal personalities (hat based)
+	- energy system
+	- chest / house inventory
+	- day / night cycle
+	- witching hour
+	- frog boi
+	
 
 To Do:
 	- main menu
@@ -25,11 +40,15 @@ To Do:
 	- draw based on front/back for collisions
 	 	- lower y value = behind
 	- fix animated pond collision
-	- add collectables
+	- add more collectables
+	- inventory ui design/theme
 	
 
 In Progess:
 	- item pick up (ground -> inventory)
+	- inventory slots
+		https://www.youtube.com/watch?v=fyRcR6C5H2g 
+	
 	
 Done:
 	- character movement
@@ -38,4 +57,4 @@ Done:
 	- window resizing / fullscreen mode
 	- physics & collision (initial)
 	- Add animated tiles (water) to Terrain TileSet
-	- inventory ui
+	- inventory ui (player)

@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 @export var inventory: Inventory
 
+
 func _physics_process(delta: float) -> void:
 
 	# left & right
@@ -38,3 +39,7 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("right_facing_idle")
 	
 	move_and_slide()
+
+func collect(item):
+	print("reached")
+	inventory.insert(item)

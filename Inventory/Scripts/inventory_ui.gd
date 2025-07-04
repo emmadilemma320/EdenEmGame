@@ -1,11 +1,12 @@
 extends Control
 
-@onready var inventory: Inventory = preload("res://Inventory/player_inventory.tres")
+@onready var inventory: Inventory = preload("res://Inventory/Resources/player_inventory.tres")
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
 
 var is_open = false
 
 func _ready():
+	inventory.update.connect(update_slots)
 	update_slots()
 	close()
 	
@@ -20,8 +21,9 @@ func _process(delta):
 		close()
 
 func update_slots():
-	for i in range(min(inventory.items.size(), slots.size())):
-		slots[i].update(inventory.items[i])
+	print("updating")
+	for i in range(min(inventory.slots.size(), slots.size())):
+		slots[i].update(inventory.slots[i])
 
 func open():
 	visible = true
