@@ -1,0 +1,27 @@
+There are three types of files associated with the inventory:
+	1) Scenes
+		These are anything that is placable in world (including UI). 
+		Scenes for the inventory are located in Scenes/Inventory, which contains the following:
+			a) inventory_ui_slot.tscn - the scene for a single slot ui, which has a background, item display and count label
+			b) inventory_ui.tscn - the scene for the entire inventory ui, which holds a GridContainer of (currently) 12 instances of Inventory_UI_slot scenes
+			c) Collectables folder - a folder which holds individual collectables scenes: these are the in-world version of various collectables
+	2) Resources
+		These are the back-end version of the inventory.
+		Resources for the inventroy are located in Resources/Inventory, which contains the follwing:
+				a) player_inventory.tres - the backend version of the player's inventory; it is an instance of the Inventory class
+				b) Collectables - a folder which holds individual collectable's implementation of the InventoryCollectable class - the in-inventory representation of the collectables
+	3) Scripts
+		These are code either attached to a instance of a Scene/Resource, or describing a new class of Scene/Resource
+		They include any variables and functions that Scene/Resource may need.
+		For example, the script inventory.gd lays out the code base for an Inventory class, a new resource. The resource player_inventory.tres is an instance of the Inventory class specifically for the player.
+		Scripts for the inventory are placed in Scripts/Inventory, which contains the following:
+			a) inventory_slot.gd - the InventorySlot class, a template for a resource which holds an InventoryCollectable resource (for ex. berry.tres) and an amount of them (for ex. 5)
+			b) inventory.gd - the Inventory class, which holds an array of 12 InventorySlot instances; 
+				the function insert(item: InventoryCollectable) takes in the in-inventory representation of an inventory collectable and searches the slots stored in the Array "slots". If it finds a stack with the given input, it increments to amount on the stack.
+					If not, it searches the Array again for an empty stack. If it finds one, it updates the stack item and amount accordingly (amount = 1)
+					Then it signals the inventory_ui to run the update_slots() function via a signal called "update"
+			c) inventory_collectable.gd - the InventoryCollectable class, the framework for the in-inventory representation of collectables; holds a name and sprite image (Texture2D)
+			d) Collectables - folder which holds the scripts related to the collectables' scenes (in-world rep.) 
+				instead of making a new one for each, what if i just added the necessary functions to inventory_collectable.gd? this may be whats causing the error
+			e) inventory_ui_slot.gd - the script for the inventory slots ui; handles updating the image sprite and amount label
+			f) inventory_ui.gd - the script connected to the Inventory UI scene, handles opening&closing of the inventroy as well as telling the inventory slots to update when the inventory back-end representation, Inventory, emits the update signal

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cgkys2yocbk4n" path="res://Scenes/player.tscn" id="1_a02cp"]
 [ext_resource type="TileSet" uid="uid://qavwmbkuyrlo" path="res://Resources/Ground_Terrain(64x64size).tres" id="1_go701"]
-[ext_resource type="PackedScene" uid="uid://duspkatahqr5f" path="res://Scenes/Items/berry.tscn" id="3_5a7ea"]
+[ext_resource type="PackedScene" uid="uid://duspkatahqr5f" path="res://Scenes/Inventory/Collectables/berry.tscn" id="3_5a7ea"]
 
 [node name="World" type="Node2D"]
 
