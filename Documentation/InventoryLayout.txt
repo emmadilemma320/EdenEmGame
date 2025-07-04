@@ -22,6 +22,7 @@ There are three types of files associated with the inventory:
 					Then it signals the inventory_ui to run the update_slots() function via a signal called "update"
 			c) inventory_collectable.gd - the InventoryCollectable class, the framework for the in-inventory representation of collectables; holds a name and sprite image (Texture2D)
 			d) Collectables - folder which holds the scripts related to the collectables' scenes (in-world rep.) 
-				instead of making a new one for each, what if i just added the necessary functions to inventory_collectable.gd? this may be whats causing the error
+				when the player enters the area of the collectable, it calls that player's collect function w/ an input of it's stored resource inventory_self
+				IMPORTANT! when making a new collectable, you MUST preload it's resource into the inventory_self variable; i would recommend duplicating the berry scene and then simply replacing the "berry.tres" in the file path with the name of your resource
 			e) inventory_ui_slot.gd - the script for the inventory slots ui; handles updating the image sprite and amount label
 			f) inventory_ui.gd - the script connected to the Inventory UI scene, handles opening&closing of the inventroy as well as telling the inventory slots to update when the inventory back-end representation, Inventory, emits the update signal
