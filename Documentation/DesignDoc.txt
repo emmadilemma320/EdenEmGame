@@ -25,10 +25,11 @@ To Do:
 	- draw based on front/back for collisions
 	 	- lower y value = behind
 	- fix animated pond collision
+	- inventory ui
 	
 
 In Progess:
-	
+	- collectables
 	
 Done:
 	- character movement
