@@ -25,11 +25,11 @@ To Do:
 	- draw based on front/back for collisions
 	 	- lower y value = behind
 	- fix animated pond collision
-	- inventory ui
+	- add collectables
 	
 
 In Progess:
-	- collectables
+	- item pick up (ground -> inventory)
 	
 Done:
 	- character movement
@@ -38,3 +38,4 @@ Done:
 	- window resizing / fullscreen mode
 	- physics & collision (initial)
 	- Add animated tiles (water) to Terrain TileSet
+	- inventory ui

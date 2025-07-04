@@ -1,7 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://cgkys2yocbk4n"]
+[gd_scene load_steps=23 format=3 uid="uid://cgkys2yocbk4n"]
 
 [ext_resource type="Script" uid="uid://b51m7hboymnrw" path="res://Scripts/character_body_2d.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://db6utsfxwwvul" path="res://Assets/Character/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_v0iea"]
+[ext_resource type="Resource" uid="uid://cat7hj6vbnqv2" path="res://Inventory/player_inventory.tres" id="2_6t5aa"]
+[ext_resource type="PackedScene" uid="uid://b5sc642axrbmr" path="res://Inventory/inventory_ui.tscn" id="4_vgqql"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 size = Vector2(42, 16)
@@ -161,8 +163,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_cvnsp")
+inventory = ExtResource("2_6t5aa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 16)
@@ -175,3 +178,9 @@ animation = &"front_facing_idle"
 autoplay = "front_facing_idle"
 
 [node name="Player" type="Node2D" parent="."]
+
+[node name="Inventory UI" parent="." instance=ExtResource("4_vgqql")]
+offset_left = -86.0
+offset_top = -166.0
+offset_right = 83.0
+offset_bottom = -33.0
