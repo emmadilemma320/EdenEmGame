@@ -17,11 +17,9 @@ func insert(item: InventoryCollectable):
 		#		if i > itemslots.size()
 					#break (?)
 		itemslots[0].amount += 1
-		print("added item to existing stack in inventory")
 	else:
 		var emptyslots = slots.filter(func(slot): return slot.item == null) # amount == 0?
 		if !emptyslots.is_empty():
-			print("added item to new stack in inventory")
 			emptyslots[0].item = item
 			emptyslots[0].amount = 1
 		else:

@@ -9,6 +9,7 @@ Planned Features:
 	- buyable furniture
 	- build menu
 	- character animations (tool use, etc.) ***
+	- diagonal walking animations
 	- foraging ***
 	- gardening **
 	- town w/ npcs **
@@ -43,12 +44,12 @@ To Do:
 	- fix animated pond collision
 	- add more collectables
 	- inventory ui design/theme
+	- hover over item for name
 	
 
 In Progess:
-	- item pick up (ground -> inventory)
-	- inventory slots
-		https://www.youtube.com/watch?v=fyRcR6C5H2g 
+	
+	- rewrite resource for inventory collectables to not have to re-write the function in each item
 	
 	
 Done:
@@ -60,3 +61,8 @@ Done:
 	- Add animated tiles (water) to Terrain TileSet
 	- inventory ui (player)
 	- made inventory ui not go behind items
+	- item pick up (ground -> inventory)
+	- inventory slots
+		https://www.youtube.com/watch?v=fyRcR6C5H2g 
+	- add mushroom collectable
+	- no number at amount 1

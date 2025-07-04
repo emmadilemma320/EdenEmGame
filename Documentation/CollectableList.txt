@@ -1,2 +1,4 @@
-Avaliable Collectables:
+Current Collectables:
 	- berry
+	- amanita
+	- brown mushroom

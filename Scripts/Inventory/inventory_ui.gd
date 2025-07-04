@@ -22,7 +22,6 @@ func _process(delta):
 
 func update_slots():
 	for i in range(min(inventory.slots.size(), slots.size())):
-		print("updating slot ", i)
 		slots[i].update(inventory.slots[i])
 
 func open():

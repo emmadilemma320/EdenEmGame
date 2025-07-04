@@ -1,19 +1,44 @@
+To make a new collectable:
+	1) Create a new collectable resource for it. 
+		a) Hover over the folder Resources/Inventory/Collectables until a drop-down menu appears.
+		b) Select "Create New..." > Resource > InventoryCollectable and hit create. This will open the "save as" menu: change the name to your desired name and double-check the file path is correct, then hit save
+		c) In the FileSystem, double click on your newly created resource. In the Inspector you should see two fields called Name and Texture. Type in the item and name select your desired texture from the drop-down menu or drag it in
+			hint: if your image is one in a larger sheet, select "New AtlasTexture" from the menu and it will give you the option to select only part of the original image
+		d) ctrol+s to save
+	2) Create a new collectable scene for it. 
+		a) From the file system (like in 1a), create a new Scene. Select type "CollectableItem" and name your scene, then hit "pick"
+		b) Add Sprite2D and Collision2D nodes to your scene (you can copy-paste these from an exsiting collectable)
+		c) Click on the root node of your scene and a button of a little script icon with a blue arrow will appear. Click on it and it will create a new Script for you collectable.
+		d) Copy and paste the following function into the newly created script, replacing "amanita" with the name of your resource, and the collection message with whatever you want (if anything):
+func _ready() -> void:
+	inventory_self = preload("res://Resources/Inventory/Collectables/amanita.tres")
+	collection_message = "this is a test"
+		f) ctrl+s to save
+		g) Click on the root node of you scene again and under the inspector tab navigate to "Node". You should see a list of many different signal such as "area_entered". In the "Area2D" section, right click on "body_entered" and a drop-down menu will appear. Click connect and than hit enter.
+		h) save again and now you are ready to place your new collectable into your world!
+
 There are three types of files associated with the inventory:
+	
 	1) Scenes
 		These are anything that is placable in world (including UI). 
+		
 		Scenes for the inventory are located in Scenes/Inventory, which contains the following:
 			a) inventory_ui_slot.tscn - the scene for a single slot ui, which has a background, item display and count label
 			b) inventory_ui.tscn - the scene for the entire inventory ui, which holds a GridContainer of (currently) 12 instances of Inventory_UI_slot scenes
 			c) Collectables folder - a folder which holds individual collectables scenes: these are the in-world version of various collectables
+	
 	2) Resources
 		These are the back-end version of the inventory.
+		
 		Resources for the inventroy are located in Resources/Inventory, which contains the follwing:
 				a) player_inventory.tres - the backend version of the player's inventory; it is an instance of the Inventory class
-				b) Collectables - a folder which holds individual collectable's implementation of the InventoryCollectable class - the in-inventory representation of the collectables
+				b) Collectables - a folder which holds individual collectable's instance of the InventoryCollectable class - the in-inventory representation of the collectables
+	
 	3) Scripts
 		These are code either attached to a instance of a Scene/Resource, or describing a new class of Scene/Resource
 		They include any variables and functions that Scene/Resource may need.
 		For example, the script inventory.gd lays out the code base for an Inventory class, a new resource. The resource player_inventory.tres is an instance of the Inventory class specifically for the player.
+		
 		Scripts for the inventory are placed in Scripts/Inventory, which contains the following:
 			a) inventory_slot.gd - the InventorySlot class, a template for a resource which holds an InventoryCollectable resource (for ex. berry.tres) and an amount of them (for ex. 5)
 			b) inventory.gd - the Inventory class, which holds an array of 12 InventorySlot instances; 
@@ -21,6 +46,7 @@ There are three types of files associated with the inventory:
 					If not, it searches the Array again for an empty stack. If it finds one, it updates the stack item and amount accordingly (amount = 1)
 					Then it signals the inventory_ui to run the update_slots() function via a signal called "update"
 			c) inventory_collectable.gd - the InventoryCollectable class, the framework for the in-inventory representation of collectables; holds a name and sprite image (Texture2D)
+			
 			d) Collectables - folder which holds the scripts related to the collectables' scenes (in-world rep.) 
 				when the player enters the area of the collectable, it calls that player's collect function w/ an input of it's stored resource inventory_self
 				IMPORTANT! when making a new collectable, you MUST preload it's resource into the inventory_self variable; i would recommend duplicating the berry scene and then simply replacing the "berry.tres" in the file path with the name of your resource

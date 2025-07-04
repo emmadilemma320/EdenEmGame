@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=4 uid="uid://ipbfxfjjual0"]
+[gd_scene load_steps=6 format=4 uid="uid://ipbfxfjjual0"]
 
 [ext_resource type="PackedScene" uid="uid://cgkys2yocbk4n" path="res://Scenes/player.tscn" id="1_a02cp"]
 [ext_resource type="TileSet" uid="uid://qavwmbkuyrlo" path="res://Resources/Ground_Terrain(64x64size).tres" id="1_go701"]
 [ext_resource type="PackedScene" uid="uid://duspkatahqr5f" path="res://Scenes/Inventory/Collectables/berry.tscn" id="3_5a7ea"]
+[ext_resource type="PackedScene" uid="uid://cuvkdvt7q060h" path="res://Scenes/Inventory/Collectables/amanita.tscn" id="4_8j60k"]
+[ext_resource type="PackedScene" uid="uid://cn57b6aygbfid" path="res://Scenes/Inventory/Collectables/brown_mushroom.tscn" id="6_5ukr8"]
 
 [node name="World" type="Node2D"]
 
@@ -28,11 +30,26 @@ tile_set = ExtResource("1_go701")
 tile_map_data = PackedByteArray("AAALAAUAAAADAAIAAAAMAAYAAAAFAAAAAAAKAAYAAAAEAAAAAAABAAQAAAAGAAYAAAD//wUAAAAJAAgAAAADAAcAAAANAAMAAAAFAAMAAAAAAAUAAAAOAAsAAAAIAAIAAAAPAAsAAAAGAAIAAAA=")
 tile_set = ExtResource("1_go701")
 
-[node name="Berry" parent="." instance=ExtResource("3_5a7ea")]
-position = Vector2(399, 280)
+[node name="Collectables" type="Node2D" parent="."]
+position = Vector2(454, 415)
 
-[node name="Berry2" parent="." instance=ExtResource("3_5a7ea")]
-position = Vector2(794, 490)
+[node name="Berry" parent="Collectables" instance=ExtResource("3_5a7ea")]
+position = Vector2(-55, -135)
 
-[node name="Berry3" parent="." instance=ExtResource("3_5a7ea")]
-position = Vector2(293, 520)
+[node name="Berry2" parent="Collectables" instance=ExtResource("3_5a7ea")]
+position = Vector2(340, 75)
+
+[node name="Berry3" parent="Collectables" instance=ExtResource("3_5a7ea")]
+position = Vector2(-161, 105)
+
+[node name="Amanita" parent="Collectables" instance=ExtResource("4_8j60k")]
+position = Vector2(-271, -30)
+
+[node name="Amanita2" parent="Collectables" instance=ExtResource("4_8j60k")]
+position = Vector2(481, -36)
+
+[node name="Amanita3" parent="Collectables" instance=ExtResource("4_8j60k")]
+position = Vector2(311, 177)
+
+[node name="BrownMushroom" parent="Collectables" instance=ExtResource("6_5ukr8")]
+position = Vector2(254, -22)

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InventoryCollectable" load_steps=4 format=3 uid="uid://c0d3t84xdr1mh"]
+
+[ext_resource type="Script" uid="uid://4tdjcv0tju4u" path="res://Scripts/Inventory/inventory_collectable.gd" id="1_184s3"]
+[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="2_2as2n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r51aw"]
+atlas = ExtResource("2_2as2n")
+region = Rect2(48, 32, 17, 18)
+margin = Rect2(1, 1, 0, 0)
+
+[resource]
+script = ExtResource("1_184s3")
+name = "brown mushroom"
+texture = SubResource("AtlasTexture_r51aw")
+metadata/_custom_type_script = "uid://4tdjcv0tju4u"
