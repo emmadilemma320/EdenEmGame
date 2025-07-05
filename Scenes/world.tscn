@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cuvkdvt7q060h" path="res://Scenes/Inventory/Collectables/amanita.tscn" id="4_8j60k"]
 [ext_resource type="PackedScene" uid="uid://cn57b6aygbfid" path="res://Scenes/Inventory/Collectables/brown_mushroom.tscn" id="6_5ukr8"]
 [ext_resource type="PackedScene" uid="uid://f5w26t330phg" path="res://Scenes/Inventory/Collectables/blue_mushroom.tscn" id="6_o06y3"]
-[ext_resource type="PackedScene" uid="uid://dwexi1pani8rj" path="res://Scenes/Inventory/Collectables/book.tscn" id="7_o06y3"]
-[ext_resource type="PackedScene" path="res://Scenes/Inventory/Collectables/apple.tscn" id="8_k7acu"]
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Collectables/book.tscn" id="7_o06y3"]
+[ext_resource type="PackedScene" uid="uid://p6noab3c4crm" path="res://Scenes/Inventory/Collectables/apple.tscn" id="8_k7acu"]
 
 [node name="World" type="Node2D"]
 
@@ -22,8 +22,6 @@ tile_set = ExtResource("1_go701")
 
 [node name="Player" parent="." instance=ExtResource("1_a02cp")]
 position = Vector2(574, 327)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="Top_Paint" type="TileMapLayer" parent="."]
 position = Vector2(95, -117)
