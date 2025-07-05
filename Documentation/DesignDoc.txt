@@ -42,11 +42,12 @@ Planned Features:
 	- plot and quests
 	- house (w/ decor, expansions, etc.)
 	- dream realm! (sleep incentive. what do?)
+		- etheral plane vibe
+	- main menu: book opening animation
 	
 
 To Do:
-	- main menu
-	- game icon
+	
 	- draw based on front/back for collisions
 	 	- lower y value = behind
 	- fix animated pond collision
@@ -57,8 +58,8 @@ To Do:
 	
 
 In Progess:
+	- scene changes
 
-	
 	
 Done:
 	- character movement
@@ -74,3 +75,5 @@ Done:
 		https://www.youtube.com/watch?v=fyRcR6C5H2g 
 	- add mushroom collectable
 	- no number at amount 1
+	- game icon
+	- main menu

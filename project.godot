@@ -13,7 +13,7 @@ config_version=5
 config/name="Em and Eden's Game"
 run/main_scene="uid://ipbfxfjjual0"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://cv8aafvxhc84o"
 
 [display]
 
