@@ -57,10 +57,14 @@ To Do:
 	- inventory ui design/theme
 	- scene changes
 	- make it easier to add collectables
+	- drop/trash items
+	- walk through item in world to see name
+	- space to pick up items
 	
 
 In Progess:
-	- drop/trash items
+	
+	- drop down menu behaviour
 
 Done:
 	- character movement

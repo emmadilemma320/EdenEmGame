@@ -14,11 +14,15 @@ func _process(delta):
 	if Input.is_action_just_pressed("open_inventory"):
 		if is_open:
 			close()
+			for slot in slots:
+				slot.closing()
 		else:
 			open()
 			
 	if Input.is_action_just_pressed("close_current_menu") and is_open:
 		close()
+		for slot in slots:
+			slot.closing()
 
 func update_slots():
 	for i in range(min(inventory.slots.size(), slots.size())):

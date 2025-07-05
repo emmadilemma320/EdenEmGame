@@ -7,22 +7,34 @@
 [node name="Inventory_UI_Slot" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(16, 16)
-offset_right = 16.0
-offset_bottom = 16.0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 18.0
+offset_bottom = 17.0
 script = ExtResource("1_uah3n")
 
 [node name="background" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
 texture = ExtResource("2_k6ogx")
 centered = false
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 0
-offset_right = 16.0
-offset_bottom = 16.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 17.0
+offset_bottom = 17.0
 
 [node name="Panel" type="Panel" parent="CenterContainer"]
 layout_mode = 2
+
+[node name="drop_down_trigger" type="Button" parent="CenterContainer/Panel"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="item_display" type="Sprite2D" parent="CenterContainer/Panel"]
 scale = Vector2(0.85, 0.85)
@@ -40,19 +52,41 @@ theme = ExtResource("3_k6ogx")
 text = "1"
 horizontal_alignment = 2
 
-[node name="item_name_background" type="ColorRect" parent="CenterContainer/Panel"]
+[node name="drop_down_menu" type="VBoxContainer" parent="."]
+visible = false
 z_index = 1
-layout_mode = 0
-offset_right = 53.0
-offset_bottom = 12.0
-color = Color(0, 0, 0, 0.439216)
+layout_mode = 2
+offset_left = 17.0
+offset_top = 1.0
+offset_right = 113.0
+offset_bottom = 97.0
 
-[node name="item_name" type="Label" parent="CenterContainer/Panel/item_name_background"]
-layout_mode = 0
-offset_right = 51.0
-offset_bottom = 15.0
+[node name="item_name" type="Label" parent="drop_down_menu"]
+layout_mode = 2
 theme = ExtResource("3_k6ogx")
 text = "(empty)"
+horizontal_alignment = 1
+
+[node name="use_button" type="Button" parent="drop_down_menu"]
+layout_mode = 2
+theme = ExtResource("3_k6ogx")
+text = "use"
+
+[node name="info_button" type="Button" parent="drop_down_menu"]
+layout_mode = 2
+theme = ExtResource("3_k6ogx")
+text = "show in grimoire"
+
+[node name="drop_button" type="Button" parent="drop_down_menu"]
+layout_mode = 2
+theme = ExtResource("3_k6ogx")
+text = "drop"
+
+[node name="trash_button" type="Button" parent="drop_down_menu"]
+layout_mode = 2
+theme = ExtResource("3_k6ogx")
+text = "trash"
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="CenterContainer/Panel/drop_down_trigger" to="." method="_on_drop_down_trigger_pressed"]
