@@ -58,13 +58,12 @@ To Do:
 	- scene changes
 	- make it easier to add collectables
 	- drop/trash items
-	- walk through item in world to see name
-	- space to pick up items
+
 	
 
 In Progess:
-	
-	- drop down menu behaviour
+	- walk through item in world to see name
+	- space to pick up items
 
 Done:
 	- character movement
@@ -83,3 +82,4 @@ Done:
 	- game icon
 	- main menu
 	- hover over item for name
+	- drop down menu behaviour
