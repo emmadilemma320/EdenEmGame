@@ -39,3 +39,20 @@ scale = Vector2(0.4, 0.4)
 theme = ExtResource("3_k6ogx")
 text = "1"
 horizontal_alignment = 2
+
+[node name="item_name_background" type="ColorRect" parent="CenterContainer/Panel"]
+z_index = 1
+layout_mode = 0
+offset_right = 53.0
+offset_bottom = 12.0
+color = Color(0, 0, 0, 0.439216)
+
+[node name="item_name" type="Label" parent="CenterContainer/Panel/item_name_background"]
+layout_mode = 0
+offset_right = 51.0
+offset_bottom = 15.0
+theme = ExtResource("3_k6ogx")
+text = "(empty)"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
