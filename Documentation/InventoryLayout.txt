@@ -7,12 +7,11 @@ To make a new collectable:
 		d) ctrol+s to save
 	2) Create a new collectable scene for it. 
 		a) From the file system (like in 1a), create a new Scene. Select type "CollectableItem" and name your scene, then hit "pick"
-		b) Add Sprite2D and Collision2D nodes to your scene (you can copy-paste these from an exsiting collectable)
+		b) Add a Sprite2D node to your scene (you can copy-paste it from an exsiting collectable)
 		c) Click on the root node of your scene and a button of a little script icon with a blue arrow will appear. Click on it and it will create a new Script for you collectable.
 		d) Copy and paste the following function into the newly created script, replacing "amanita" with the name of your resource, and the collection message with whatever you want (if anything):
 func _ready() -> void:
 	inventory_self = preload("res://Resources/Inventory/Collectables/amanita.tres")
-	collection_message = "this is a test"
 		f) ctrl+s to save
 		g) Click on the root node of you scene again and under the inspector tab navigate to "Node". You should see a list of many different signal such as "area_entered". In the "Area2D" section, right click on "body_entered" and a drop-down menu will appear. Click connect and than hit enter.
 		h) save again and now you are ready to place your new collectable into your world!
