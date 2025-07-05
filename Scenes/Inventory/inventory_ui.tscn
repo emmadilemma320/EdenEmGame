@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5sc642axrbmr"]
+[gd_scene load_steps=5 format=3 uid="uid://b5sc642axrbmr"]
 
 [ext_resource type="Script" uid="uid://ngmvlkfhbvv1" path="res://Scripts/Inventory/inventory_ui.gd" id="1_se627"]
 [ext_resource type="Texture2D" uid="uid://dl1n04ksbbx65" path="res://Assets/UI/inventory-background.png" id="2_o6avf"]
+[ext_resource type="Theme" uid="uid://d3l5kwxe8w48i" path="res://Assets/UI/Theme/inventory_theme.tres" id="2_s1kqi"]
 [ext_resource type="PackedScene" uid="uid://bi2d1e14l124x" path="res://Scenes/Inventory/inventory_ui_slot.tscn" id="3_6gduq"]
 
 [node name="Inventory UI" type="Control"]
@@ -17,6 +18,7 @@ layout_mode = 1
 offset_right = 85.0
 offset_bottom = 66.0
 scale = Vector2(2, 2)
+theme = ExtResource("2_s1kqi")
 texture = ExtResource("2_o6avf")
 patch_margin_left = 6
 patch_margin_top = 6

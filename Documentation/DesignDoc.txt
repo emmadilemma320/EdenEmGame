@@ -45,10 +45,11 @@ To Do:
 	- add more collectables
 	- inventory ui design/theme
 	- hover over item for name
+	- make it easier to add collectables
 	
 
 In Progess:
-	- rewrite resource for inventory collectables to not have to re-write the function in each item
+
 	
 	
 Done:
