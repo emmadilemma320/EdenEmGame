@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://ipbfxfjjual0"]
+[gd_scene load_steps=7 format=4 uid="uid://ipbfxfjjual0"]
 
 [ext_resource type="PackedScene" uid="uid://cgkys2yocbk4n" path="res://Scenes/player.tscn" id="1_a02cp"]
 [ext_resource type="TileSet" uid="uid://qavwmbkuyrlo" path="res://Resources/Ground_Terrain(64x64size).tres" id="1_go701"]
 [ext_resource type="PackedScene" uid="uid://duspkatahqr5f" path="res://Scenes/Inventory/Collectables/berry.tscn" id="3_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://cuvkdvt7q060h" path="res://Scenes/Inventory/Collectables/amanita.tscn" id="4_8j60k"]
 [ext_resource type="PackedScene" uid="uid://cn57b6aygbfid" path="res://Scenes/Inventory/Collectables/brown_mushroom.tscn" id="6_5ukr8"]
+[ext_resource type="PackedScene" uid="uid://c5eb58vw74dsq" path="res://Scenes/Inventory/berry_alt.tscn" id="6_o06y3"]
 
 [node name="World" type="Node2D"]
 
@@ -53,3 +54,6 @@ position = Vector2(311, 177)
 
 [node name="BrownMushroom" parent="Collectables" instance=ExtResource("6_5ukr8")]
 position = Vector2(254, -22)
+
+[node name="berry_alt" parent="." instance=ExtResource("6_o06y3")]
+position = Vector2(444, 469)
