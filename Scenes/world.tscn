@@ -6,8 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://cuvkdvt7q060h" path="res://Scenes/Inventory/Collectables/amanita.tscn" id="4_8j60k"]
 [ext_resource type="PackedScene" uid="uid://cn57b6aygbfid" path="res://Scenes/Inventory/Collectables/brown_mushroom.tscn" id="6_5ukr8"]
 [ext_resource type="PackedScene" uid="uid://f5w26t330phg" path="res://Scenes/Inventory/Collectables/blue_mushroom.tscn" id="6_o06y3"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://dwexi1pani8rj" path="res://Scenes/Inventory/Collectables/book.tscn" id="7_o06y3"]
 [ext_resource type="PackedScene" path="res://Scenes/Inventory/Collectables/apple.tscn" id="8_k7acu"]
+=======
+[ext_resource type="PackedScene" path="res://Scenes/Inventory/Collectables/book.tscn" id="7_o06y3"]
+>>>>>>> ad976819766db0d667b247aca4d4b1aff4692129
 
 [node name="World" type="Node2D"]
 
