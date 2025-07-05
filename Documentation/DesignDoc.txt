@@ -44,6 +44,8 @@ Planned Features:
 	- dream realm! (sleep incentive. what do?)
 		- etheral plane vibe
 	- main menu: book opening animation
+	- custom curser
+	- dynamic custom curser
 	
 
 To Do:
