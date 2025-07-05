@@ -12,10 +12,10 @@ tile_set = ExtResource("1_bghy4")
 
 [node name="Furniture" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAADAAEAAgAEAAMAAAACAAEAAgABAAEAAAAGAAQAAgAHAAUAAAAIAAAAAgAAAAAAAAAIAAMAAgADAAMAAAAIAAIAAgAGAAIAAAAJAAMAAgAFAAIAAAAKAAEAAgADAAIAAAAGAAUAAQAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAADAAEAAgAEAAMAAAACAAEAAgABAAEAAAAGAAQAAgAHAAUAAAAIAAAAAgAAAAAAAAAIAAMAAgADAAMAAAAIAAIAAgAGAAIAAAAJAAMAAgAFAAIAAAAKAAEAAgADAAIAAAAGAAUAAQAAAAEAAAAEAAMAAwADAAAAAAAEAAQAAwAAAAEAAAADAAMAAwACAAMAAAA=")
 tile_set = ExtResource("1_bghy4")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="Furniture"]
+[node name="Lamps" type="TileMapLayer" parent="Furniture"]
 position = Vector2(-0.25, -3)
 tile_map_data = PackedByteArray("AAADAAEAAgAEAAEAAAAIAAMAAgAEAAAAAAA=")
 tile_set = ExtResource("1_bghy4")

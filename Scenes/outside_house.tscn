@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c11o7l6px5wev"]
+
+[ext_resource type="Texture2D" uid="uid://bfupbvypxhutp" path="res://Assets/Terrain-and-Buildings/World of Solaria New Style DEMO.png" id="1_1bobb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8pu6"]
+atlas = ExtResource("1_1bobb")
+region = Rect2(8, 8, 96, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4na5"]
+size = Vector2(153, 90)
+
+[node name="outside_house" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_r8pu6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 10)
+shape = SubResource("RectangleShape2D_y4na5")
