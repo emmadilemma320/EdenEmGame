@@ -53,17 +53,14 @@ To Do:
 	- draw based on front/back for collisions
 	 	- lower y value = behind
 	- fix animated pond collision
-	- add more collectables
 	- inventory ui design/theme
 	- scene changes
-	- make it easier to add collectables
 	- drop/trash items
 
 	
 
 In Progess:
-	- walk through item in world to see name
-	- space to pick up items
+	
 
 Done:
 	- character movement
@@ -83,3 +80,6 @@ Done:
 	- main menu
 	- hover over item for name
 	- drop down menu behaviour
+	- walk through item in world to see name
+	- space to pick up items
+	- make it easier to add collectables

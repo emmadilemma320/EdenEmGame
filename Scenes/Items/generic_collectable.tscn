@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5m6r1hsnvd5u"]
+
+[ext_resource type="Script" uid="uid://opnux1gwdxj3" path="res://Scripts/generic_collectable.gd" id="1_2xoiy"]
+[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="2_smhd8"]
+[ext_resource type="Theme" uid="uid://y1l8bqsf7l6w" path="res://Assets/UI/Theme/in_world_theme.tres" id="3_v2q8c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7ob8"]
+atlas = ExtResource("2_smhd8")
+region = Rect2(17, 32, 15, 16)
+margin = Rect2(0, 1, 1, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_paidv"]
+radius = 15.0
+
+[node name="GenericCollectable" type="Area2D"]
+script = ExtResource("1_2xoiy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_x7ob8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_paidv")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_right = 51.0
+offset_bottom = 15.0
+theme = ExtResource("3_v2q8c")
+text = "berry"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

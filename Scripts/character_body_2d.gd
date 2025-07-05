@@ -41,4 +41,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func collect(item):
+	if !item.discovered:
+		item.discovered = true
 	inventory.insert(item)

@@ -1,14 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://ipbfxfjjual0"]
+[gd_scene load_steps=7 format=4 uid="uid://ipbfxfjjual0"]
 
 [ext_resource type="TileSet" uid="uid://qavwmbkuyrlo" path="res://Resources/Terrain/Ground_Terrain(64x64size).tres" id="1_sghl5"]
 [ext_resource type="PackedScene" uid="uid://cgkys2yocbk4n" path="res://Scenes/player.tscn" id="2_syva4"]
-[ext_resource type="PackedScene" uid="uid://duspkatahqr5f" path="res://Scenes/Items/Collectables/berry.tscn" id="3_wcev2"]
-[ext_resource type="PackedScene" uid="uid://cuvkdvt7q060h" path="res://Scenes/Items/Collectables/amanita.tscn" id="4_sjvcn"]
-[ext_resource type="PackedScene" uid="uid://f5w26t330phg" path="res://Scenes/Items/Collectables/blue_mushroom.tscn" id="5_kykf2"]
-[ext_resource type="PackedScene" uid="uid://cn57b6aygbfid" path="res://Scenes/Items/Collectables/brown_mushroom.tscn" id="6_enowb"]
-[ext_resource type="PackedScene" uid="uid://dwexi1pani8rj" path="res://Scenes/Items/Collectables/book.tscn" id="7_suda1"]
-[ext_resource type="PackedScene" uid="uid://p6noab3c4crm" path="res://Scenes/Items/Collectables/apple.tscn" id="8_w7ne4"]
+[ext_resource type="Resource" uid="uid://nyb6xna0ht8f" path="res://Resources/Collectables/amanita.tres" id="6_0qglv"]
 [ext_resource type="PackedScene" uid="uid://dqymqkvgx4q3r" path="res://Scenes/Entities/frog.tscn" id="9_bwcnv"]
+[ext_resource type="PackedScene" uid="uid://b5m6r1hsnvd5u" path="res://Scenes/Items/generic_collectable.tscn" id="10_syva4"]
+[ext_resource type="Resource" uid="uid://c0d3t84xdr1mh" path="res://Resources/Collectables/brown_mushroom.tres" id="11_wcev2"]
 
 [node name="World" type="Node2D"]
 
@@ -35,38 +32,17 @@ tile_set = ExtResource("1_sghl5")
 [node name="Collectables" type="Node2D" parent="."]
 position = Vector2(454, 415)
 
-[node name="Berry" parent="Collectables" instance=ExtResource("3_wcev2")]
-position = Vector2(-55, -135)
+[node name="brown mushroom2" parent="Collectables" instance=ExtResource("10_syva4")]
+position = Vector2(336, 100)
+inventory_self = ExtResource("11_wcev2")
 
-[node name="Berry2" parent="Collectables" instance=ExtResource("3_wcev2")]
-position = Vector2(340, 75)
+[node name="brown mushroom" parent="Collectables" instance=ExtResource("10_syva4")]
+position = Vector2(-55, 93)
+inventory_self = ExtResource("11_wcev2")
 
-[node name="Berry3" parent="Collectables" instance=ExtResource("3_wcev2")]
-position = Vector2(-161, 105)
+[node name="aminita" parent="Collectables" instance=ExtResource("10_syva4")]
+position = Vector2(285, -10)
+inventory_self = ExtResource("6_0qglv")
 
-[node name="Amanita" parent="Collectables" instance=ExtResource("4_sjvcn")]
-position = Vector2(-271, -30)
-
-[node name="Amanita2" parent="Collectables" instance=ExtResource("4_sjvcn")]
-position = Vector2(481, -36)
-
-[node name="Amanita3" parent="Collectables" instance=ExtResource("4_sjvcn")]
-position = Vector2(311, 177)
-
-[node name="Amanita4" parent="Collectables" instance=ExtResource("4_sjvcn")]
-position = Vector2(-6, -21)
-
-[node name="blue_mushroom" parent="." instance=ExtResource("5_kykf2")]
-position = Vector2(772, 374)
-
-[node name="BrownMushroom" parent="." instance=ExtResource("6_enowb")]
-position = Vector2(650, 414)
-
-[node name="Book" parent="." instance=ExtResource("7_suda1")]
-position = Vector2(211, 480)
-
-[node name="Apple" parent="." instance=ExtResource("8_w7ne4")]
-position = Vector2(182, 474)
-
-[node name="Area2D" parent="." instance=ExtResource("9_bwcnv")]
+[node name="Frog" parent="." instance=ExtResource("9_bwcnv")]
 position = Vector2(611, 345)
