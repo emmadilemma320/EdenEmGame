@@ -48,7 +48,6 @@ To Do:
 	
 
 In Progess:
-	
 	- rewrite resource for inventory collectables to not have to re-write the function in each item
 	
 	

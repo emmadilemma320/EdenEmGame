@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://p6noab3c4crm"]
+
+[ext_resource type="Script" uid="uid://cpr3ov2vk6x0l" path="res://Scripts/Inventory/Collectables/apple.gd" id="1_h64lc"]
+[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="2_i1pt5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ggyq"]
+atlas = ExtResource("2_i1pt5")
+region = Rect2(0, 32, 16, 16)
+margin = Rect2(0, 0, 1, 1)
+
+[node name="Apple" type="Area2D"]
+script = ExtResource("1_h64lc")
+metadata/_custom_type_script = "uid://xj01qcntyrh3"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_7ggyq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

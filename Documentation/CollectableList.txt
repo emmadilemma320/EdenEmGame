@@ -2,3 +2,4 @@ Current Collectables:
 	- berry
 	- amanita
 	- brown mushroom
+	- blue mushroom
