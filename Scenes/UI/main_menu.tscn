@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cghu7n2y2hci3"]
+[gd_scene load_steps=9 format=3 uid="uid://cghu7n2y2hci3"]
 
 [ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="1_i2xx2"]
+[ext_resource type="Script" uid="uid://bs4kdvibkd4wd" path="res://Scenes/UI/main_menu.gd" id="1_o14dv"]
 [ext_resource type="Theme" uid="uid://dbgpgkqjox11x" path="res://Assets/UI/Theme/menu_theme.tres" id="2_o14dv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u7lva"]
@@ -15,6 +16,14 @@ region = Rect2(768, 224, 16, 16)
 atlas = ExtResource("1_i2xx2")
 region = Rect2(768, 208, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_o14dv"]
+atlas = ExtResource("1_i2xx2")
+region = Rect2(784, 224, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gih0s"]
+atlas = ExtResource("1_i2xx2")
+region = Rect2(784, 208, 16, 16)
+
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -22,35 +31,50 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_o14dv")
 
 [node name="Background Color" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 280.0
-offset_bottom = 216.0
+offset_right = 1164.0
+offset_bottom = 660.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 21.0
-offset_right = 244.0
-offset_bottom = 192.0
+offset_right = 1136.0
+offset_bottom = 633.0
 texture = SubResource("AtlasTexture_u7lva")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 57.0
-offset_top = 36.0
-offset_right = 226.0
-offset_bottom = 51.0
+offset_left = 211.0
+offset_top = 76.0
+offset_right = 972.0
+offset_bottom = 122.0
 theme = ExtResource("2_o14dv")
 text = "Eden and Em's Game"
+horizontal_alignment = 1
 
 [node name="Start Button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 75.0
-offset_top = 60.0
-offset_right = 115.0
-offset_bottom = 89.0
+offset_left = 295.0
+offset_top = 159.0
+offset_right = 450.0
+offset_bottom = 268.0
 texture_normal = SubResource("AtlasTexture_mrfpk")
 texture_pressed = SubResource("AtlasTexture_4pqbp")
 stretch_mode = 0
+
+[node name="Exit Button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 277.0
+offset_right = 432.0
+offset_bottom = 399.0
+texture_normal = SubResource("AtlasTexture_o14dv")
+texture_pressed = SubResource("AtlasTexture_gih0s")
+stretch_mode = 0
+
+[connection signal="pressed" from="Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Exit Button" to="." method="_on_exit_button_pressed"]
