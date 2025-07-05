@@ -180,6 +180,7 @@ autoplay = "front_facing_idle"
 [node name="Player" type="Node2D" parent="."]
 
 [node name="Inventory UI" parent="." instance=ExtResource("4_vgqql")]
+visible = false
 z_index = 1
 offset_left = -86.0
 offset_top = -166.0
