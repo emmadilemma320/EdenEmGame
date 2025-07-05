@@ -26,7 +26,7 @@ Planned Features:
 	- pet/creature clothing 
 	- pet/creature friendship
 	- mushroom status effects
-	- frog licking effect: talk to animals
+	- frog kissing effect: talk to animals
 		- animal personalities (hat based)
 	- energy system
 	- chest / house inventory
@@ -34,6 +34,14 @@ Planned Features:
 	- witching hour
 	- frog boi
 	- codex/grimoire : in-game reference for collectables, gardening, etc.
+	- seasons + events
+	- food + cooking
+	- spells and rituals
+	- town upgrades
+	- town
+	- plot and quests
+	- house (w/ decor, expansions, etc.)
+	- dream realm! (sleep incentive. what do?)
 	
 
 To Do:
