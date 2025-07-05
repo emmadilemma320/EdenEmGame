@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwexi1pani8rj"]
+
+[ext_resource type="Script" uid="uid://d0x4aoluwjqtj" path="res://Scripts/Inventory/Collectables/book.gd" id="1_gybdh"]
+[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="2_f3ok5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yr5cm"]
+atlas = ExtResource("2_f3ok5")
+region = Rect2(48.3082, 16.6011, 16.2548, 15.0603)
+
+[node name="Book" type="Area2D"]
+script = ExtResource("1_gybdh")
+metadata/_custom_type_script = "uid://xj01qcntyrh3"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 2.38419e-07)
+scale = Vector2(2.54688, 2.55833)
+texture = SubResource("AtlasTexture_yr5cm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
