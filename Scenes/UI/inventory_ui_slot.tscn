@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://3ksico1jl4qb" path="res://Scripts/Inventory UI/inventory_ui_slot.gd" id="1_uah3n"]
 [ext_resource type="Texture2D" uid="uid://d0tbe64g80a2m" path="res://Assets/UI/inventory-slot.png" id="2_k6ogx"]
-[ext_resource type="Theme" uid="uid://d3l5kwxe8w48i" path="res://Assets/UI/Theme/inventory_theme.tres" id="3_k6ogx"]
+[ext_resource type="Theme" uid="uid://d3l5kwxe8w48i" path="res://Themes/inventory_theme.tres" id="3_k6ogx"]
 
 [node name="Inventory_UI_Slot" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
@@ -60,29 +60,33 @@ offset_left = 17.0
 offset_top = 1.0
 offset_right = 113.0
 offset_bottom = 97.0
+theme = ExtResource("3_k6ogx")
 
 [node name="item_name" type="Label" parent="drop_down_menu"]
 layout_mode = 2
 theme = ExtResource("3_k6ogx")
 text = "(empty)"
-horizontal_alignment = 1
 
 [node name="use_button" type="Button" parent="drop_down_menu"]
+visible = false
 layout_mode = 2
 theme = ExtResource("3_k6ogx")
 text = "use"
 
 [node name="info_button" type="Button" parent="drop_down_menu"]
+visible = false
 layout_mode = 2
 theme = ExtResource("3_k6ogx")
 text = "show in grimoire"
 
 [node name="drop_button" type="Button" parent="drop_down_menu"]
+visible = false
 layout_mode = 2
 theme = ExtResource("3_k6ogx")
 text = "drop"
 
 [node name="trash_button" type="Button" parent="drop_down_menu"]
+visible = false
 layout_mode = 2
 theme = ExtResource("3_k6ogx")
 text = "trash"
@@ -90,3 +94,5 @@ text = "trash"
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="CenterContainer/Panel/drop_down_trigger" to="." method="_on_drop_down_trigger_pressed"]
+[connection signal="pressed" from="drop_down_menu/drop_button" to="." method="_on_drop_button_pressed"]
+[connection signal="pressed" from="drop_down_menu/trash_button" to="." method="_on_trash_button_pressed"]

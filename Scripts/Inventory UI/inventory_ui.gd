@@ -7,6 +7,8 @@ var is_open = false
 
 func _ready():
 	inventory.update.connect(update_slots)
+	for i in range(slots.size()):
+		slots[i].represents = inventory.slots[i]
 	update_slots()
 	close()
 	
@@ -35,3 +37,4 @@ func open():
 func close():
 	visible = false
 	is_open = false
+	

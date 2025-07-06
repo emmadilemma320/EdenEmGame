@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dqgfffw7olopd"
-path="res://.godot/imported/Gluten-Bold.ttf-f2cae5533e7723e9027a74c2b9b90012.fontdata"
+path="res://.godot/imported/Gluten-Bold.ttf-46dcc28003c144910aafd93c4c5634b5.fontdata"
 
 [deps]
 
-source_file="res://Assets/UI/Theme/Fonts/Gluten-Bold.ttf"
-dest_files=["res://.godot/imported/Gluten-Bold.ttf-f2cae5533e7723e9027a74c2b9b90012.fontdata"]
+source_file="res://Themes/Fonts/Gluten-Bold.ttf"
+dest_files=["res://.godot/imported/Gluten-Bold.ttf-46dcc28003c144910aafd93c4c5634b5.fontdata"]
 
 [params]
 

@@ -6,7 +6,6 @@ const SPEED = 300.0
 
 
 func _physics_process(delta: float) -> void:
-
 	# left & right
 	if Input.is_action_pressed("move_left"):
 		velocity.x = SPEED*-1 #move left

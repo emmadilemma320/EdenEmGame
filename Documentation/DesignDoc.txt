@@ -49,10 +49,8 @@ Planned Features:
 	
 
 To Do:
-	
 	- draw based on front/back for collisions
 	 	- lower y value = behind
-	- fix animated pond collision
 	- inventory ui design/theme
 	- scene changes
 	- drop/trash items
