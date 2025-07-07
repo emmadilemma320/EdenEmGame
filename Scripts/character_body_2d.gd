@@ -42,4 +42,4 @@ func _physics_process(delta: float) -> void:
 func collect(item):
 	if !item.discovered:
 		item.discovered = true
-	inventory.insert(item)
+	Global.player_inventory.insert(item)
