@@ -183,6 +183,7 @@ autoplay = "front_facing_idle"
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="UI" type="Control" parent="."]
+z_index = 1
 layout_mode = 3
 anchors_preset = 0
 offset_left = -576.0
