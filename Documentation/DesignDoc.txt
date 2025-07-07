@@ -46,6 +46,7 @@ Planned Features:
 	- main menu: book opening animation
 	- custom curser
 	- dynamic custom curser
+	- tool dock
 	
 
 To Do:
@@ -54,7 +55,6 @@ To Do:
 	- inventory ui design/theme
 	- scene changes
 	- drop/trash items
-	- backpack icon
 	- rewrite inventory based on global variable
 	- current menu var in global script (for use of close_current_menu input)
 	- auto close small inventory on grimoire open
@@ -62,7 +62,7 @@ To Do:
 
 In Progess:
 	- grimoire gui: tabs
-	- stack limit
+	
 
 Done:
 	- character movement
@@ -88,3 +88,4 @@ Done:
 	- switch discovered to list (rather than bool variable)
 	- gui overview
 	- grimoire gui (initial design)
+	- stack limit

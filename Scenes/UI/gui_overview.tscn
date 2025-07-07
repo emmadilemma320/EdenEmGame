@@ -48,6 +48,7 @@ texture_hover = SubResource("AtlasTexture_s5xb7")
 stretch_mode = 0
 
 [node name="grimoire_color" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 81.0
 offset_top = 53.0

@@ -2,6 +2,7 @@ extends Node
 
 @export var player_inventory: Inventory
 @export var discovered: Array[String]
+@onready var current_scene = $"."
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

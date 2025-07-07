@@ -39,7 +39,14 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-func collect(item) -> bool:
-	if !Global.discovered.has(item.name):
-		Global.discovered.append(item.name)
-	return inventory.insert(item)
+func collect(item, num) -> int:
+	var num_left = inventory.insert(item, num)
+	if num_left == 0:
+		if !Global.discovered.has(item.name):
+			Global.discovered.append(item.name)
+	return num_left
+
+func drop(item):
+	var new_item
+	Global.current_scene.add_child(new_item)
+	pass

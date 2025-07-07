@@ -29,6 +29,15 @@ offset_bottom = 15.0
 theme = ExtResource("3_v2q8c")
 text = "berry"
 
+[node name="item_amount" type="Label" parent="."]
+visible = false
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 21.0
+offset_bottom = 19.0
+theme = ExtResource("3_v2q8c")
+text = "1"
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
