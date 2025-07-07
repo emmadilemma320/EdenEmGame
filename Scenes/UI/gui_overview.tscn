@@ -47,8 +47,7 @@ texture_pressed = SubResource("AtlasTexture_2vo66")
 texture_hover = SubResource("AtlasTexture_s5xb7")
 stretch_mode = 0
 
-[node name="grimoire_color" type="ColorRect" parent="."]
-visible = false
+[node name="grimoire_base" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 81.0
 offset_top = 53.0
@@ -56,7 +55,7 @@ offset_right = 1045.0
 offset_bottom = 580.0
 color = Color(0, 0, 0, 0.447059)
 
-[node name="grimoire_image" type="TextureRect" parent="grimoire_color"]
+[node name="grimoire_initial_image" type="TextureRect" parent="grimoire_base"]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 27.0

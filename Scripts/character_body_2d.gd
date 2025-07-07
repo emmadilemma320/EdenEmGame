@@ -4,6 +4,10 @@ extends CharacterBody2D
 const SPEED = 300.0
 @export var inventory: Inventory
 
+@onready var generic_collectable = preload("res://Scenes/Items/generic_collectable.tscn")
+
+func _ready():
+	inventory.player_drop.connect(drop)
 
 func _physics_process(delta: float) -> void:
 	# left & right
@@ -46,7 +50,9 @@ func collect(item, num) -> int:
 			Global.discovered.append(item.name)
 	return num_left
 
-func drop(item):
-	var new_item
-	Global.current_scene.add_child(new_item)
-	pass
+func drop(slot):
+	var dropped_collectable = generic_collectable.instantiate()
+	dropped_collectable.inventory_self = slot.item
+	dropped_collectable.amount = slot.amount
+	dropped_collectable.position = self.position
+	self.get_parent().add_child(dropped_collectable)

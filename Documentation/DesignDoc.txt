@@ -54,14 +54,12 @@ To Do:
 	 	- lower y value = behind
 	- inventory ui design/theme
 	- scene changes
-	- drop/trash items
-	- rewrite inventory based on global variable
-	- current menu var in global script (for use of close_current_menu input)
-	- auto close small inventory on grimoire open
-	
+	- grimoire gui: tabs
+	- 
 
 In Progess:
-	- grimoire gui: tabs
+	
+
 	
 
 Done:
@@ -89,3 +87,7 @@ Done:
 	- gui overview
 	- grimoire gui (initial design)
 	- stack limit
+	- on-ground stacks
+	- picking up partial stacks
+	- drop/trash items
+	- current menu var in global script (for use of close_current_menu input)

@@ -3,21 +3,25 @@ extends Resource
 class_name Inventory
 
 signal update
+signal player_drop(slot: InventorySlot)
 
 @export var slots: Array[InventorySlot]
 const STACK_LIMIT = 99
+
+func _ready():
+	for slot in slots:
+		Global.discovered.append(slot.item.name)
 
 #returns 0 if the item is successfully inserted, else returns a num of how much of the stack wasn't
 func insert(item: InventoryCollectable, num: int) -> int:
 	# if the num we are trying to add is less that our stack limit, we return false
 	if num > STACK_LIMIT:
-		print("attemptted to pick up a stack of items, but the stack is too big!")
+		print("attempted to pick up a stack of items, but the stack is too big!")
 		return num
 	if num <= 0:
 		print("error: stack of size < 1!")
 		return 0
 	# going forward we can assume 0 < num <= STACK_LIMIT
-	print("Called insert on ", str(num), " ", item.name)
 	# looking for slots with our current item stored
 	var itemslots = slots.filter(func(slot): return slot.item == item)
 	# if we find (at least) one, we try to add our item to it/them
@@ -54,3 +58,10 @@ func insert(item: InventoryCollectable, num: int) -> int:
 	update.emit()
 	return num
 	
+func trash(i: int):
+	slots[i].trash()
+	update.emit()
+	
+func drop(i: int):
+	player_drop.emit(slots[i])
+	trash(i)

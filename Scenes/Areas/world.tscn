@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://ipbfxfjjual0"]
+[gd_scene load_steps=8 format=4 uid="uid://ipbfxfjjual0"]
 
 [ext_resource type="TileSet" uid="uid://qavwmbkuyrlo" path="res://Resources/Terrain/Ground_Terrain(64x64size).tres" id="1_sghl5"]
 [ext_resource type="PackedScene" uid="uid://cgkys2yocbk4n" path="res://Scenes/player.tscn" id="2_syva4"]
 [ext_resource type="Resource" uid="uid://nyb6xna0ht8f" path="res://Resources/Collectables/amanita.tres" id="6_0qglv"]
 [ext_resource type="Resource" uid="uid://d1cdu6q8wpa5k" path="res://Resources/Collectables/apple.tres" id="6_vc2e2"]
-[ext_resource type="PackedScene" uid="uid://bk1ic2jri883i" path="res://Scenes/UI/gui_overview.tscn" id="7_yin3e"]
 [ext_resource type="PackedScene" uid="uid://dqymqkvgx4q3r" path="res://Scenes/Entities/frog.tscn" id="9_bwcnv"]
 [ext_resource type="PackedScene" uid="uid://b5m6r1hsnvd5u" path="res://Scenes/Items/generic_collectable.tscn" id="10_syva4"]
 [ext_resource type="Resource" uid="uid://c0d3t84xdr1mh" path="res://Resources/Collectables/brown_mushroom.tres" id="11_wcev2"]
@@ -61,13 +60,3 @@ amount = 2
 
 [node name="Frog" parent="." instance=ExtResource("9_bwcnv")]
 position = Vector2(611, 345)
-
-[node name="GUI" type="Control" parent="."]
-top_level = true
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="GUI Overview" parent="GUI" instance=ExtResource("7_yin3e")]
-layout_mode = 1

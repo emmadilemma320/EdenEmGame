@@ -6,6 +6,7 @@ extends Panel
 @onready var item_name: Label = $drop_down_menu/item_name
 @onready var drop_down_menu: VBoxContainer = $drop_down_menu
 
+# buttons in drop-down
 @onready var buttons: Array
 @onready var use: Button = $drop_down_menu/use_button
 @onready var info: Button = $drop_down_menu/info_button
@@ -13,7 +14,8 @@ extends Panel
 @onready var trash: Button = $drop_down_menu/trash_button
 
 @onready var drop_down_open: bool = false
-@export var inventory = self.get_parent()
+@onready var inventory_ui = self.get_parent().get_parent().get_parent()
+@onready var self_index: int # it's own index in the list of slots
 
 # this runs when the inventory_ui signals that it is closing
 # it handles any behavior that needs to happen when this happens 
@@ -21,22 +23,33 @@ extends Panel
 
 func _ready():
 	buttons = [use, info, drop, trash]
+	
+func _process(delta):
+	if Input.is_action_just_pressed("close_current_menu") and Global.current_open_menu.back() == name:
+		if drop_down_open:
+			close_drop_down()
+	if Global.current_open_menu.back() != name:
+		close_drop_down()
 
 func closing():
 	if drop_down_open:
 		drop_down_menu.visible = false
 		drop_down_open = false
+		Global.current_open_menu.erase(name)
 		
 func _on_drop_down_trigger_pressed() -> void:
-	drop_down_menu.visible = false if drop_down_open else true
-	drop_down_open = false if drop_down_open else true
+	if drop_down_open:
+		close_drop_down()
+	else:
+		open_drop_down()
 
 func _on_drop_button_pressed() -> void:
-	pass # Replace with function body.
+	inventory_ui.drop(self_index)
+	close_drop_down()
 
 func _on_trash_button_pressed() -> void:
-	pass
-	
+	inventory_ui.trash(self_index)
+	close_drop_down()
 
 func update(slot: InventorySlot):
 	if !slot.item:
@@ -54,3 +67,13 @@ func update(slot: InventorySlot):
 			amount_text.text = str(slot.amount)
 		for button in buttons:
 			button.visible = true
+
+func close_drop_down():
+	Global.current_open_menu.erase(name)
+	drop_down_menu.visible = false
+	drop_down_open = false
+
+func open_drop_down():
+	Global.current_open_menu.append(name)
+	drop_down_menu.visible = true
+	drop_down_open = true
