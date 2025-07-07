@@ -16,8 +16,8 @@ func _process(delta):
 	if Global.discovered.has(inventory_self.name):
 		label.text = inventory_self.name
 	if player_in_area and Input.is_action_pressed("item_pick_up"):
-		player.collect(inventory_self)
-		queue_free()
+		if player.collect(inventory_self):
+			queue_free()
 	
 func _on_mouse_entered() -> void:
 	label.visible = true

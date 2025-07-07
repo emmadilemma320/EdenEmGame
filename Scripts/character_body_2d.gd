@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-func collect(item):
+func collect(item) -> bool:
 	if !Global.discovered.has(item.name):
 		Global.discovered.append(item.name)
-	inventory.insert(item)
+	return inventory.insert(item)

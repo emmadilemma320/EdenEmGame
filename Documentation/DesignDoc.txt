@@ -56,6 +56,8 @@ To Do:
 	- drop/trash items
 	- backpack icon
 	- rewrite inventory based on global variable
+	- current menu var in global script (for use of close_current_menu input)
+	- auto close small inventory on grimoire open
 	
 
 In Progess:
