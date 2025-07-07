@@ -1,0 +1,26 @@
+Town NPCs:
+	- beekeeper: wears a medieval beekeeping hood that hides his face
+		https://i.pinimg.com/736x/3a/01/fd/3a01fdbc7413f0b7488b86870d8dba30.jpg
+		https://angrygamez.com/games/images/doodle-jump_845x600.jpg
+	- snail mail carrier
+	- traveling shopkeep (magpie)
+	- banker (potentially a dragon)
+	- librarian (potentially also a dragon)
+	- blacksmiths apprentice (you guessed it, dragon)
+	- fire-resistant baker (surprisingly not a dragon this time) (maybe a tiefling or elementals? unsure)
+	- fisher fish (merman/mermaid)
+	
+	- mayor & desk clerk
+	- teacher (potentially same person as librarian)
+	- families
+	- grocer / shopkeep
+	- mason
+	- carpenter
+	- fisher
+	- nurse and/or doctor
+	- innskeeper & cook
+
+Other NPCs:
+	- dryad (romancable)
+	- frog prince
+	- Forest Thing

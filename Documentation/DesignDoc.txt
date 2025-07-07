@@ -54,11 +54,13 @@ To Do:
 	- inventory ui design/theme
 	- scene changes
 	- drop/trash items
+	- backpack icon
 
 	
 
 In Progess:
-	
+	- global variables
+	- gui overview
 
 Done:
 	- character movement

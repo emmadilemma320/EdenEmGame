@@ -1,0 +1,23 @@
+There are many different types of resources in our game, and multiple sources to get them from.
+Some of the main ways to get resources are: merchants in town (both specialized and general), helping npcs with ailments, collecting them from the ground, and growing plants/flowers in window boxes, flower beds, and flower pots.
+Different areas, npcs, and growables will contain different resources, so it is good for players to explore all areas and talk to many different townsfolk. 
+Players can also dry herbs on drying racks to unlock new potentials of herbs. 
+In summary, the sources are:
+	- ground collecting
+	- trading/buying from merchants
+	- helping npcs
+	- growing flowers
+
+Ground-collectable resources include:
+	- berry
+	- amanita
+	- brown mushroom
+	- blue mushroom
+	- apple
+	- book
+
+Bought resources include:
+	- honey
+	- candles
+	- bread/pastries (stamina)
+	- food&drink (stamina)
