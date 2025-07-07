@@ -55,13 +55,11 @@ To Do:
 	- scene changes
 	- drop/trash items
 	- backpack icon
-
+	- rewrite inventory based on global variable
 	
 
 In Progess:
-	- gui overview
-	- switch discovered to list (rather than bool variable)
-	- grimoire gui
+	- grimoire gui: tabs
 	- stack limit
 
 Done:
@@ -85,3 +83,6 @@ Done:
 	- walk through item in world to see name
 	- space to pick up items
 	- make it easier to add collectables
+	- switch discovered to list (rather than bool variable)
+	- gui overview
+	- grimoire gui (initial design)

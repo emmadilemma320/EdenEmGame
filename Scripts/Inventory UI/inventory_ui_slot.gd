@@ -35,8 +35,7 @@ func _on_drop_button_pressed() -> void:
 	pass # Replace with function body.
 
 func _on_trash_button_pressed() -> void:
-	
-	print("trash")
+	pass
 	
 
 func update(slot: InventorySlot):

@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://bk1ic2jri883i"]
+
+[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="1_2vo66"]
+[ext_resource type="Script" uid="uid://iwqfrvwvxx51" path="res://Scripts/gui_overview.gd" id="1_vqv5w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqv5w"]
+atlas = ExtResource("1_2vo66")
+region = Rect2(512, 177, 17, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vo66"]
+atlas = ExtResource("1_2vo66")
+region = Rect2(512, 208, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5xb7"]
+atlas = ExtResource("1_2vo66")
+region = Rect2(512, 192, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvooe"]
+atlas = ExtResource("1_2vo66")
+region = Rect2(16, 33, 96, 48)
+
+[node name="GUI Overview" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vqv5w")
+
+[node name="grimoire_button_background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1098.0
+offset_top = 595.0
+offset_right = 1145.0
+offset_bottom = 642.0
+color = Color(0, 0, 0, 0.454902)
+
+[node name="grimoire_button" type="TextureButton" parent="grimoire_button_background"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 48.0
+offset_bottom = 46.0
+texture_normal = SubResource("AtlasTexture_vqv5w")
+texture_pressed = SubResource("AtlasTexture_2vo66")
+texture_hover = SubResource("AtlasTexture_s5xb7")
+stretch_mode = 0
+
+[node name="grimoire_color" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 53.0
+offset_right = 1045.0
+offset_bottom = 580.0
+color = Color(0, 0, 0, 0.447059)
+
+[node name="grimoire_image" type="TextureRect" parent="grimoire_color"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 27.0
+offset_right = 955.0
+offset_bottom = 523.0
+texture = SubResource("AtlasTexture_bvooe")
+
+[connection signal="pressed" from="grimoire_button_background/grimoire_button" to="." method="_on_button_pressed"]

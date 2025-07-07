@@ -9,11 +9,11 @@ extends Area2D
 @onready var label: Label = $Label
 
 func _ready():
-	label.text = inventory_self.name if inventory_self.discovered else "???"
+	label.text = inventory_self.name if Global.discovered.has(inventory_self.name) else "???"
 	sprite.texture = inventory_self.texture
 	
 func _process(delta):
-	if inventory_self.discovered:
+	if Global.discovered.has(inventory_self.name):
 		label.text = inventory_self.name
 	if player_in_area and Input.is_action_pressed("item_pick_up"):
 		player.collect(inventory_self)
