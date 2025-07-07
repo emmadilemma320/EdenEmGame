@@ -59,8 +59,10 @@ To Do:
 	
 
 In Progess:
-	- global variables
 	- gui overview
+	- switch discovered to list (rather than bool variable)
+	- grimoire gui
+	- stack limit
 
 Done:
 	- character movement
