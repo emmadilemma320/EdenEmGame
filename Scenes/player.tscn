@@ -181,10 +181,9 @@ autoplay = "front_facing_idle"
 
 [node name="Player" type="Node2D" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="emoter" parent="." instance=ExtResource("4_x3wgy")]
-position = Vector2(1, -47)
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="UI" type="Control" parent="."]
 z_index = 1

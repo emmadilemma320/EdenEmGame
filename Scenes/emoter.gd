@@ -9,9 +9,24 @@ func _process(delta: float) -> void:
 	pass
 	
 func emote(emotion: String):
+	var animation_time: float
+	#if the emote is not a valid one, it prints an error and exits the method
+	if !sprite_frames.has_animation(emotion):
+		print("emotion not found!")
+		return
+	
+	#while it is visible that means another emote is already playing, 
+	# so we wait for it to finsh playing
+	while visible and !(animation == emotion):
+		print("animation ", animation, " is already playing!")
+		animation_time = sprite_frames.get_frame_count(animation) / sprite_frames.get_animation_speed(animation)
+		await get_tree().create_timer(animation_time).timeout
+	
+	#calculate the time the given emote will take
+	animation_time = sprite_frames.get_frame_count(emotion) / sprite_frames.get_animation_speed(emotion)
+	
+	#set self to visible and play the emote, then wait until it's done
 	visible = true
 	play(emotion)
-	var animation_time: float = sprite_frames.get_frame_count(emotion) / sprite_frames.get_animation_speed(emotion)
-	print("animation ", emotion, " runs at ", sprite_frames.get_animation_speed(emotion), " fps for ", sprite_frames.get_frame_count(emotion), " frames, for a total of ", animation_time, " second(s)")
 	await get_tree().create_timer(animation_time).timeout
 	visible = false
