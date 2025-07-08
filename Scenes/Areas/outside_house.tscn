@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c11o7l6px5wev"]
+[gd_scene load_steps=5 format=3 uid="uid://c11o7l6px5wev"]
 
 [ext_resource type="Texture2D" uid="uid://bfupbvypxhutp" path="res://Assets/Terrain-and-Buildings/World of Solaria New Style DEMO.png" id="1_1bobb"]
+[ext_resource type="PackedScene" uid="uid://bfwdrqxb0q1op" path="res://Scenes/teleport_trigger.tscn" id="2_pkja8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r8pu6"]
 atlas = ExtResource("1_1bobb")
@@ -9,7 +10,7 @@ region = Rect2(8, 8, 96, 88)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4na5"]
 size = Vector2(153, 90)
 
-[node name="outside_house" type="Area2D"]
+[node name="outside_house" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
@@ -18,3 +19,15 @@ texture = SubResource("AtlasTexture_r8pu6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 10)
 shape = SubResource("RectangleShape2D_y4na5")
+
+[node name="Teleport_trigger" parent="." instance=ExtResource("2_pkja8")]
+position = Vector2(0, 66)
+scale = Vector2(2, 2)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+physics_interpolation_mode = 1
+visible = false
+position = Vector2(-0.500001, 16.5)
+scale = Vector2(7.55, 3.75)
+build_mode = 1
+polygon = PackedVector2Array(10.1325, -10, -10, -9.73333, -9.60265, 18, -3.37748, 18.5333, -3.37748, 7.86667, 3.50993, 7.86667, 3.37748, 18.5333, 10.2649, 18.5333)

@@ -55,7 +55,7 @@ To Do:
 	- inventory ui design/theme
 	- scene changes
 	- grimoire gui: tabs
-	- 
+
 
 In Progess:
 	
@@ -91,3 +91,4 @@ Done:
 	- picking up partial stacks
 	- drop/trash items
 	- current menu var in global script (for use of close_current_menu input)
+	- fix collision

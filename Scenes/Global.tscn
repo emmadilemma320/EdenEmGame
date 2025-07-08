@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://b1y3ru5m5p3v7"]
 
-[ext_resource type="Script" uid="uid://bg3hxv1vcpmqd" path="res://Scripts/global.gd" id="1_6yl2a"]
+[ext_resource type="Script" uid="uid://bg3hxv1vcpmqd" path="res://Scripts/Misc/global.gd" id="1_6yl2a"]
 [ext_resource type="Script" uid="uid://75whx7hjp7ic" path="res://Scripts/Resources/inventory.gd" id="2_22hhr"]
 [ext_resource type="Script" uid="uid://cxgysmpcyn3mn" path="res://Scripts/Resources/inventory_slot.gd" id="3_ybmq8"]
 
