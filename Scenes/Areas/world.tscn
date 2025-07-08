@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://ipbfxfjjual0"]
+[gd_scene load_steps=11 format=4 uid="uid://ipbfxfjjual0"]
 
 [ext_resource type="TileSet" uid="uid://qavwmbkuyrlo" path="res://Resources/Terrain/Ground_Terrain(64x64size).tres" id="1_sghl5"]
 [ext_resource type="PackedScene" uid="uid://cgkys2yocbk4n" path="res://Scenes/player.tscn" id="2_syva4"]
@@ -6,8 +6,9 @@
 [ext_resource type="Resource" uid="uid://d1cdu6q8wpa5k" path="res://Resources/Collectables/apple.tres" id="6_vc2e2"]
 [ext_resource type="PackedScene" uid="uid://c11o7l6px5wev" path="res://Scenes/Areas/outside_house.tscn" id="8_vc2e2"]
 [ext_resource type="PackedScene" uid="uid://dqymqkvgx4q3r" path="res://Scenes/Entities/frog.tscn" id="9_bwcnv"]
-[ext_resource type="PackedScene" uid="uid://bu56g7v80s2vp" path="res://Scenes/Entities/chom_bomb.tscn" id="9_sghl5"]
+[ext_resource type="PackedScene" uid="uid://bo3k7fhttle" path="res://Scenes/Entities/generic_npc.tscn" id="9_sghl5"]
 [ext_resource type="PackedScene" uid="uid://b5m6r1hsnvd5u" path="res://Scenes/Items/generic_collectable.tscn" id="10_syva4"]
+[ext_resource type="Resource" uid="uid://cqi4sury42keo" path="res://Resources/NPCs/chom_bomb.tres" id="10_wcev2"]
 [ext_resource type="Resource" uid="uid://c0d3t84xdr1mh" path="res://Resources/Collectables/brown_mushroom.tres" id="11_wcev2"]
 
 [node name="World" type="Node2D"]
@@ -66,5 +67,6 @@ position = Vector2(611, 345)
 [node name="outside_house" parent="." instance=ExtResource("8_vc2e2")]
 position = Vector2(901, -9)
 
-[node name="Chom_Bomb" parent="." instance=ExtResource("9_sghl5")]
-position = Vector2(634, 399)
+[node name="Generic NPC" parent="." instance=ExtResource("9_sghl5")]
+position = Vector2(845, 401)
+character = ExtResource("10_wcev2")

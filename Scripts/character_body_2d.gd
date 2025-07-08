@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+var current_speed = 300.0
 @export var inventory: Inventory
 
+@export var player_name: String = "player"
 @onready var generic_collectable = preload("res://Scenes/Items/generic_collectable.tscn")
+@onready var emoter: AnimatedSprite2D = $emoter
 
 func _ready():
 	inventory.player_drop.connect(drop)
@@ -12,23 +14,23 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	# left & right
 	if Input.is_action_pressed("move_left"):
-		velocity.x = SPEED*-1 #move left
+		velocity.x = current_speed*-1 #move left
 		$AnimatedSprite2D.play("left_facing_walk")
 	elif Input.is_action_pressed("move_right"):
-		velocity.x = SPEED #move right
+		velocity.x = current_speed #move right
 		$AnimatedSprite2D.play("right_facing_walk")
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, current_speed)
 	
 	#up & down
 	if Input.is_action_pressed("move_up"):
-		velocity.y = SPEED*-1 #move up
+		velocity.y = current_speed*-1 #move up
 		$AnimatedSprite2D.play("back_facing_walk")
 	elif Input.is_action_pressed("move_down"):
-		velocity.y = SPEED #move down
+		velocity.y = current_speed #move down
 		$AnimatedSprite2D.play("front_facing_walk")
 	else:
-		velocity.y = move_toward(velocity.y, 0, SPEED)
+		velocity.y = move_toward(velocity.y, 0, current_speed)
 
 	if velocity.length() == 0:
 		match ($AnimatedSprite2D.animation):

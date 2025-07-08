@@ -17,7 +17,7 @@ config/icon="uid://cv8aafvxhc84o"
 
 [autoload]
 
-Global="*res://Scripts/Misc/global.gd"
+Global="*res://Scripts/in_world/global.gd"
 
 [display]
 
