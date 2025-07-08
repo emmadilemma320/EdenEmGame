@@ -1,0 +1,212 @@
+[gd_scene load_steps=14 format=3 uid="uid://bk1ic2jri883i"]
+
+[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="1_2vo66"]
+[ext_resource type="Script" uid="uid://iwqfrvwvxx51" path="res://Scripts/UI/gui_overvlay.gd" id="1_vqv5w"]
+[ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Assets/Entities/chomp_idle.png" id="3_31o6n"]
+[ext_resource type="Theme" uid="uid://e24781o5joi4" path="res://Themes/dialogue_theme.tres" id="4_d5ngb"]
+[ext_resource type="Texture2D" uid="uid://d0tbe64g80a2m" path="res://Assets/UI/inventory-slot.png" id="5_4ewqb"]
+[ext_resource type="Theme" uid="uid://e6bvrbsl0oqo" path="res://Themes/nameplate_theme.tres" id="5_lbv3i"]
+[ext_resource type="Texture2D" uid="uid://db6utsfxwwvul" path="res://Assets/Character/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="5_oo5r5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqv5w"]
+atlas = ExtResource("1_2vo66")
+region = Rect2(512, 177, 17, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vo66"]
+atlas = ExtResource("1_2vo66")
+region = Rect2(512, 208, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5xb7"]
+atlas = ExtResource("1_2vo66")
+region = Rect2(512, 192, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvooe"]
+atlas = ExtResource("1_2vo66")
+region = Rect2(16, 33, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ewqb"]
+atlas = ExtResource("5_oo5r5")
+region = Rect2(64, 16, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdvwd"]
+atlas = ExtResource("3_31o6n")
+region = Rect2(37, 40, 22, 24)
+
+[node name="GUI Overview" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vqv5w")
+
+[node name="grimoire_button_background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1098.0
+offset_top = 595.0
+offset_right = 1145.0
+offset_bottom = 642.0
+color = Color(0, 0, 0, 0.454902)
+
+[node name="grimoire_button" type="TextureButton" parent="grimoire_button_background"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 48.0
+offset_bottom = 46.0
+texture_normal = SubResource("AtlasTexture_vqv5w")
+texture_pressed = SubResource("AtlasTexture_2vo66")
+texture_hover = SubResource("AtlasTexture_s5xb7")
+stretch_mode = 0
+
+[node name="grimoire_base" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 81.0
+offset_top = 53.0
+offset_right = 1045.0
+offset_bottom = 580.0
+color = Color(0, 0, 0, 0.447059)
+
+[node name="grimoire_initial_image" type="TextureRect" parent="grimoire_base"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 27.0
+offset_right = 955.0
+offset_bottom = 523.0
+texture = SubResource("AtlasTexture_bvooe")
+
+[node name="dialogue_base" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.34902)
+
+[node name="player_base" type="Panel" parent="dialogue_base"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 363.0
+offset_right = 225.0
+offset_bottom = 613.0
+
+[node name="player_portrait_background" type="TextureRect" parent="dialogue_base/player_base"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+texture = ExtResource("5_4ewqb")
+
+[node name="player_portrait" type="TextureRect" parent="dialogue_base/player_base/player_portrait_background"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 19.0
+offset_right = 172.0
+offset_bottom = 169.0
+texture = SubResource("AtlasTexture_4ewqb")
+
+[node name="nameplate" type="TextureRect" parent="dialogue_base/player_base"]
+offset_top = 210.0
+offset_right = 200.0
+offset_bottom = 250.0
+texture = ExtResource("5_4ewqb")
+
+[node name="player_name" type="Label" parent="dialogue_base/player_base/nameplate"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 2.0
+offset_right = 187.0
+offset_bottom = 37.0
+theme = ExtResource("5_lbv3i")
+text = "player"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="npc_base" type="Panel" parent="dialogue_base"]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 373.0
+offset_right = 1129.0
+offset_bottom = 623.0
+
+[node name="npc_portrait_background" type="TextureRect" parent="dialogue_base/npc_base"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+texture = ExtResource("5_4ewqb")
+
+[node name="npc_portrait" type="TextureRect" parent="dialogue_base/npc_base/npc_portrait_background"]
+layout_mode = 2
+offset_left = 47.0
+offset_top = 39.0
+offset_right = 69.0
+offset_bottom = 65.0
+scale = Vector2(5, 5)
+texture = SubResource("AtlasTexture_gdvwd")
+
+[node name="nameplate" type="TextureRect" parent="dialogue_base/npc_base"]
+offset_top = 210.0
+offset_right = 200.0
+offset_bottom = 250.0
+texture = ExtResource("5_4ewqb")
+
+[node name="npc_name" type="Label" parent="dialogue_base/npc_base/nameplate"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 2.0
+offset_right = 188.0
+offset_bottom = 37.0
+theme = ExtResource("5_lbv3i")
+theme_override_font_sizes/font_size = 25
+text = "comb bomb"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="dialogue_base" type="Panel" parent="dialogue_base"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 425.0
+offset_right = 915.0
+offset_bottom = 600.0
+
+[node name="dialogue_background" type="ColorRect" parent="dialogue_base/dialogue_base"]
+layout_mode = 0
+offset_right = 675.0
+offset_bottom = 175.0
+
+[node name="npc_dialogue" type="Label" parent="dialogue_base/dialogue_base/dialogue_background"]
+visible = false
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 650.0
+offset_bottom = 150.0
+theme = ExtResource("4_d5ngb")
+text = "I, the npc, am talking!"
+
+[node name="player_responses" type="VBoxContainer" parent="dialogue_base/dialogue_base/dialogue_background"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 650.0
+offset_bottom = 150.0
+theme = ExtResource("4_d5ngb")
+
+[node name="option_a" type="Button" parent="dialogue_base/dialogue_base/dialogue_background/player_responses"]
+layout_mode = 2
+theme = ExtResource("4_d5ngb")
+text = "i, the player, am being nice!"
+alignment = 0
+
+[node name="option_b" type="Button" parent="dialogue_base/dialogue_base/dialogue_background/player_responses"]
+layout_mode = 2
+theme = ExtResource("4_d5ngb")
+text = "i, the player, am being mean!"
+alignment = 0
+
+[node name="option_c" type="Button" parent="dialogue_base/dialogue_base/dialogue_background/player_responses"]
+layout_mode = 2
+theme = ExtResource("4_d5ngb")
+text = "i, the player, am being decidely neutral"
+alignment = 0
+
+[connection signal="pressed" from="grimoire_button_background/grimoire_button" to="." method="_on_button_pressed"]

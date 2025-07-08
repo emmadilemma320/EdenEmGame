@@ -27,6 +27,7 @@ func _on_talk_button_pressed() -> void:
 	# set values 
 	character.wants_to_talk = false
 	talk_button.visible = false
+	Global.player_is_speaking = true
 	
 	# play emotes and print message
 	emoter.emote("speaking")

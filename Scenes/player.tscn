@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://cat7hj6vbnqv2" path="res://Resources/player_inventory.tres" id="2_6t5aa"]
 [ext_resource type="PackedScene" uid="uid://b5sc642axrbmr" path="res://Scenes/UI/inventory_ui.tscn" id="4_vgqql"]
 [ext_resource type="PackedScene" uid="uid://0caqxwd3bslv" path="res://Scenes/emoter.tscn" id="4_x3wgy"]
-[ext_resource type="PackedScene" uid="uid://bk1ic2jri883i" path="res://Scenes/UI/gui_overview.tscn" id="5_fkybt"]
+[ext_resource type="PackedScene" uid="uid://bk1ic2jri883i" path="res://Scenes/UI/gui_overlay.tscn" id="5_fkybt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 size = Vector2(42, 16)

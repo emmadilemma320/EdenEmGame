@@ -4,12 +4,15 @@ extends Node
 @onready var current_scene = $"."
 @onready var current_open_menu: Array[String]
 
+#TEMPORARY
+@export var player_is_speaking: bool
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	discovered.append("amanita")
 	#discovered.append("chom bomb")
 	current_open_menu.append("none")
-	pass # Replace with function body.
+	player_is_speaking = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
