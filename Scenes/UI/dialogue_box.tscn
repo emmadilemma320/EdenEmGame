@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://btr4m6nma1ibh"]
+
+[ext_resource type="Script" uid="uid://b2jw5e6eyljoq" path="res://Scripts/dialogue_box.gd" id="1_qb1dv"]
+[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="2_c67c5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlprh"]
+atlas = ExtResource("2_c67c5")
+region = Rect2(593, 224, 14, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg80k"]
+atlas = ExtResource("2_c67c5")
+region = Rect2(593, 256, 14, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c65s7"]
+atlas = ExtResource("2_c67c5")
+region = Rect2(593, 240, 14, 16)
+
+[node name="Dialogue Box" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qb1dv")
+
+[node name="talk_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 14.0
+offset_bottom = 15.0
+scale = Vector2(2, 2)
+texture_normal = SubResource("AtlasTexture_tlprh")
+texture_pressed = SubResource("AtlasTexture_hg80k")
+texture_hover = SubResource("AtlasTexture_c65s7")
+
+[connection signal="pressed" from="talk_button" to="." method="_on_talk_button_pressed"]

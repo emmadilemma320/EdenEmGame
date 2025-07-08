@@ -1,0 +1,120 @@
+[gd_scene load_steps=16 format=3 uid="uid://bu56g7v80s2vp"]
+
+[ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Assets/Entities/chomp_idle.png" id="1_ydkgc"]
+[ext_resource type="PackedScene" uid="uid://btr4m6nma1ibh" path="res://Scenes/UI/dialogue_box.tscn" id="2_qf6w4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qf6w4"]
+atlas = ExtResource("1_ydkgc")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qeyoo"]
+atlas = ExtResource("1_ydkgc")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_loobb"]
+atlas = ExtResource("1_ydkgc")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ic3tt"]
+atlas = ExtResource("1_ydkgc")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydkgc"]
+atlas = ExtResource("1_ydkgc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcg17"]
+atlas = ExtResource("1_ydkgc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1xbf"]
+atlas = ExtResource("1_ydkgc")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubagc"]
+atlas = ExtResource("1_ydkgc")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7act"]
+atlas = ExtResource("1_ydkgc")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gliya"]
+atlas = ExtResource("1_ydkgc")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hacyw"]
+atlas = ExtResource("1_ydkgc")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5adhm"]
+atlas = ExtResource("1_ydkgc")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mcg17"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qf6w4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qeyoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_loobb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ic3tt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydkgc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcg17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1xbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubagc")
+}],
+"loop": true,
+"name": &"idle2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7act")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gliya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hacyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5adhm")
+}],
+"loop": true,
+"name": &"idle_back",
+"speed": 5.0
+}]
+
+[node name="Chom_Bomb" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_mcg17")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Dialogue Box" parent="." instance=ExtResource("2_qf6w4")]
+offset_left = -10.0
+offset_top = -48.0
+offset_right = -10.0
+offset_bottom = -48.0
