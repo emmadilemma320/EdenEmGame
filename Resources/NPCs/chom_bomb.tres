@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=4 format=3 uid="uid://cqi4sury42keo"]
+
+[ext_resource type="Script" uid="uid://o73xrdsy2tu6" path="res://Scripts/Resources/generic_npc.gd" id="1_c6emj"]
+[ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Assets/Entities/chomp_idle.png" id="2_qn13o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s62vv"]
+atlas = ExtResource("2_qn13o")
+region = Rect2(6, 39, 20, 26)
+
+[resource]
+script = ExtResource("1_c6emj")
+name = "Chompy"
+texture = SubResource("AtlasTexture_s62vv")
+conversations = {}
+metadata/_custom_type_script = "uid://o73xrdsy2tu6"

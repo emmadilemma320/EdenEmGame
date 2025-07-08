@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=2 format=3 uid="uid://c71bmr8ugs7al"]
+
+[ext_resource type="Script" uid="uid://c5f4n1u6mfiyg" path="res://Scripts/Resources/dialogue.gd" id="1_oa7yj"]
+
+[resource]
+script = ExtResource("1_oa7yj")
+player_replies = Array[String]([])
+metadata/_custom_type_script = "uid://c5f4n1u6mfiyg"
