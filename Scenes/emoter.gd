@@ -18,7 +18,7 @@ func emote(emotion: String):
 	#while it is visible that means another emote is already playing, 
 	# so we wait for it to finsh playing
 	while visible and !(animation == emotion):
-		print("animation ", animation, " is already playing!")
+		#print("animation ", animation, " is already playing!")
 		animation_time = sprite_frames.get_frame_count(animation) / sprite_frames.get_animation_speed(animation)
 		await get_tree().create_timer(animation_time).timeout
 	

@@ -194,19 +194,37 @@ theme = ExtResource("4_d5ngb")
 [node name="option_a" type="Button" parent="dialogue_base/dialogue_base/dialogue_background/player_responses"]
 layout_mode = 2
 theme = ExtResource("4_d5ngb")
-text = "i, the player, am being nice!"
+text = "dialogue option a"
 alignment = 0
+autowrap_mode = 2
+clip_text = true
 
 [node name="option_b" type="Button" parent="dialogue_base/dialogue_base/dialogue_background/player_responses"]
 layout_mode = 2
 theme = ExtResource("4_d5ngb")
-text = "i, the player, am being mean!"
+text = "dialogue option b"
 alignment = 0
+autowrap_mode = 2
+clip_text = true
 
 [node name="option_c" type="Button" parent="dialogue_base/dialogue_base/dialogue_background/player_responses"]
 layout_mode = 2
 theme = ExtResource("4_d5ngb")
-text = "i, the player, am being decidely neutral"
+text = "dialogue option c"
 alignment = 0
+autowrap_mode = 2
+clip_text = true
+
+[node name="option_d" type="Button" parent="dialogue_base/dialogue_base/dialogue_background/player_responses"]
+layout_mode = 2
+theme = ExtResource("4_d5ngb")
+text = "dialogue option d"
+alignment = 0
+autowrap_mode = 2
+clip_text = true
 
 [connection signal="pressed" from="grimoire_button_background/grimoire_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="dialogue_base/dialogue_base/dialogue_background/player_responses/option_a" to="." method="_on_option_a_pressed"]
+[connection signal="pressed" from="dialogue_base/dialogue_base/dialogue_background/player_responses/option_b" to="." method="_on_option_b_pressed"]
+[connection signal="pressed" from="dialogue_base/dialogue_base/dialogue_background/player_responses/option_c" to="." method="_on_option_c_pressed"]
+[connection signal="pressed" from="dialogue_base/dialogue_base/dialogue_background/player_responses/option_d" to="." method="_on_option_d_pressed"]

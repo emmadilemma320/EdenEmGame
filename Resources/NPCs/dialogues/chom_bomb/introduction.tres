@@ -1,8 +1,18 @@
-[gd_resource type="Resource" script_class="Dialogue" load_steps=2 format=3 uid="uid://c71bmr8ugs7al"]
+[gd_resource type="Resource" script_class="Dialogue" load_steps=5 format=3 uid="uid://c71bmr8ugs7al"]
 
+[ext_resource type="Resource" uid="uid://cqi4sury42keo" path="res://Resources/NPCs/chom_bomb.tres" id="1_lkr3e"]
 [ext_resource type="Script" uid="uid://c5f4n1u6mfiyg" path="res://Scripts/Resource Classes/dialogue.gd" id="1_oa7yj"]
+[ext_resource type="Script" uid="uid://do2wrj4s7k08k" path="res://Scripts/Resource Classes/reply_pattern.gd" id="2_pbt5f"]
+
+[sub_resource type="Resource" id="Resource_uy68b"]
+script = ExtResource("2_pbt5f")
+quotes = Array[String](["Hi, my name is player and I am being nice :)", "Hi, my name is player and I am being decidely neutral", "Hi, my name is player and I am being mean >:)"])
+point_values = Array[int]([5, 0, -5])
+metadata/_custom_type_script = "uid://do2wrj4s7k08k"
 
 [resource]
 script = ExtResource("1_oa7yj")
-player_replies = Array[String]([])
+npc = ExtResource("1_lkr3e")
+player_replies = Array[ExtResource("2_pbt5f")]([SubResource("Resource_uy68b")])
+npc_replies = Array[String](["hello! my name is chom bomb", "thank you for chatting with me"])
 metadata/_custom_type_script = "uid://c5f4n1u6mfiyg"
