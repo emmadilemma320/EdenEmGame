@@ -1,0 +1,120 @@
+
+READ:
+	I DONT want a combat system in this game, all potion effects for things like fire/col/general resistance,
+	healing, etc. are for helping the player *explore*.
+	I think a big world that, while dangerous, is peaceful would be a nice change of pace
+	from how these types of games usually are.
+	Environmental hazards, done right, can help say that nature is beuatiful and we're working with it
+	but that it's still dangerous and getting more potent ingredients to help nature might hurt you 
+	in the process - the rewards, however, will be great
+	
+	Please feel free to change or add to anything here, its conceptual!
+	Lemme know what you do tho cuz I'm not sure I'll look here much lol
+
+Potion System Design Layout
+
+Basics:
+	Player has a cauldron and multiple tools to use ingredients in
+	Cauldron gets filled with a BASE and the base determines the type
+	Ingredients can have their PROPERTIES changed with the other tools
+		The overall effect of the ingredient will not change greatly, 
+		but the way it behaves will be different (more later)
+	Certain ingredients or potions will need time to reach full potential
+		Stored in mason jars or other cauldrons while the time passess
+		this leaves the main cauldron free to do quicker things
+	Potions must have use for player as well as for selling/quests
+	Cauldron fire started with wood or fire stones, magical ENERGY used in the process of making
+		To maintain fire, make the potion work, etc.
+	Potions can fail! If adding too many ingredients/too much/ inccorect preparation
+	
+Add-ins for extra small boosts after the potion is made?
+	
+Perhaps potions lose potency over time, to encourage players to keep making them?
+	
+TIME DOES NOT PASS IN THE POTION UI
+
+Types:
+Types unlock as player progresses, tho nothing is stopping them
+if they get the ingredients earlier than intended (trading probably)
+Good for players that know what they need, and instructions will come up for those who don't
+
+- Draught -
+	Water based
+	Used for making quick, simple potions; one or two ingredients tops
+	Best for *delicate* ingredients to get their most potential
+	Shortest shelf life?
+	
+- Syrup - 
+	Sugar based
+	Quick and simple like Draughts, but is best for fruits, berries, and nuts
+	Longer shelf life
+	Tasty!
+	
+- Salve -
+	Oil/Wax based
+	Best for herbs and greens and mixing in multiple things all at once
+	Medium shelf life
+	Oil can be reused
+	
+- Tincture - 
+	Alchohol based 
+	Strongest potions, but only for tough ingredients
+	Longest shelf life; does not fade but is instant when it happens
+	turns into infused vinegar after spoiling
+
+Tools
+Different tools affect PROPERTIES of ingredients, with some being better than others for certain purposes
+ex. muddling berries in a mortar + pestle is best for making a tincture with them,
+	maceration with berries for Draughts, and leaving them whole is best for Syrups.
+Some ingredients won't work in potions until they are treated properly - use logic for it 
+	ex. berries in a salve? no. dried berries crushed and added to a salve? good.
+When an ingredient is worked, its effect changes:
+	ex. A flower used for heat resistance would give like 5 mins of mid heat resistance in a draught
+		if you macerate it first, it isnt as strong but lasts for longer
+		chopped and added to a tincture, it is a short-term strong res.
+		Subject to change obvs but as an example lol
+	
+- Mortar and Pestle - 
+	Grinds ingredients into muddles (poultices) or powders
+	Move the pestel up and down with the mouse - see Potion Craft
+- Mason Jars -
+	For waiting for infused liquids - vinegar, macerates, essential oils, honey
+	Shake the jars
+- Drying racks -
+	Make dried ingredients for crushing and adding to salves/ after making potions
+	Arrange the racks to keep ingredients from overlapping and check crunch
+- Slow cooking cauldrons -
+	For making stronger potions at the cost of time
+	Stir them occassionally, make the heat proper when you first set them to go
+- Fermentation Jugs - 
+	Turn draughts and syrups into tinctures, mostly for making vinegars
+	Keep potions potent for longer
+	No special minigame, but you can hear them "burp" now and then lmao
+- Cutting Board - 
+	most basic step 1 for nearly everything, few things worked with whole
+	cut! up! those! ingredients!!!!!
+ 
+Add-ins
+Add-ins are for after a potion is made, and can be more of an ingredient (giving that a boost)
+or something like a crystal (general boost), literally just tossed into potion
+
+I want ingredients and their effects to be based on actual herbalism
+Most plants i know are poisonous in some way, but some can be used for stuff like pain relief
+so please help expand this lmao
+INGREDIENTS LIST
+	Mustard seeds
+	Poppy - sleep
+	Buttercup - Luck
+	Amarita Vien
+	Watercolour Mushroom - water colour dimension
+	Browncaps - Foraging
+	Yew bark
+	Seaweed/seagrapes - water related?
+	Garlic
+	Foxglove
+	Willow bark 
+	Mint
+	Aloe 
+	
+	
+	
