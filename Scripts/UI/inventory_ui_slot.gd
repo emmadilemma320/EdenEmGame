@@ -13,6 +13,10 @@ extends Panel
 @onready var drop: Button = $drop_down_menu/drop_button
 @onready var trash: Button = $drop_down_menu/trash_button
 
+#item drop line edit
+@onready var drop_amount_line: LineEdit = $drop_down_menu/drop_button/amount_edit
+@onready var trash_amount_line: LineEdit = $drop_down_menu/trash_button/amount_edit
+
 @onready var drop_down_open: bool = false
 @onready var inventory_ui = self.get_parent().get_parent().get_parent()
 @onready var self_index: int # it's own index in the list of slots
@@ -31,11 +35,6 @@ func _process(delta):
 	if Global.current_open_menu.back() != name:
 		close_drop_down()
 
-func closing():
-	if drop_down_open:
-		drop_down_menu.visible = false
-		drop_down_open = false
-		Global.current_open_menu.erase(name)
 		
 func _on_drop_down_trigger_pressed() -> void:
 	if drop_down_open:
@@ -44,11 +43,23 @@ func _on_drop_down_trigger_pressed() -> void:
 		open_drop_down()
 
 func _on_drop_button_pressed() -> void:
-	inventory_ui.drop(self_index)
+	drop_amount_line.visible = true
+	var amount: int = int(await drop_amount_line.text_submitted)
+	
+	drop_amount_line.visible = false
+	drop_amount_line.text = ""
+	
+	inventory_ui.drop(self_index, amount)
 	close_drop_down()
 
 func _on_trash_button_pressed() -> void:
-	inventory_ui.trash(self_index)
+	trash_amount_line.visible = true
+	var amount: int = int(await trash_amount_line.text_submitted)
+	
+	trash_amount_line.visible = false
+	trash_amount_line.text = ""
+	
+	inventory_ui.trash(self_index, amount)
 	close_drop_down()
 
 func update(slot: InventorySlot):
@@ -62,18 +73,30 @@ func update(slot: InventorySlot):
 		item_visual.visible = true
 		item_visual.texture = slot.item.texture
 		item_name.text = slot.item.name
-		if slot.amount > 1:
-			amount_text.visible = true
-			amount_text.text = str(slot.amount)
+		amount_text.text = str(slot.amount)
+		amount_text.visible = (slot.amount > 1)
+
 		for button in buttons:
 			button.visible = true
 
 func close_drop_down():
 	Global.current_open_menu.erase(name)
 	drop_down_menu.visible = false
+	drop_amount_line.visible = false
+	trash_amount_line.visible = false
 	drop_down_open = false
 
 func open_drop_down():
 	Global.current_open_menu.append(name)
 	drop_down_menu.visible = true
 	drop_down_open = true
+
+
+func _on_drop_amount_edit_text_changed(new_text: String) -> void:
+	if int(new_text) > int(amount_text.text):
+		drop_amount_line.text = amount_text.text
+
+
+func _on_trash_amount_edit_text_changed(new_text: String) -> void:
+	if int(new_text) > int(amount_text.text):
+		trash_amount_line.text = amount_text.text

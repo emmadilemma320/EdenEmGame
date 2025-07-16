@@ -40,8 +40,8 @@ func close():
 	is_open = false
 	Global.current_open_menu.erase(name)
 	
-func trash(slot_i: int):
-	inventory.trash(slot_i)
+func trash(slot_i: int, amount: int):
+	inventory.trash(slot_i, amount)
 	
-func drop(slot_i: int):
-	inventory.drop(slot_i)
+func drop(slot_i: int, amount: int):
+	inventory.drop(slot_i, amount)

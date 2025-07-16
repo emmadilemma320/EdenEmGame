@@ -58,10 +58,13 @@ func insert(item: InventoryCollectable, num: int) -> int:
 	update.emit()
 	return num
 	
-func trash(i: int):
-	slots[i].trash()
+func trash(i: int, amt: int):
+	slots[i].trash(amt)
 	update.emit()
 	
-func drop(i: int):
-	player_drop.emit(slots[i])
-	trash(i)
+func drop(i: int, amt: int):
+	if slots[i].amount < amt:
+		amt = slots[i].amount
+	#print("dropping ")
+	player_drop.emit(slots[i], amt)
+	trash(i, amt)

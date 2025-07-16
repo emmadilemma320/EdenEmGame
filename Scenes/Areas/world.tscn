@@ -234,7 +234,7 @@ position = Vector2(901, -9)
 position = Vector2(647, 323)
 
 [node name="Frog2" parent="NPCs" instance=ExtResource("8_sghl5")]
-position = Vector2(-30, 13)
+position = Vector2(70, 279)
 character = ExtResource("11_sjvcn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPCs/Frog2"]

@@ -52,9 +52,9 @@ func collect(item, num) -> int:
 			Global.discovered.append(item.name)
 	return num_left
 
-func drop(slot):
+func drop(slot, amt: int):
 	var dropped_collectable = generic_collectable.instantiate()
 	dropped_collectable.inventory_self = slot.item
-	dropped_collectable.amount = slot.amount
+	dropped_collectable.amount = amt
 	dropped_collectable.position = self.position
 	self.get_parent().add_child(dropped_collectable)

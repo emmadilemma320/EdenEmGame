@@ -13,8 +13,8 @@ Planned Features:
 	- foraging ***
 	- gardening **
 	- town w/ npcs **
-	- npc ailments **
-	- friendship
+	- npc ailments ***
+	- friendship **
 	- romance *
 	- npc gifts
 	- potion making ***
@@ -55,6 +55,7 @@ To Do:
 	- inventory ui design/theme
 	- scene changes
 	- improve dialogue options ui
+	- disable dialogue buttons during inventory
 
 	
 
@@ -98,3 +99,4 @@ Done:
 	- fine-tuning conversations
 	- dialogue signal
 	- dialogue emote whole time
+	- inventory improvements
