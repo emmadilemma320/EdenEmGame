@@ -21,9 +21,13 @@ class_name NPC
 @export var conversations: Dictionary
 @export var next_conversation: String = "intro"
 
-# CONSTANT relationship status
+# CONSTANT relationship status and poits
 const FRIENDSHIP_STATUS_NAMES = ["enemies", "acquentiences", "friends"]
 const FRIENDSHIP_STATUS_THRESHOLDS = [-10, 10]
+const POINTS_FOR_FAV_GIFT = 15
+const POINTS_FOR_LIKED_GIFT = 10
+const POINTS_FOR_NEUTRAL_GIFT = 5
+const POINTS_FOR_DISLIKED_GIFT = -3
 
 signal talk_button_pressed(NPC)
 
@@ -59,3 +63,15 @@ func get_friendship_status() -> String:
 
 func emit_talk_signal():
 	talk_button_pressed.emit(self)
+	
+func receive_gift(gift: String):
+	var temp = friendship_points
+	if gift == favorite_gift:
+		friendship_points += POINTS_FOR_FAV_GIFT
+	elif liked_gifts.has(gift):
+		friendship_points += POINTS_FOR_LIKED_GIFT
+	elif disliked_gifts.has(gift):
+		friendship_points += POINTS_FOR_DISLIKED_GIFT
+	else:
+		friendship_points += POINTS_FOR_NEUTRAL_GIFT
+	print("gave gift ", gift, " friendship points increased by ", (friendship_points - temp))

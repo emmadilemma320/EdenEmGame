@@ -21,12 +21,16 @@ extends Panel
 @onready var inventory_ui = self.get_parent().get_parent().get_parent()
 @onready var self_index: int # it's own index in the list of slots
 
+# gifting
+@export var gifting_mode: bool = false
+signal gift_chosen(gift: int)
 # this runs when the inventory_ui signals that it is closing
 # it handles any behavior that needs to happen when this happens 
 # (for example closing any drop down menus)
 
 func _ready():
 	buttons = [use, info, drop, trash]
+	gift_chosen.connect(Global.emit_gift_is)
 	
 func _process(delta):
 	if Input.is_action_just_pressed("close_current_menu") and Global.current_open_menu.back() == name:
@@ -37,6 +41,10 @@ func _process(delta):
 
 		
 func _on_drop_down_trigger_pressed() -> void:
+	if gifting_mode:
+		gift_chosen.emit(self_index)
+		inventory_ui.trash(self_index, 1)
+		return
 	if drop_down_open:
 		close_drop_down()
 	else:

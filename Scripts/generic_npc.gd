@@ -10,9 +10,12 @@ var connected = false
 @onready var talk_button: TextureButton = $talk_button
 @onready var gift_button: TextureButton = $gift_button
 
+signal gifting_npc(NPC)
+
 func _ready():
 	name = character.name
 	nametag.text = character.name if Global.discovered.has(character.name) else "???"
+	gifting_npc.connect(Global.waiting_for_gift)
 	
 func _process(_delta):
 	pass
@@ -41,8 +44,9 @@ func _on_talk_button_pressed() -> void:
 	talk_button.visible = true
 
 func gifting() -> void:
-	print("you gave ", character.name, " a gift!")
-	character.change_friendship(5)
+	gifting_npc.emit(character)
+	var gift: String = await Global.gift_is
+	character.receive_gift(gift)
 
 func _on_mouse_entered() -> void:
 	nametag.visible = true

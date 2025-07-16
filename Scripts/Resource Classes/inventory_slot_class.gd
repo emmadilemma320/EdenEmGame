@@ -6,9 +6,8 @@ class_name InventorySlot
 @export var amount: int
 
 func trash(amt: int):
-	print("trashed ", amt, " ", item.name)
 	amount -= amt
 	if amount <= 0:
 		item = null
 		amount = 0
-	print("new amount is ", amount)
+		#print("no items now")

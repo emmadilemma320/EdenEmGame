@@ -4,8 +4,12 @@ extends Node
 @onready var current_scene = $"."
 @onready var current_open_menu: Array[String]
 
+@onready var inventory: Inventory = preload("res://Resources/player_inventory.tres")
+
 signal talk_to(NPC)
 signal done_speaking
+signal gift_is(String)
+signal get_gift
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,3 +38,10 @@ func wait(seconds: float) -> void:
 
 func connect_signal(npc: NPC):
 	npc.talk_button_pressed.connect(emit_talk_to)
+	
+func emit_gift_is(gift_i: int):
+	var gift: String = inventory.slots[gift_i].item.name
+	gift_is.emit(gift)
+
+func waiting_for_gift(npc: NPC):
+	get_gift.emit()

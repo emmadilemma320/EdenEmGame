@@ -59,6 +59,7 @@ func insert(item: InventoryCollectable, num: int) -> int:
 	return num
 	
 func trash(i: int, amt: int):
+	#print("trashing ", amt, " ", slots[i].item)
 	slots[i].trash(amt)
 	update.emit()
 	

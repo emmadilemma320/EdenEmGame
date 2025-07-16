@@ -8,8 +8,11 @@ var is_open = false
 
 func _ready():
 	inventory.update.connect(update_slots)
+	Global.get_gift.connect(open_gift_mode)
+	Global.gift_is.connect(close_gift_mode)
 	for i in range(slots.size()):
 		slots[i].self_index = i
+		
 	update_slots()
 	close()
 	
@@ -45,3 +48,15 @@ func trash(slot_i: int, amount: int):
 	
 func drop(slot_i: int, amount: int):
 	inventory.drop(slot_i, amount)
+	
+func open_gift_mode():
+	close() # first we close to ensure all menus & such are closed
+	for slot in slots: # then we let the slots know we are in gifting mode
+		slot.gifting_mode = true
+	visible = true # then we make ourselves visible
+	
+func close_gift_mode(temp: String):
+	visible = false
+	for slot in slots: # then we let the slots know we are in gifting mode
+		slot.gifting_mode = false
+	
