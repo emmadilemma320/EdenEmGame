@@ -26,6 +26,9 @@ var catalogue_open: bool
 @onready var npc_dialogue: Label = $dialogue_base/dialogue_base/dialogue_background/npc_dialogue
 @onready var player_responses_box: VBoxContainer = $dialogue_base/dialogue_base/dialogue_background/player_responses
 @onready var player_responses_buttons: Array
+
+@onready var npc_portrait: TextureRect = $dialogue_base/npc_base/npc_portrait_background/CenterContainer/npc_portrait
+@onready var npc_name: Label = $dialogue_base/npc_base/nameplate/npc_name
 signal option_chosen(int)
 
 # Called when the node enters the scene tree for the first time.
@@ -116,6 +119,9 @@ func close_catalogue():
 func open_dialogue(speaking_with: NPC):
 	dialogue_open = true
 	Global.current_open_menu.append(dialogue_base.name)
+	
+	npc_name.text = speaking_with.name
+	npc_portrait.texture = speaking_with.portrait
 	
 	grimoire_button_base.visible = false
 	dialogue_base.visible = true

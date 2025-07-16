@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://ipbfxfjjual0"]
+[gd_scene load_steps=35 format=4 uid="uid://ipbfxfjjual0"]
 
 [ext_resource type="TileSet" uid="uid://qavwmbkuyrlo" path="res://Resources/Terrain/Ground_Terrain(64x64size).tres" id="1_sghl5"]
 [ext_resource type="PackedScene" uid="uid://cgkys2yocbk4n" path="res://Scenes/player.tscn" id="2_syva4"]
@@ -9,8 +9,169 @@
 [ext_resource type="PackedScene" uid="uid://dqymqkvgx4q3r" path="res://Scenes/Entities/frog.tscn" id="9_bwcnv"]
 [ext_resource type="Resource" uid="uid://ds4q6hr0ck0kd" path="res://Resources/NPCs/chom_bomb.tres" id="9_syva4"]
 [ext_resource type="PackedScene" uid="uid://b5m6r1hsnvd5u" path="res://Scenes/Items/generic_collectable.tscn" id="10_syva4"]
+[ext_resource type="Texture2D" uid="uid://dy814mb0vw05c" path="res://Assets/Entities/forgsheet.png" id="11_kykf2"]
 [ext_resource type="Resource" uid="uid://cldm2iavsj2q6" path="res://Resources/NPCs/frog_prince.tres" id="11_sjvcn"]
 [ext_resource type="Resource" uid="uid://c0d3t84xdr1mh" path="res://Resources/Collectables/brown_mushroom.tres" id="11_wcev2"]
+[ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Assets/Entities/chomp_idle.png" id="13_kykf2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enowb"]
+atlas = ExtResource("11_kykf2")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suda1"]
+atlas = ExtResource("11_kykf2")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7ne4"]
+atlas = ExtResource("11_kykf2")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwcnv"]
+atlas = ExtResource("11_kykf2")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kq0q"]
+atlas = ExtResource("11_kykf2")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x68yl"]
+atlas = ExtResource("11_kykf2")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vijum"]
+atlas = ExtResource("11_kykf2")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oofs8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enowb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suda1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7ne4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwcnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kq0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x68yl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vijum")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qf6w4"]
+atlas = ExtResource("13_kykf2")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qeyoo"]
+atlas = ExtResource("13_kykf2")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_loobb"]
+atlas = ExtResource("13_kykf2")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ic3tt"]
+atlas = ExtResource("13_kykf2")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydkgc"]
+atlas = ExtResource("13_kykf2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcg17"]
+atlas = ExtResource("13_kykf2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1xbf"]
+atlas = ExtResource("13_kykf2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubagc"]
+atlas = ExtResource("13_kykf2")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7act"]
+atlas = ExtResource("13_kykf2")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gliya"]
+atlas = ExtResource("13_kykf2")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hacyw"]
+atlas = ExtResource("13_kykf2")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5adhm"]
+atlas = ExtResource("13_kykf2")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_enowb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qf6w4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qeyoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_loobb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ic3tt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydkgc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcg17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1xbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubagc")
+}],
+"loop": true,
+"name": &"idle2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7act")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gliya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hacyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5adhm")
+}],
+"loop": true,
+"name": &"idle_back",
+"speed": 5.0
+}]
 
 [node name="World" type="Node2D"]
 
@@ -63,15 +224,28 @@ inventory_self = ExtResource("6_vc2e2")
 amount = 2
 
 [node name="Frog" parent="." instance=ExtResource("9_bwcnv")]
+visible = false
 position = Vector2(611, 345)
-
-[node name="Chom Bomb" parent="." instance=ExtResource("8_sghl5")]
-position = Vector2(862, 386)
-character = ExtResource("9_syva4")
 
 [node name="outside_house" parent="." instance=ExtResource("8_vc2e2")]
 position = Vector2(901, -9)
 
-[node name="Generic NPC" parent="." instance=ExtResource("8_sghl5")]
-position = Vector2(634, 213)
+[node name="NPCs" type="Node2D" parent="."]
+position = Vector2(647, 323)
+
+[node name="Frog2" parent="NPCs" instance=ExtResource("8_sghl5")]
+position = Vector2(-30, 13)
 character = ExtResource("11_sjvcn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPCs/Frog2"]
+sprite_frames = SubResource("SpriteFrames_oofs8")
+
+[node name="Chom Bomb" parent="NPCs" instance=ExtResource("8_sghl5")]
+position = Vector2(215, 63)
+character = ExtResource("9_syva4")
+
+[node name="character_image2" type="AnimatedSprite2D" parent="NPCs/Chom Bomb"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_enowb")
+animation = &"idle"
+autoplay = "idle"
