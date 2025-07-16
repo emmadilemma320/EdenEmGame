@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://ipbfxfjjual0"]
+[gd_scene load_steps=12 format=4 uid="uid://ipbfxfjjual0"]
 
 [ext_resource type="TileSet" uid="uid://qavwmbkuyrlo" path="res://Resources/Terrain/Ground_Terrain(64x64size).tres" id="1_sghl5"]
 [ext_resource type="PackedScene" uid="uid://cgkys2yocbk4n" path="res://Scenes/player.tscn" id="2_syva4"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dqymqkvgx4q3r" path="res://Scenes/Entities/frog.tscn" id="9_bwcnv"]
 [ext_resource type="Resource" uid="uid://ds4q6hr0ck0kd" path="res://Resources/NPCs/chom_bomb.tres" id="9_syva4"]
 [ext_resource type="PackedScene" uid="uid://b5m6r1hsnvd5u" path="res://Scenes/Items/generic_collectable.tscn" id="10_syva4"]
+[ext_resource type="Resource" uid="uid://cldm2iavsj2q6" path="res://Resources/NPCs/frog_prince.tres" id="11_sjvcn"]
 [ext_resource type="Resource" uid="uid://c0d3t84xdr1mh" path="res://Resources/Collectables/brown_mushroom.tres" id="11_wcev2"]
 
 [node name="World" type="Node2D"]
@@ -70,3 +71,7 @@ character = ExtResource("9_syva4")
 
 [node name="outside_house" parent="." instance=ExtResource("8_vc2e2")]
 position = Vector2(901, -9)
+
+[node name="Generic NPC" parent="." instance=ExtResource("8_sghl5")]
+position = Vector2(634, 213)
+character = ExtResource("11_sjvcn")

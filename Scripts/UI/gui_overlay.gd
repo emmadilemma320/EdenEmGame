@@ -154,7 +154,10 @@ func run_dialogue(dialogue: Dialogue, speaking_with: NPC):
 	for i in range(dialogue.npc_replies.size() - 1):
 		# first, the npc talks, so we set their box to true and the players to false
 		# we scroll through the text and give the player time to read it
-		npc_dialogue.text = dialogue.npc_replies[i].quotes[option]
+		if dialogue.npc_replies[i].quotes.size() != 1:
+			npc_dialogue.text = dialogue.npc_replies[i].quotes[option]
+		else:
+			npc_dialogue.text = dialogue.npc_replies[i].quotes[0]
 		
 		# using the visible ratio, slowly increasing it from 0 to 1
 		for r in range(scroll_chunks):
@@ -205,7 +208,11 @@ func run_dialogue(dialogue: Dialogue, speaking_with: NPC):
 			player_responses_buttons[j].visible = false
 		
 	# npcs always get the last word 
-	npc_dialogue.text = dialogue.npc_replies[-1].quotes[option]
+	if dialogue.npc_replies[-1].quotes.size() != 1:
+		npc_dialogue.text = dialogue.npc_replies[-1].quotes[option]
+	else:
+		npc_dialogue.text = dialogue.npc_replies[-1].quotes[0]
+	
 	for r in range(scroll_chunks):
 		npc_dialogue.visible_ratio = float(r) / scroll_chunks
 		await get_tree().create_timer(scroll_speed).timeout
