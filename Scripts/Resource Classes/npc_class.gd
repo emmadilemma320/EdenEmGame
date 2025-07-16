@@ -49,8 +49,9 @@ func get_friendship_status() -> String:
 	
 	for i in range(FRIENDSHIP_STATUS_THRESHOLDS.size() - 1):
 		if friendship_points >= FRIENDSHIP_STATUS_THRESHOLDS[i] and friendship_points < FRIENDSHIP_STATUS_THRESHOLDS[i+1]:
-			return FRIENDSHIP_STATUS_NAMES[i]
+			return FRIENDSHIP_STATUS_NAMES[i+1]
 			
 	if friendship_points >= (FRIENDSHIP_STATUS_THRESHOLDS[-1]):
-		return FRIENDSHIP_STATUS_NAMES[-1]
+		
+		print("value ", friendship_points, " is more than ", FRIENDSHIP_STATUS_THRESHOLDS[-1])
 	return "unknown friendship status"
