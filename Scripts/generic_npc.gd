@@ -8,7 +8,6 @@ var connected = false
 @onready var nametag: Label = $nametag
 @onready var emoter: AnimatedSprite2D = $emoter
 @onready var talk_button: TextureButton = $talk_button
-#@onready var player = preload("res://Scenes/player.tscn")
 
 func _ready():
 	name = character.name
@@ -34,15 +33,12 @@ func _on_talk_button_pressed() -> void:
 	# play emotes and print message
 	emoter.loop("speaking")
 	await Global.done_speaking
-	#emoter.stop()
 	emoter.visible = false
 	emoter.emote("love")
 	
 	# once we're done, set the talk button to visible again
 	talk_button.visible = true
 	
-
-
 
 func _on_mouse_entered() -> void:
 	nametag.visible = true
@@ -55,6 +51,7 @@ func _on_body_entered(body: Node2D) -> void:
 		talk_button.visible = true
 	if !connected:
 		Global.connect_signal(character)
+		connected = true
 
 func _on_body_exited(body: Node2D) -> void:
 	talk_button.visible = false

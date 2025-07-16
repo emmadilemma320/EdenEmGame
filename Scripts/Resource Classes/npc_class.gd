@@ -54,8 +54,7 @@ func get_friendship_status() -> String:
 			return FRIENDSHIP_STATUS_NAMES[i+1]
 			
 	if friendship_points >= (FRIENDSHIP_STATUS_THRESHOLDS[-1]):
-		
-		print("value ", friendship_points, " is more than ", FRIENDSHIP_STATUS_THRESHOLDS[-1])
+		return FRIENDSHIP_STATUS_NAMES[-1]
 	return "unknown friendship status"
 
 func emit_talk_signal():

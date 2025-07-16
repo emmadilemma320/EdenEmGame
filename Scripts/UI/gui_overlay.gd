@@ -128,7 +128,6 @@ func open_dialogue(speaking_with: NPC):
 			player_responses_buttons[j].visible = false
 	player_responses_box.visible = true
 	
-	print("npc ", speaking_with.name, " with convo ",speaking_with.next_conversation)
 	var dialogue: Dialogue = speaking_with.conversations[speaking_with.next_conversation]
 	run_dialogue(dialogue, speaking_with)
 	
@@ -143,8 +142,8 @@ func close_dialogue():
 # see the Dialogue class for a specific definition of its content
 func run_dialogue(dialogue: Dialogue, speaking_with: NPC):
 	# method variables & constants
-	const scroll_chunks: float = 200.0
-	const scroll_speed: float = 0.01
+	const scroll_chunks: float = 100.0 # higher = slower
+	const scroll_speed: float = 0.01 # higher = faster
 	const reading_buffer: float = 2.0
 	
 	var current_replies: ReplyPattern
@@ -196,12 +195,10 @@ func run_dialogue(dialogue: Dialogue, speaking_with: NPC):
 		# we wait for the pick an option and save what they choose, 
 		#changing the relationship by any point totals gained/lost
 		option = await option_chosen
+		var prev_relationship = speaking_with.get_friendship_status()
 		speaking_with.change_friendship(current_replies.point_values[option])
-		
-		# testing prints
-		print("you chose ", current_replies.quotes[option])
-		print("relationship changed by ", current_replies.point_values[option])
-		print("your new relationship is ", speaking_with.get_friendship_status(), " with a score of ", speaking_with.friendship_points)
+		if prev_relationship != speaking_with.get_friendship_status():
+			print("Your relationship with ", speaking_with.name, " has changed from ", prev_relationship, " to ", speaking_with.get_friendship_status())
 		
 		#since we're done, we turn the buttons off again, and it goes back to the npc talking  
 		for j in range(player_responses_buttons.size()):
