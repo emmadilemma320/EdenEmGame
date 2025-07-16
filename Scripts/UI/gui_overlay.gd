@@ -4,8 +4,6 @@ var grimoire_open: bool
 var dialogue_open: bool
 var catalogue_open: bool
 
-@export var test_npc: NPC
-
 @onready var grimoire_button_base: ColorRect = $grimoire_button_background
 
 @onready var grimoire_base: ColorRect = $grimoire_base
@@ -18,8 +16,6 @@ var catalogue_open: bool
 @onready var unsure_base: TextureRect = $grimoire_base/map_pg1
 
 @onready var dialogue_base: ColorRect = $dialogue_base
-
-#@onready var test_dialogue: Dialogue = preload("res://Resources/NPCs/dialogues/chom_bomb/introduction.tres")
 
 
 # dialogue inner workings

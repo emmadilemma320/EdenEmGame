@@ -56,7 +56,7 @@ To Do:
 	- scene changes
 	- npc gifting
 	- improve dialogue options ui
-
+	- dialogue emote whole time
 	
 
 

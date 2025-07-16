@@ -15,3 +15,5 @@ class_name Dialogue
 # each ReplyPattern also holds a set of point values, represent the change in friendship with the given npc if the player chooses that option
 # the point values for the npc's dialogue currently does nothing
 # since NPCs always get the last word, they have one more ReplyPattern than the player
+# The "next conversation" tells the game which conversation with this npc would happen next via is *key in the npc conversations dictonary*. 
+# It is very important that this string match *exactly* with the one used as the key in the dictionary

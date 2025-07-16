@@ -1,0 +1,39 @@
+To make a new NPC:
+	1) Make a new Resource
+		a) Hover over the folder Resources/NPCs until a drop-down menu appears.
+		b) Select "Create New..." > Resource > NPC and hit create. This will open the "save as" menu: change the name to your desired name and double-check the file path is correct, then hit save
+		c) In the FileSystem, double click on your newly created resource. In the Inspector you should see many fields, such as name, portrait, and conversations. Fill these in, ensuring you have filled in the name, portrait, and given them at least one conversation (title it "intro")
+			i) To add any liked and disliked gifts, click on where it says Array[String]... and then choose "Add Element" and type it in
+				hint: if your image is one in a larger sheet, select "New AtlasTexture" from the menu and it will give you the option to select only part of the original image
+			ii) To add a portrait, drag it in or click on the drop-down menu and create a new Texture object
+			ii) To add a conversation, make an instance of the Dialogue resource type as described below. Click on the pencil next to "New Key" and choose string, than type in the name of your conversation ("intro" for the first conversation). 
+				Then click on the pencil next to "New Value" and select "Object". Drag your conversation resource onto where it now says "<empty>".
+				Click "Add Key/Value Pair" to add your conversation to the dictionary.
+			iii) Do not edit "Next Conversation" unless to rename to initial conversation key
+			d) ctrol+s to save
+	2) Add the NPC to the world 
+		a) Drag a new instance of the "generic_npc.tscn" scene into the world
+		b) Drag the desired character's resource into the "Character" variable
+		c) Add a new Sprite2D or AnimatedSprite2D as a child of your npc node and give it a sprite
+
+			
+To make a new conversation:
+	1) Create your file 
+		a) If this is the first conversation made for your npc, make them a folder in Resources/NPCs/dialogues
+		b) Hover over the folder Resources/NPCs/dialogues/<your npcs name> until a drop-down menu appears.
+		c) Select "Create New..." > Resource > Dialogue and hit create. This will open the "save as" menu: change the name to your desired name and double-check the file path is correct, then hit save
+		d) In the FileSystem, double click on your newly created resource. In the Inspector you should see three fields: NPC Replies, Player Replies, and Next Conversation
+	2) Set NPC Replies
+		a) Next to where it says "NPC Replies", click on where it says Array[String]... and then choose "Add Element", then choose "New ReplyPatten". This represents *one instance of an npc talking*.
+		b) Click on the newly created replied pattern, then click on quotes on where it says Array[String]... and then choose "Add Element" and type in your NPCs line(s)
+			 NPCs can either have the same response for any player dialogue option, or have one reply per option. This is per ReplyPattern
+		c) Repeat steps a&b until you have as many lines as npc dialogue as you wish (at least 2)
+			It is
+	3) Set Player Replies
+		a) Repeat the NPC replies process with the player replies for "quotes" (remember that the npc speaks first as last)
+		b) For each ReplyPattern the player has, you will have to set a point value, which represents the friendship gained/lost from the player picking that dialogue option.
+			i) Set the size of "Point Value" to be the same the same as the size of "Quotes"
+			ii) For any non-neutral dialogue option, set the value to represent to friendship points gained/lost (- = lost, + = gained) 
+	4) Set next conversation
+		If there is none, simply set it to its own key
+	5) ctrol+s to save
