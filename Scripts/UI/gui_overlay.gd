@@ -171,13 +171,11 @@ func run_dialogue(dialogue: Dialogue):
 			print(j, current_replies.quotes[j])
 			
 		
-		
 		#if there are too many replies, an error has occured
 		if player_responses_buttons.size() < current_replies.quotes.size():
 			print("error occured: more dialogue options that dialogue buttons")
 			close_dialogue()
 			return
-			
 		
 		# if there are too many buttons, we simply turn the extra ones in visible
 		if player_responses_buttons.size() > current_replies.quotes.size():

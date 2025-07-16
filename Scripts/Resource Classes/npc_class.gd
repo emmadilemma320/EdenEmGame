@@ -18,7 +18,8 @@ class_name NPC
 @export var wants_to_talk: bool
 
 # character conversation (dictionary of Dialogue resources)
-@export var conversations: Dictionary
+@export var conversations: Dictionary = {}
+@export var current_conversation: int = 0
 
 # CONSTANT relationship status
 const FRIENDSHIP_STATUS_NAMES = ["enemies", "acquentiences", "friends"]

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=4 format=3 uid="uid://cldm2iavsj2q6"]
+
+[ext_resource type="Texture2D" uid="uid://dy814mb0vw05c" path="res://Assets/Entities/forgsheet.png" id="1_d34jh"]
+[ext_resource type="Script" uid="uid://o73xrdsy2tu6" path="res://Scripts/Resource Classes/npc_class.gd" id="1_ifd2j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lviaw"]
+atlas = ExtResource("1_d34jh")
+region = Rect2(19, 29, 29, 20)
+
+[resource]
+script = ExtResource("1_ifd2j")
+name = "frog"
+portrait = SubResource("AtlasTexture_lviaw")
+favorite_gift = "berry"
+liked_gifts = Array[String](["book"])
+disliked_gifts = Array[String](["blue mushroom"])
+friendship_points = 0
+romancable = false
+romance_points = 0
+wants_to_talk = true
+conversations = {
+"test": 0
+}
+current_conversation = 0
+metadata/_custom_type_script = "uid://o73xrdsy2tu6"

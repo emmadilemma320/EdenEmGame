@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="NPC" load_steps=2 format=3 uid="uid://cqi4sury42keo"]
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://cqi4sury42keo"]
 
 [ext_resource type="Script" uid="uid://o73xrdsy2tu6" path="res://Scripts/Resource Classes/npc_class.gd" id="1_c6emj"]
+[ext_resource type="Resource" uid="uid://c71bmr8ugs7al" path="res://Resources/NPCs/dialogues/chom_bomb/introduction.tres" id="1_qn13o"]
 
 [resource]
 script = ExtResource("1_c6emj")
@@ -12,5 +13,9 @@ friendship_points = 0
 romancable = false
 romance_points = 0
 wants_to_talk = true
-conversations = {}
+conversations = {
+"intro": ExtResource("1_qn13o"),
+"test": 0
+}
+current_conversation = 0
 metadata/_custom_type_script = "uid://o73xrdsy2tu6"
