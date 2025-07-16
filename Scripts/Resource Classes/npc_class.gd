@@ -25,6 +25,8 @@ class_name NPC
 const FRIENDSHIP_STATUS_NAMES = ["enemies", "acquentiences", "friends"]
 const FRIENDSHIP_STATUS_THRESHOLDS = [-5, 5]
 
+signal talk_button_pressed(NPC)
+
 
 func _to_string() -> String:
 	return  name
@@ -55,3 +57,6 @@ func get_friendship_status() -> String:
 		
 		print("value ", friendship_points, " is more than ", FRIENDSHIP_STATUS_THRESHOLDS[-1])
 	return "unknown friendship status"
+
+func emit_talk_signal():
+	talk_button_pressed.emit(self)

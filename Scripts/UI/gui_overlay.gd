@@ -34,7 +34,7 @@ signal option_chosen(int)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player_responses_buttons = player_responses_box.get_children()
-	
+	Global.talk_to.connect(open_dialogue)
 	#generic_npc.talk_button_pressed.connect(open_dialogue) # how to connect the signal?
 	
 	close_grimoire()
@@ -67,8 +67,6 @@ func _process(delta: float) -> void:
 				else:
 					open_catalogue()
 			
-	if Global.player_is_speaking and !dialogue_open:
-		open_dialogue(test_npc)
 		
 	if Input.is_action_just_pressed("dialogue_option_1"):
 		option_chosen.emit(0)
@@ -143,8 +141,6 @@ func close_dialogue():
 	
 	grimoire_button_base.visible = true
 	dialogue_base.visible = false
-	
-	Global.player_is_speaking = false # replace with send a signal
 	
 # see the Dialogue class for a specific definition of its content
 func run_dialogue(dialogue: Dialogue, speaking_with: NPC):

@@ -2,14 +2,13 @@ extends Area2D
 
 # the resource of the character they represent
 @export var character: NPC
+var connected = false
 
 #nodes
 @onready var nametag: Label = $nametag
 @onready var emoter: AnimatedSprite2D = $emoter
 @onready var talk_button: TextureButton = $talk_button
 #@onready var player = preload("res://Scenes/player.tscn")
-
-signal talk_button_pressed(NPC)
 
 func _ready():
 	name = character.name
@@ -30,8 +29,7 @@ func _on_talk_button_pressed() -> void:
 	# set values 
 	#character.wants_to_talk = false
 	talk_button.visible = false
-	Global.player_is_speaking = true
-	talk_button_pressed.emit(character)
+	character.emit_talk_signal()
 	
 	# play emotes and print message
 	emoter.emote("speaking")
@@ -50,6 +48,8 @@ func _on_mouse_exited() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if character.wants_to_talk:
 		talk_button.visible = true
+	if !connected:
+		Global.connect_signal(character)
 
 func _on_body_exited(body: Node2D) -> void:
 	talk_button.visible = false

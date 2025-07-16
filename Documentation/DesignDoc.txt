@@ -54,13 +54,14 @@ To Do:
 	 	- lower y value = behind
 	- inventory ui design/theme
 	- scene changes
-
+	- npc gifting
 	- improve dialogue options ui
+
 	
 
 
 In Progess:
-	- fine-tuning conversations
+	
 
 	
 
@@ -97,3 +98,5 @@ Done:
 	- grimoire gui: tabs
 	- npc multiple conversations
 	- closer for dialogue
+	- fine-tuning conversations
+	- dialogue signal
