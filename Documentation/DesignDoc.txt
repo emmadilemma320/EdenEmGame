@@ -61,7 +61,6 @@ To Do:
 
 
 In Progess:
-	- npc gifting
 
 Done:
 	- character movement
@@ -100,3 +99,4 @@ Done:
 	- dialogue signal
 	- dialogue emote whole time
 	- inventory improvements
+	- npc gifting
