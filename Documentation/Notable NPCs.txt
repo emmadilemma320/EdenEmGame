@@ -25,6 +25,7 @@ Town NPCs:
 	- fisher
 	- nurse and/or doctor
 	- innskeeper & cook
+	- cow/goat keeper - milk&cheese
 
 Other NPCs:
 	- dryad (romancable)

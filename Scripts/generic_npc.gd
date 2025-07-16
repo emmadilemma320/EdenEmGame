@@ -9,6 +9,8 @@ extends Area2D
 @onready var talk_button: TextureButton = $talk_button
 #@onready var player = preload("res://Scenes/player.tscn")
 
+signal talk_button_pressed(NPC)
+
 func _ready():
 	name = character.name
 	nametag.text = character.name if Global.discovered.has(character.name) else "???"
@@ -28,6 +30,7 @@ func _on_talk_button_pressed() -> void:
 	character.wants_to_talk = false
 	talk_button.visible = false
 	Global.player_is_speaking = true
+	talk_button_pressed.emit(character)
 	
 	# play emotes and print message
 	emoter.emote("speaking")

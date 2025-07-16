@@ -11,7 +11,6 @@ disliked_gifts = Array[String](["blue mushroom"])
 friendship_points = 0
 romancable = false
 romance_points = 0
-relationship_status = "acquentices"
 wants_to_talk = true
 conversations = {}
 metadata/_custom_type_script = "uid://o73xrdsy2tu6"
