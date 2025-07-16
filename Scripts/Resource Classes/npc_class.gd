@@ -18,12 +18,12 @@ class_name NPC
 @export var wants_to_talk: bool
 
 # character conversation (dictionary of Dialogue resources)
-@export var conversations: Dictionary = {}
-@export var current_conversation: int = 0
+@export var conversations: Dictionary
+@export var next_conversation: String = "intro"
 
 # CONSTANT relationship status
 const FRIENDSHIP_STATUS_NAMES = ["enemies", "acquentiences", "friends"]
-const FRIENDSHIP_STATUS_THRESHOLDS = [-1, 1]
+const FRIENDSHIP_STATUS_THRESHOLDS = [-5, 5]
 
 
 func _to_string() -> String:

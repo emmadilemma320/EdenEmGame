@@ -21,5 +21,5 @@ wants_to_talk = true
 conversations = {
 "test": 0
 }
-current_conversation = 0
+next_conversation = "intro"
 metadata/_custom_type_script = "uid://o73xrdsy2tu6"

@@ -4,6 +4,8 @@ var grimoire_open: bool
 var dialogue_open: bool
 var catalogue_open: bool
 
+@export var test_npc: NPC
+
 @onready var grimoire_button_base: ColorRect = $grimoire_button_background
 
 @onready var grimoire_base: ColorRect = $grimoire_base
@@ -17,9 +19,8 @@ var catalogue_open: bool
 
 @onready var dialogue_base: ColorRect = $dialogue_base
 
+#@onready var test_dialogue: Dialogue = preload("res://Resources/NPCs/dialogues/chom_bomb/introduction.tres")
 
-@onready var test_dialogue: Dialogue = preload("res://Resources/NPCs/dialogues/chom_bomb/introduction.tres")
-@onready var test_npc: NPC = preload("res://Resources/NPCs/chom_bomb.tres")
 
 # dialogue inner workings
 @onready var npc_dialogue: Label = $dialogue_base/dialogue_base/dialogue_background/npc_dialogue
@@ -37,7 +38,6 @@ func _ready() -> void:
 	close_dialogue()
 	close_catalogue()
 	
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -127,8 +127,9 @@ func open_dialogue(speaking_with: NPC):
 			player_responses_buttons[j].visible = false
 	player_responses_box.visible = true
 	
-	var dialogue: Dialogue
-	run_dialogue(test_dialogue)
+	print("npc ", speaking_with.name, " with convo ",speaking_with.next_conversation)
+	var dialogue: Dialogue = speaking_with.conversations[speaking_with.next_conversation]
+	run_dialogue(dialogue, speaking_with)
 	
 func close_dialogue():
 	dialogue_open = false
@@ -140,7 +141,7 @@ func close_dialogue():
 	Global.player_is_speaking = false # replace with send a signal
 	
 # see the Dialogue class for a specific definition of its content
-func run_dialogue(dialogue: Dialogue):
+func run_dialogue(dialogue: Dialogue, speaking_with: NPC):
 	# method variables & constants
 	const scroll_chunks: float = 200.0
 	const scroll_speed: float = 0.01
@@ -167,8 +168,6 @@ func run_dialogue(dialogue: Dialogue):
 		# now we switch to the player talking
 		# load in the current replies, and check the size of the button box compared to the current replies
 		current_replies = dialogue.player_replies[i]
-		for j in range(current_replies.quotes.size()):
-			print(j, current_replies.quotes[j])
 			
 		
 		#if there are too many replies, an error has occured
@@ -194,12 +193,12 @@ func run_dialogue(dialogue: Dialogue):
 		# we wait for the pick an option and save what they choose, 
 		#changing the relationship by any point totals gained/lost
 		option = await option_chosen
-		dialogue.npc.change_friendship(current_replies.point_values[option])
+		speaking_with.change_friendship(current_replies.point_values[option])
 		
 		# testing prints
 		print("you chose ", current_replies.quotes[option])
 		print("relationship changed by ", current_replies.point_values[option])
-		print("your new relationship is ", dialogue.npc.get_friendship_status(), " with a score of ", dialogue.npc.friendship_points)
+		print("your new relationship is ", speaking_with.get_friendship_status(), " with a score of ", speaking_with.friendship_points)
 		
 		#since we're done, we turn the buttons off again, and it goes back to the npc talking  
 		for j in range(player_responses_buttons.size()):
@@ -212,6 +211,7 @@ func run_dialogue(dialogue: Dialogue):
 		await get_tree().create_timer(scroll_speed).timeout
 	npc_dialogue.visible_ratio = 1
 	
+	speaking_with.next_conversation = dialogue.next_conversation
 	# once the conversation has ended we close the dialogue after giving the player time to read
 	await get_tree().create_timer(reading_buffer).timeout
 	close_dialogue()

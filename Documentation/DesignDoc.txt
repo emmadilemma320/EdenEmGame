@@ -54,11 +54,13 @@ To Do:
 	 	- lower y value = behind
 	- inventory ui design/theme
 	- scene changes
-	- grimoire gui: tabs
+
+	- improve dialogue options ui
+	
 
 
 In Progess:
-	
+	- fine-tuning conversations
 
 	
 
@@ -92,3 +94,6 @@ Done:
 	- drop/trash items
 	- current menu var in global script (for use of close_current_menu input)
 	- fix collision
+	- grimoire gui: tabs
+	- npc multiple conversations
+	- closer for dialogue

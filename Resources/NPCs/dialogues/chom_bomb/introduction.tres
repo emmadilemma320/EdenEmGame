@@ -1,30 +1,29 @@
-[gd_resource type="Resource" script_class="Dialogue" load_steps=7 format=3 uid="uid://c71bmr8ugs7al"]
+[gd_resource type="Resource" script_class="Dialogue" load_steps=6 format=3 uid="uid://bs814ofc12gmd"]
 
-[ext_resource type="Resource" uid="uid://cqi4sury42keo" path="res://Resources/NPCs/chom_bomb.tres" id="1_lkr3e"]
-[ext_resource type="Script" uid="uid://do2wrj4s7k08k" path="res://Scripts/Resource Classes/reply_pattern_class.gd" id="2_pbt5f"]
-[ext_resource type="Script" uid="uid://c5f4n1u6mfiyg" path="res://Scripts/Resource Classes/dialogue_class.gd" id="3_uy68b"]
+[ext_resource type="Script" uid="uid://do2wrj4s7k08k" path="res://Scripts/Resource Classes/reply_pattern_class.gd" id="1_lkr3e"]
+[ext_resource type="Script" uid="uid://c5f4n1u6mfiyg" path="res://Scripts/Resource Classes/dialogue_class.gd" id="2_pbt5f"]
 
-[sub_resource type="Resource" id="Resource_pbt5f"]
-script = ExtResource("2_pbt5f")
-quotes = Array[String](["Hello! Nice to meet you, I'm chom bomb"])
+[sub_resource type="Resource" id="Resource_lkr3e"]
+script = ExtResource("1_lkr3e")
+quotes = Array[String](["Hi, my name is chom bomb"])
 point_values = Array[int]([])
 metadata/_custom_type_script = "uid://do2wrj4s7k08k"
 
-[sub_resource type="Resource" id="Resource_qdxma"]
-script = ExtResource("2_pbt5f")
-quotes = Array[String](["Thank you for being nice to me! :)", "Well, nice to meet you", "Why are you being mean to me "])
+[sub_resource type="Resource" id="Resource_pbt5f"]
+script = ExtResource("1_lkr3e")
+quotes = Array[String](["Thank you for being nice to me!", "Nice to meet you", "Why are you being mean to me?! :("])
 point_values = Array[int]([])
 metadata/_custom_type_script = "uid://do2wrj4s7k08k"
 
 [sub_resource type="Resource" id="Resource_uy68b"]
-script = ExtResource("2_pbt5f")
-quotes = Array[String](["Hi, my name is player and I am being nice :)", "Hi, my name is player and I am being decidely neutral", "Hi, my name is player and I am being mean >:)"])
-point_values = Array[int]([5, 0, -5])
+script = ExtResource("1_lkr3e")
+quotes = Array[String](["I am being nice :)", "I am being decidely neutral", "I am being mean >:)"])
+point_values = Array[int]([3, 0, -3])
 metadata/_custom_type_script = "uid://do2wrj4s7k08k"
 
 [resource]
-script = ExtResource("3_uy68b")
-npc = ExtResource("1_lkr3e")
-npc_replies = Array[ExtResource("2_pbt5f")]([SubResource("Resource_pbt5f"), SubResource("Resource_qdxma")])
-player_replies = Array[ExtResource("2_pbt5f")]([SubResource("Resource_uy68b")])
+script = ExtResource("2_pbt5f")
+npc_replies = Array[ExtResource("1_lkr3e")]([SubResource("Resource_lkr3e"), SubResource("Resource_pbt5f")])
+player_replies = Array[ExtResource("1_lkr3e")]([SubResource("Resource_uy68b")])
+next_conversation = "second convo"
 metadata/_custom_type_script = "uid://c5f4n1u6mfiyg"

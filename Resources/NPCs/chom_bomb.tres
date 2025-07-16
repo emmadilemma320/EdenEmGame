@@ -1,21 +1,28 @@
-[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://cqi4sury42keo"]
+[gd_resource type="Resource" script_class="NPC" load_steps=6 format=3 uid="uid://ds4q6hr0ck0kd"]
 
-[ext_resource type="Script" uid="uid://o73xrdsy2tu6" path="res://Scripts/Resource Classes/npc_class.gd" id="1_c6emj"]
-[ext_resource type="Resource" uid="uid://c71bmr8ugs7al" path="res://Resources/NPCs/dialogues/chom_bomb/introduction.tres" id="1_qn13o"]
+[ext_resource type="Resource" uid="uid://bs814ofc12gmd" path="res://Resources/NPCs/dialogues/chom_bomb/introduction.tres" id="1_1dafc"]
+[ext_resource type="Resource" uid="uid://cnjy6gdkahwux" path="res://Resources/NPCs/dialogues/chom_bomb/second_conversation.tres" id="2_ye5hf"]
+[ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Assets/Entities/chomp_idle.png" id="3_rgbhl"]
+[ext_resource type="Script" uid="uid://o73xrdsy2tu6" path="res://Scripts/Resource Classes/npc_class.gd" id="4_n0qt6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1832o"]
+atlas = ExtResource("3_rgbhl")
+region = Rect2(101, 40, 22, 24)
 
 [resource]
-script = ExtResource("1_c6emj")
+script = ExtResource("4_n0qt6")
 name = "chom bomb"
+portrait = SubResource("AtlasTexture_1832o")
 favorite_gift = "berry"
-liked_gifts = Array[String](["brown mushroom"])
-disliked_gifts = Array[String](["blue mushroom"])
+liked_gifts = Array[String]([])
+disliked_gifts = Array[String]([])
 friendship_points = 0
 romancable = false
 romance_points = 0
 wants_to_talk = true
 conversations = {
-"intro": ExtResource("1_qn13o"),
-"test": 0
+"intro": ExtResource("1_1dafc"),
+"second convo": ExtResource("2_ye5hf")
 }
-current_conversation = 0
+next_conversation = "intro"
 metadata/_custom_type_script = "uid://o73xrdsy2tu6"

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=6 format=3 uid="uid://cnjy6gdkahwux"]
+
+[ext_resource type="Script" uid="uid://do2wrj4s7k08k" path="res://Scripts/Resource Classes/reply_pattern_class.gd" id="1_inf0l"]
+[ext_resource type="Script" uid="uid://c5f4n1u6mfiyg" path="res://Scripts/Resource Classes/dialogue_class.gd" id="2_44jyr"]
+
+[sub_resource type="Resource" id="Resource_inf0l"]
+script = ExtResource("1_inf0l")
+quotes = Array[String](["Hello again!"])
+point_values = Array[int]([])
+metadata/_custom_type_script = "uid://do2wrj4s7k08k"
+
+[sub_resource type="Resource" id="Resource_44jyr"]
+script = ExtResource("1_inf0l")
+quotes = Array[String](["Goodbye!", "Goodbye!"])
+point_values = Array[int]([])
+metadata/_custom_type_script = "uid://do2wrj4s7k08k"
+
+[sub_resource type="Resource" id="Resource_uhj2h"]
+script = ExtResource("1_inf0l")
+quotes = Array[String](["Hello!", "Goodbye!"])
+point_values = Array[int]([0, 0])
+metadata/_custom_type_script = "uid://do2wrj4s7k08k"
+
+[resource]
+script = ExtResource("2_44jyr")
+npc_replies = Array[ExtResource("1_inf0l")]([SubResource("Resource_inf0l"), SubResource("Resource_44jyr")])
+player_replies = Array[ExtResource("1_inf0l")]([SubResource("Resource_uhj2h")])
+next_conversation = "second convo"
+metadata/_custom_type_script = "uid://c5f4n1u6mfiyg"

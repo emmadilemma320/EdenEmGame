@@ -22,12 +22,13 @@ func _process(_delta):
 func _on_talk_button_pressed() -> void:
 	#if the player has never talked to this npc, add their name to the discovered list
 	# and update their nametag
+	
 	if !Global.discovered.has(character.name):
 		Global.discovered.append(character.name)
 		nametag.text = character.name
 		
 	# set values 
-	character.wants_to_talk = false
+	#character.wants_to_talk = false
 	talk_button.visible = false
 	Global.player_is_speaking = true
 	talk_button_pressed.emit(character)
@@ -45,3 +46,10 @@ func _on_mouse_entered() -> void:
 
 func _on_mouse_exited() -> void:
 	nametag.visible = false
+
+func _on_body_entered(body: Node2D) -> void:
+	if character.wants_to_talk:
+		talk_button.visible = true
+
+func _on_body_exited(body: Node2D) -> void:
+	talk_button.visible = false

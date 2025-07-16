@@ -2,13 +2,12 @@ extends Resource
 
 class_name Dialogue
 
-@export var npc: NPC
 @export var npc_replies: Array[ReplyPattern]
 @export var player_replies: Array[ReplyPattern]
+@export var next_conversation: String
 
 
 # A Dialogue resource holds three variables:
-# - the NPC associated with the dialogue (i.e. who you're talking to)
 # - the npc replies, i.e. what the npc says in response to the player, an array of ReplyPattern objects
 # - the player replies, i.e. the player can say in response to the npc
 # player and npc replies are in the form of ReplyPattern objects

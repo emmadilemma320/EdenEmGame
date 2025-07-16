@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://bk1ic2jri883i"]
+[gd_scene load_steps=24 format=3 uid="uid://bk1ic2jri883i"]
 
 [ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="1_2vo66"]
 [ext_resource type="Script" uid="uid://iwqfrvwvxx51" path="res://Scripts/UI/gui_overlay.gd" id="1_vqv5w"]
+[ext_resource type="Resource" uid="uid://ds4q6hr0ck0kd" path="res://Resources/NPCs/chom_bomb.tres" id="2_gdvwd"]
 [ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Assets/Entities/chomp_idle.png" id="3_31o6n"]
 [ext_resource type="Theme" uid="uid://csdiw7pvt6axe" path="res://Themes/grimoire_theme.tres" id="3_lbv3i"]
 [ext_resource type="Theme" uid="uid://e24781o5joi4" path="res://Themes/dialogue_theme.tres" id="4_d5ngb"]
@@ -73,6 +74,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vqv5w")
+test_npc = ExtResource("2_gdvwd")
 
 [node name="grimoire_button_background" type="ColorRect" parent="."]
 layout_mode = 0
@@ -94,6 +96,7 @@ texture_hover = SubResource("AtlasTexture_s5xb7")
 stretch_mode = 0
 
 [node name="grimoire_base" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 81.0
 offset_top = 53.0
