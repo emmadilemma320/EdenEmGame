@@ -33,7 +33,7 @@ func _on_talk_button_pressed() -> void:
 	
 	# play emotes and print message
 	emoter.emote("speaking")
-	emoter.emote("love")
+	#emoter.emote("love")
 	
 	# once we're done, set the talk button to visible again
 	talk_button.visible = true

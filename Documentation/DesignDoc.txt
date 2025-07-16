@@ -54,16 +54,14 @@ To Do:
 	 	- lower y value = behind
 	- inventory ui design/theme
 	- scene changes
-	- npc gifting
 	- improve dialogue options ui
-	- dialogue emote whole time
+
 	
 
 
 In Progess:
-	
-
-	
+	- npc gifting
+	- dialogue emote whole time
 
 Done:
 	- character movement

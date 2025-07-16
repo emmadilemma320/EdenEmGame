@@ -575,7 +575,5 @@ animations = [{
 [node name="emoter" type="AnimatedSprite2D"]
 scale = Vector2(1.15625, 1.125)
 sprite_frames = SubResource("SpriteFrames_s57mh")
-animation = &"new_animation_1"
-frame = 1
-frame_progress = 1.0
+animation = &"speaking"
 script = ExtResource("7_m75th")
