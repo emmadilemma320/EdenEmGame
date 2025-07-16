@@ -32,12 +32,17 @@ func _on_talk_button_pressed() -> void:
 	character.emit_talk_signal()
 	
 	# play emotes and print message
-	emoter.emote("speaking")
-	#emoter.emote("love")
+	emoter.loop("speaking")
+	await Global.done_speaking
+	#emoter.stop()
+	emoter.visible = false
+	emoter.emote("love")
 	
 	# once we're done, set the talk button to visible again
 	talk_button.visible = true
 	
+
+
 
 func _on_mouse_entered() -> void:
 	nametag.visible = true

@@ -26,13 +26,14 @@ var catalogue_open: bool
 @onready var npc_portrait: TextureRect = $dialogue_base/npc_base/npc_portrait_background/CenterContainer/npc_portrait
 @onready var npc_name: Label = $dialogue_base/npc_base/nameplate/npc_name
 signal option_chosen(int)
+signal dialogue_ended
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player_responses_buttons = player_responses_box.get_children()
 	Global.talk_to.connect(open_dialogue)
 	#generic_npc.talk_button_pressed.connect(open_dialogue) # how to connect the signal?
-	
+	dialogue_ended.connect(Global.emit_done_speaking)
 	close_grimoire()
 	close_dialogue()
 	close_catalogue()
@@ -137,6 +138,7 @@ func close_dialogue():
 	
 	grimoire_button_base.visible = true
 	dialogue_base.visible = false
+	dialogue_ended.emit()
 	
 # see the Dialogue class for a specific definition of its content
 func run_dialogue(dialogue: Dialogue, speaking_with: NPC):

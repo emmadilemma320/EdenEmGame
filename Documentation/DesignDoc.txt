@@ -61,7 +61,6 @@ To Do:
 
 In Progess:
 	- npc gifting
-	- dialogue emote whole time
 
 Done:
 	- character movement
@@ -98,3 +97,4 @@ Done:
 	- closer for dialogue
 	- fine-tuning conversations
 	- dialogue signal
+	- dialogue emote whole time

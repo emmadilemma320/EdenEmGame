@@ -30,3 +30,18 @@ func emote(emotion: String):
 	play(emotion)
 	await get_tree().create_timer(animation_time).timeout
 	visible = false
+	
+func loop(emotion):
+	var animation_time
+	if !sprite_frames.has_animation(emotion):
+		print("emotion not found!")
+		return
+		
+	while visible and !(animation == emotion):
+		#print("animation ", animation, " is already playing!")
+		animation_time = sprite_frames.get_frame_count(animation) / sprite_frames.get_animation_speed(animation)
+		await get_tree().create_timer(animation_time).timeout
+		
+	visible = true
+	play(emotion)
+	

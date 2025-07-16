@@ -5,19 +5,24 @@ extends Node
 @onready var current_open_menu: Array[String]
 
 signal talk_to(NPC)
+signal done_speaking
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	discovered.append("amanita")
 	discovered.append("chom bomb")
 	current_open_menu.append("none")
+	
 	#chom_bomb.talk_button_pressed.connect(test)
 	#connect_signal(frog)
 	#frog.talk_button_pressed.connect(test)
 
-func test(npc: NPC):
+func emit_talk_to(npc: NPC):
 	#print("talk button of npc ", npc.name," pressed")
 	talk_to.emit(npc)
+	
+func emit_done_speaking():
+	done_speaking.emit()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -28,4 +33,4 @@ func wait(seconds: float) -> void:
 	await get_tree().create_timer(seconds).timeout
 
 func connect_signal(npc: NPC):
-	npc.talk_button_pressed.connect(test)
+	npc.talk_button_pressed.connect(emit_talk_to)
