@@ -23,7 +23,7 @@ class_name NPC
 
 # CONSTANT relationship status
 const FRIENDSHIP_STATUS_NAMES = ["enemies", "acquentiences", "friends"]
-const FRIENDSHIP_STATUS_THRESHOLDS = [-5, 5]
+const FRIENDSHIP_STATUS_THRESHOLDS = [-10, 10]
 
 signal talk_button_pressed(NPC)
 

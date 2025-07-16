@@ -8,6 +8,7 @@ var connected = false
 @onready var nametag: Label = $nametag
 @onready var emoter: AnimatedSprite2D = $emoter
 @onready var talk_button: TextureButton = $talk_button
+@onready var gift_button: TextureButton = $gift_button
 
 func _ready():
 	name = character.name
@@ -38,7 +39,10 @@ func _on_talk_button_pressed() -> void:
 	
 	# once we're done, set the talk button to visible again
 	talk_button.visible = true
-	
+
+func gifting() -> void:
+	print("you gave ", character.name, " a gift!")
+	character.change_friendship(5)
 
 func _on_mouse_entered() -> void:
 	nametag.visible = true
