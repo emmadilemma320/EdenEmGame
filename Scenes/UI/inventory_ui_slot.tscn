@@ -53,6 +53,7 @@ text = "1"
 horizontal_alignment = 2
 
 [node name="drop_down_menu" type="VBoxContainer" parent="."]
+visible = false
 z_index = 1
 layout_mode = 2
 offset_left = 17.0

@@ -3,17 +3,19 @@ extends Control
 var grimoire_open: bool
 var dialogue_open: bool
 var catalogue_open: bool
+var recipes_open: bool
 
 @onready var grimoire_button_base: ColorRect = $grimoire_button_background
 
 @onready var grimoire_base: ColorRect = $grimoire_base
+@onready var table_of_contents: Label = $"grimoire_base/Table of Contents"
 
 
-@onready var catalogue_button: TextureButton = $grimoire_base/green_button
-@onready var red_button: TextureButton = $grimoire_base/red_button
+@onready var catalogue_button: TextureButton = $grimoire_base/catalogue_button
+@onready var recipes_button: TextureButton = $grimoire_base/recipes_button
 
-@onready var catalogue_base: TextureRect = $grimoire_base/catalogue_pg1
-@onready var unsure_base: TextureRect = $grimoire_base/map_pg1
+@onready var catalogue_base: TextureRect = $grimoire_base/catalogue
+@onready var recipes_base: TextureRect = $grimoire_base/recipes
 
 @onready var dialogue_base: ColorRect = $dialogue_base
 
@@ -49,6 +51,8 @@ func _process(delta: float) -> void:
 			close_dialogue()
 		if Global.current_open_menu.back() == catalogue_base.name and catalogue_open:
 			close_catalogue()
+		if Global.current_open_menu.back() == recipes_base.name and recipes_open:
+			close_recipes()
 	
 	# opening & closing grimoire via "access_grimoire"
 	if Input.is_action_just_pressed("access_grimoire"):
@@ -57,12 +61,17 @@ func _process(delta: float) -> void:
 		else:
 			open_grimoire()
 			
-		if Input.is_action_just_pressed("access_catalogue"):
-			if grimoire_open:
-				if catalogue_open:
-					close_catalogue()
-				else:
-					open_catalogue()
+	if Input.is_action_just_pressed("access_catalogue") and grimoire_open:			
+		if catalogue_open:
+			close_catalogue()
+		else:
+			open_catalogue()
+			
+	if Input.is_action_just_pressed("access_recipes") and grimoire_open:
+		if recipes_open:
+			close_recipes()
+		else: 
+			open_recipes()
 			
 		
 	if Input.is_action_just_pressed("dialogue_option_1"):
@@ -96,8 +105,13 @@ func close_grimoire():
 	Global.current_open_menu.erase(grimoire_base.name)
 	
 func open_catalogue() -> void:
+	if recipes_open:
+		close_recipes()
+	table_of_contents.visible = false
 	catalogue_button.visible = false
-	red_button.visible = false
+	#recipes_button.visible = false
+	
+	
 	
 	catalogue_open = true
 	catalogue_base.visible = true
@@ -105,11 +119,34 @@ func open_catalogue() -> void:
 	
 	
 func close_catalogue():
+	table_of_contents.visible = true
 	catalogue_button.visible = true
-	red_button.visible = true
+	recipes_button.visible = true
 	
+	catalogue_open = false
 	catalogue_base.visible = false
 	Global.current_open_menu.erase(catalogue_base.name)
+	
+func open_recipes() -> void:
+	if catalogue_open:
+		close_catalogue()
+	table_of_contents.visible = false
+	catalogue_button.visible = false
+	recipes_button.visible = false
+	
+	recipes_open = true
+	recipes_base.visible = true
+	Global.current_open_menu.append(recipes_base.name)
+	
+	
+func close_recipes() -> void:
+	table_of_contents.visible = true
+	catalogue_button.visible = true
+	recipes_button.visible = true
+	
+	recipes_open = false
+	recipes_base.visible = false
+	Global.current_open_menu.erase(recipes_base.name)
 	
 func open_dialogue(speaking_with: NPC):
 	dialogue_open = true
@@ -221,8 +258,6 @@ func run_dialogue(dialogue: Dialogue, speaking_with: NPC):
 	close_dialogue()
 	
 
-
-
 func _on_option_a_pressed() -> void:
 	option_chosen.emit(0)
 
@@ -234,11 +269,3 @@ func _on_option_c_pressed() -> void:
 
 func _on_option_d_pressed() -> void:
 	option_chosen.emit(3)
-
-
-
-func _on_red_button_pressed() -> void:
-	catalogue_button.visible = false
-	red_button.visible = false
-	
-	catalogue_base.visible = true

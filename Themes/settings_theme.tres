@@ -1,0 +1,13 @@
+[gd_resource type="Theme" format=3 uid="uid://dwpkmw76owkos"]
+
+[resource]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Label/colors/font_color = Color(0.648078, 0.648078, 0.648078, 1)
+Label/colors/font_outline_color = Color(0.210507, 0.210507, 0.210507, 1)
+Label/constants/outline_size = 2
+Label/font_sizes/font_size = 31
+VBoxContainer/constants/separation = 5
