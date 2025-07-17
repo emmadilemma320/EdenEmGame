@@ -60,6 +60,8 @@ func _on_body_entered(body: Node2D) -> void:
 	if !connected:
 		Global.connect_signal(character)
 		connected = true
+	gift_button.visible = true
 
 func _on_body_exited(body: Node2D) -> void:
 	talk_button.visible = false
+	gift_button.visible = false

@@ -21,6 +21,7 @@ grow_vertical = 2
 script = ExtResource("1_3dc5o")
 
 [node name="recipes_page1" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 134.0
 offset_top = 103.0
 offset_right = 499.0

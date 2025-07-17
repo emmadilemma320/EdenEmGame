@@ -64,6 +64,7 @@ visible = false
 position = Vector2(1, -44)
 
 [node name="gift_button" type="TextureButton" parent="."]
+visible = false
 custom_minimum_size = Vector2(13, 15)
 offset_left = 32.0
 offset_top = 13.0
