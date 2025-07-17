@@ -13,6 +13,7 @@ func _ready():
 	for i in range(slots.size()):
 		slots[i].self_index = i
 		
+	Global.talking.connect(close)
 	update_slots()
 	close()
 	

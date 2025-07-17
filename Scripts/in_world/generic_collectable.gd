@@ -1,19 +1,30 @@
 extends Area2D
 
 @export var inventory_self: InventoryCollectable
+
+@export var has_unique_sprite: bool
+
 @onready var player
 @onready var player_in_area
 @export var amount: int = 1
 const STACK_LIMIT: int = 99
 
 #Sprites:
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: Sprite2D = $generic_sprite
 @onready var label: Label = $Label
 @onready var amount_label: Label = $item_amount
 
 func _ready():
 	label.text = inventory_self.name if Global.discovered.has(inventory_self.name) else "???"
-	sprite.texture = inventory_self.texture
+	if has_unique_sprite:
+		sprite.visible = false
+	elif inventory_self.in_world_texture != null:
+		sprite.texture = inventory_self.in_world_texture
+		sprite.visible = true
+	else:
+		sprite.texture = inventory_self.texture
+		sprite.visible = true
+		
 	amount_label.text = str(amount)
 	if amount > 1:
 		amount_label.visible = true

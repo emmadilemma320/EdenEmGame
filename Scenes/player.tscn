@@ -197,6 +197,7 @@ offset_bottom = -287.0
 [node name="Inventory UI" parent="UI" instance=ExtResource("4_vgqql")]
 visible = false
 z_index = 1
+layout_mode = 0
 offset_left = 490.0
 offset_top = 161.0
 offset_right = 659.0

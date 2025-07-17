@@ -55,12 +55,12 @@ To Do:
 	- inventory ui design/theme
 	- scene changes
 	- improve dialogue options ui
-	- disable dialogue buttons during inventory
 
 	
 
 
 In Progess:
+	
 
 Done:
 	- character movement
@@ -100,3 +100,6 @@ Done:
 	- dialogue emote whole time
 	- inventory improvements
 	- npc gifting
+	- start of settings menu
+	- close inventory during dialogue
+	- disable buttons behind inventory

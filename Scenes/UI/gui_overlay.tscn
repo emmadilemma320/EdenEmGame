@@ -218,6 +218,7 @@ texture_hover = SubResource("AtlasTexture_s5xb7")
 stretch_mode = 0
 
 [node name="Dialogue" parent="." instance=ExtResource("11_ej8gj")]
+visible = false
 layout_mode = 1
 
 [node name="Settings" parent="." instance=ExtResource("9_gdvwd")]

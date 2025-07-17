@@ -1,10 +1,11 @@
-[gd_scene load_steps=35 format=4 uid="uid://ipbfxfjjual0"]
+[gd_scene load_steps=36 format=4 uid="uid://ipbfxfjjual0"]
 
 [ext_resource type="TileSet" uid="uid://qavwmbkuyrlo" path="res://Resources/Terrain/Ground_Terrain(64x64size).tres" id="1_sghl5"]
 [ext_resource type="PackedScene" uid="uid://cgkys2yocbk4n" path="res://Scenes/player.tscn" id="2_syva4"]
 [ext_resource type="Resource" uid="uid://nyb6xna0ht8f" path="res://Resources/Collectables/amanita.tres" id="6_0qglv"]
 [ext_resource type="Resource" uid="uid://d1cdu6q8wpa5k" path="res://Resources/Collectables/apple.tres" id="6_vc2e2"]
 [ext_resource type="PackedScene" uid="uid://bo3k7fhttle" path="res://Scenes/Entities/generic_npc.tscn" id="8_sghl5"]
+[ext_resource type="Resource" uid="uid://dd43r8tv6ltxe" path="res://Resources/Collectables/berry.tres" id="8_suda1"]
 [ext_resource type="PackedScene" uid="uid://c11o7l6px5wev" path="res://Scenes/Areas/outside_house.tscn" id="8_vc2e2"]
 [ext_resource type="PackedScene" uid="uid://dqymqkvgx4q3r" path="res://Scenes/Entities/frog.tscn" id="9_bwcnv"]
 [ext_resource type="Resource" uid="uid://ds4q6hr0ck0kd" path="res://Resources/NPCs/chom_bomb.tres" id="9_syva4"]
@@ -218,9 +219,9 @@ inventory_self = ExtResource("6_0qglv")
 inventory_self = ExtResource("6_vc2e2")
 amount = 2
 
-[node name="apple2" parent="Collectables" instance=ExtResource("10_syva4")]
+[node name="berry" parent="Collectables" instance=ExtResource("10_syva4")]
 position = Vector2(-21, -116)
-inventory_self = ExtResource("6_vc2e2")
+inventory_self = ExtResource("8_suda1")
 amount = 2
 
 [node name="Frog" parent="." instance=ExtResource("9_bwcnv")]
@@ -234,11 +235,12 @@ position = Vector2(901, -9)
 position = Vector2(647, 323)
 
 [node name="Frog2" parent="NPCs" instance=ExtResource("8_sghl5")]
-position = Vector2(70, 279)
+position = Vector2(57, 6)
 character = ExtResource("11_sjvcn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPCs/Frog2"]
 sprite_frames = SubResource("SpriteFrames_oofs8")
+metadata/_edit_lock_ = true
 
 [node name="Chom Bomb" parent="NPCs" instance=ExtResource("8_sghl5")]
 position = Vector2(215, 63)
@@ -249,3 +251,4 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_enowb")
 animation = &"idle"
 autoplay = "idle"
+metadata/_edit_lock_ = true

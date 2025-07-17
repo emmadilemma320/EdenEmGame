@@ -7,6 +7,7 @@ extends Node
 @onready var inventory: Inventory = preload("res://Resources/player_inventory.tres")
 
 signal talk_to(NPC)
+signal talking
 signal done_speaking
 signal gift_is(String)
 signal get_gift
@@ -24,6 +25,8 @@ func _ready() -> void:
 func emit_talk_to(npc: NPC):
 	#print("talk button of npc ", npc.name," pressed")
 	talk_to.emit(npc)
+	talking.emit()
+	
 	
 func emit_done_speaking():
 	done_speaking.emit()

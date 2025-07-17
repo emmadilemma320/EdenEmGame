@@ -33,7 +33,6 @@ func _ready() -> void:
 	Global.done_speaking.connect(close_dialogue)
 	
 	# next we close all menus, just in case
-	close_dialogue()
 	close_grimoire()
 	
 

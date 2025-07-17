@@ -5,10 +5,8 @@
 [ext_resource type="Theme" uid="uid://d3l5kwxe8w48i" path="res://Themes/inventory_theme.tres" id="2_s1kqi"]
 [ext_resource type="PackedScene" uid="uid://bi2d1e14l124x" path="res://Scenes/UI/inventory_ui_slot.tscn" id="3_6gduq"]
 
-[node name="Inventory UI" type="Control"]
+[node name="Inventory UI" type="Panel"]
 custom_minimum_size = Vector2(169, 133)
-layout_mode = 3
-anchors_preset = 0
 offset_right = 169.0
 offset_bottom = 133.0
 theme = ExtResource("2_s1kqi")
