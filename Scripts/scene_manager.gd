@@ -6,22 +6,21 @@ var scenes: Dictionary
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# Set up the scene dictionary
 	scenes = {
 		"Main Menu": "res://Scenes/UI/main_menu.tscn", 
 		"World": "res://Scenes/Areas/world.tscn", 
 		"Inside House": "res://Scenes/Areas/inside_house.tscn"
 	}
+	
+	# load in the main menu 
 	current_scene = "Main Menu"
 	var scene_instance = load(scenes[current_scene]).instantiate()
 	self.add_child(scene_instance)
 	
+	# connect the signal for future scene changes
 	Global.scene_change_signal.connect(scene_change)
 	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func scene_change(next_scene: String, player_position: Vector2):
 	# if the new scene is the same as the previous one, we do nothing

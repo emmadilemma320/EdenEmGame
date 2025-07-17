@@ -53,7 +53,6 @@ To Do:
 	- draw based on front/back for collisions
 	 	- lower y value = behind
 	- inventory ui design/theme
-	- scene changes
 	- improve dialogue options ui
 
 	
@@ -103,3 +102,4 @@ Done:
 	- start of settings menu
 	- close inventory during dialogue
 	- disable buttons behind inventory
+	- scene changes
