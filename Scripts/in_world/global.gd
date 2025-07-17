@@ -11,6 +11,7 @@ signal talking
 signal done_speaking
 signal gift_is(String)
 signal get_gift
+signal scene_change_signal(String, Vector2)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -48,3 +49,7 @@ func emit_gift_is(gift_i: int):
 
 func waiting_for_gift(npc: NPC):
 	get_gift.emit()
+
+func emit_scene_change_signal(next_scene: String, player_position: Vector2):
+	print("Global speaking: initiated player teleport to ", next_scene)
+	scene_change_signal.emit(next_scene, player_position)

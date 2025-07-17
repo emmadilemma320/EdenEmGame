@@ -1,7 +1,6 @@
-[gd_scene load_steps=35 format=4 uid="uid://ipbfxfjjual0"]
+[gd_scene load_steps=34 format=4 uid="uid://ipbfxfjjual0"]
 
 [ext_resource type="TileSet" uid="uid://qavwmbkuyrlo" path="res://Resources/Terrain/Ground_Terrain(64x64size).tres" id="1_sghl5"]
-[ext_resource type="PackedScene" uid="uid://cgkys2yocbk4n" path="res://Scenes/player.tscn" id="2_syva4"]
 [ext_resource type="Resource" uid="uid://nyb6xna0ht8f" path="res://Resources/Collectables/amanita.tres" id="6_0qglv"]
 [ext_resource type="Resource" uid="uid://d1cdu6q8wpa5k" path="res://Resources/Collectables/apple.tres" id="6_vc2e2"]
 [ext_resource type="PackedScene" uid="uid://bo3k7fhttle" path="res://Scenes/Entities/generic_npc.tscn" id="8_sghl5"]
@@ -187,9 +186,6 @@ tile_set = ExtResource("1_sghl5")
 [node name="TileMapLayer" type="TileMapLayer" parent="Ground_paint/Ground_deco"]
 tile_map_data = PackedByteArray("AAAPAAcAAQAAAAAABgAPAAYAAQAAAAAABAA=")
 tile_set = ExtResource("1_sghl5")
-
-[node name="Player" parent="." instance=ExtResource("2_syva4")]
-position = Vector2(574, 327)
 
 [node name="Top_Paint" type="TileMapLayer" parent="."]
 position = Vector2(95, -117)

@@ -47,8 +47,8 @@ script = ExtResource("1_o14dv")
 
 [node name="Background Color" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1164.0
-offset_bottom = 660.0
+offset_right = 1152.0
+offset_bottom = 648.0
 color = Color(0, 0.518518, 0.36039, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]

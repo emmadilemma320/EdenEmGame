@@ -23,11 +23,12 @@ shape = SubResource("RectangleShape2D_y4na5")
 [node name="Teleport_trigger" parent="." instance=ExtResource("2_pkja8")]
 position = Vector2(0, 66)
 scale = Vector2(2, 2)
+next_scene = "Inside House"
+next_scene_player_positon = Vector2(580, 325)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 physics_interpolation_mode = 1
-visible = false
 position = Vector2(-0.500001, 16.5)
 scale = Vector2(7.55, 3.75)
 build_mode = 1
-polygon = PackedVector2Array(10.1325, -10, -10, -9.73333, -9.60265, 18, -3.37748, 18.5333, -3.37748, 7.86667, 3.50993, 7.86667, 3.37748, 18.5333, 10.2649, 18.5333)
+polygon = PackedVector2Array(10.1325, -10, -10, -9.73333, -9.60265, 14.5333, -4.56954, 14.8, -4.56954, 7.6, 4.43709, 7.6, 4.56954, 15.3333, 10.2649, 15.3333)
