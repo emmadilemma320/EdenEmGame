@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://du7gds3fvqw63"]
+
+[ext_resource type="Texture2D" uid="uid://i108pjojih5n" path="res://Assets/Terrain-and-Buildings/Raven Fantasy/64x64.png" id="1_tjyfe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_go5rt"]
+atlas = ExtResource("1_tjyfe")
+region = Rect2(704, 192, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w22hg"]
+atlas = ExtResource("1_tjyfe")
+region = Rect2(768, 192, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnxhc"]
+atlas = ExtResource("1_tjyfe")
+region = Rect2(832, 192, 64, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u8ycb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_go5rt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w22hg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnxhc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_la6sx"]
+radius = 26.5707
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u8ycb")
+autoplay = "default"
+frame_progress = 0.451988
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 30)
+shape = SubResource("CircleShape2D_la6sx")
