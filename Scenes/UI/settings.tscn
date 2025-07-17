@@ -1,7 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsegb2otwpffd"]
+[gd_scene load_steps=7 format=3 uid="uid://dsegb2otwpffd"]
 
 [ext_resource type="Theme" uid="uid://dwpkmw76owkos" path="res://Themes/settings_theme.tres" id="1_4geyq"]
 [ext_resource type="Script" uid="uid://cm3k2vqounwcn" path="res://Scripts/UI/settings.gd" id="1_ma1v7"]
+[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="3_p46qs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygnii"]
+atlas = ExtResource("3_p46qs")
+region = Rect2(514, 433, 9, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8st6"]
+atlas = ExtResource("3_p46qs")
+region = Rect2(530, 433, 9, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkbde"]
+atlas = ExtResource("3_p46qs")
+region = Rect2(530, 433, 9, 14)
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -27,15 +40,17 @@ offset_bottom = 508.0
 
 [node name="Label" type="Label" parent="Base"]
 layout_mode = 0
-offset_left = 72.0
 offset_top = 16.0
-offset_right = 258.0
+offset_right = 344.0
 offset_bottom = 46.0
-theme = ExtResource("1_4geyq")
+theme_override_colors/font_color = Color(0.647059, 0.647059, 0.647059, 1)
+theme_override_colors/font_outline_color = Color(0.211765, 0.211765, 0.211765, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 31
 text = "Settings"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Base"]
+[node name="main_settings_list" type="VBoxContainer" parent="Base"]
 layout_mode = 0
 offset_left = 44.0
 offset_top = 61.0
@@ -43,21 +58,180 @@ offset_right = 294.0
 offset_bottom = 291.0
 theme = ExtResource("1_4geyq")
 
-[node name="Visual" type="Button" parent="Base/VBoxContainer"]
+[node name="Visual" type="Button" parent="Base/main_settings_list"]
 layout_mode = 2
 theme = ExtResource("1_4geyq")
 text = "Visual Settings"
 
-[node name="Audio" type="Button" parent="Base/VBoxContainer"]
+[node name="Audio" type="Button" parent="Base/main_settings_list"]
 layout_mode = 2
 theme = ExtResource("1_4geyq")
 text = "Audio Settings"
 
-[node name="Gameplay" type="Button" parent="Base/VBoxContainer"]
+[node name="Gameplay" type="Button" parent="Base/main_settings_list"]
 layout_mode = 2
 theme = ExtResource("1_4geyq")
 text = "Gameplay Settings"
 
-[node name="Credits" type="Button" parent="Base/VBoxContainer"]
+[node name="Credits" type="Button" parent="Base/main_settings_list"]
 layout_mode = 2
 text = "Credits"
+
+[node name="menus" type="Control" parent="Base"]
+anchors_preset = 0
+offset_left = -368.0
+offset_top = -102.0
+offset_right = -328.0
+offset_bottom = -62.0
+
+[node name="visual_settings" type="VBoxContainer" parent="Base/menus"]
+visible = false
+layout_mode = 2
+offset_left = 410.0
+offset_top = 164.0
+offset_right = 660.0
+offset_bottom = 243.0
+theme = ExtResource("1_4geyq")
+
+[node name="1" type="Button" parent="Base/menus/visual_settings"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+text = "Visual Setting 1"
+
+[node name="2" type="Button" parent="Base/menus/visual_settings"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+text = "Visual Setting 2"
+
+[node name="3" type="Button" parent="Base/menus/visual_settings"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+text = "Visual Setting 3"
+
+[node name="audio_settings" type="VBoxContainer" parent="Base/menus"]
+visible = false
+offset_left = 410.0
+offset_top = 164.0
+offset_right = 660.0
+offset_bottom = 243.0
+theme = ExtResource("1_4geyq")
+
+[node name="1" type="Button" parent="Base/menus/audio_settings"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+text = "Audio Setting 1"
+
+[node name="2" type="Button" parent="Base/menus/audio_settings"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+text = "Audio Setting 2"
+
+[node name="3" type="Button" parent="Base/menus/audio_settings"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+text = "Audio Setting 3"
+
+[node name="gameplay_settings" type="VBoxContainer" parent="Base/menus"]
+visible = false
+offset_left = 410.0
+offset_top = 164.0
+offset_right = 660.0
+offset_bottom = 243.0
+theme = ExtResource("1_4geyq")
+
+[node name="1" type="Button" parent="Base/menus/gameplay_settings"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+text = "Gameplay Setting 1"
+
+[node name="2" type="Button" parent="Base/menus/gameplay_settings"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+text = "Gameplay Setting 2"
+
+[node name="3" type="Button" parent="Base/menus/gameplay_settings"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+text = "Gameplay Setting 3"
+
+[node name="credits" type="VBoxContainer" parent="Base/menus"]
+visible = false
+offset_left = 410.0
+offset_top = 164.0
+offset_right = 660.0
+offset_bottom = 243.0
+theme = ExtResource("1_4geyq")
+
+[node name="coder" type="Label" parent="Base/menus/credits"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+text = "Coder: Emma Pedersen"
+
+[node name="artist" type="Label" parent="Base/menus/credits"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+text = "Artist: Eden Meesters"
+
+[node name="boteny_consultants" type="Label" parent="Base/menus/credits"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+text = "Boteny Consultants:"
+autowrap_mode = 2
+
+[node name="boteny_consultants_list" type="VBoxContainer" parent="Base/menus/credits"]
+layout_mode = 2
+
+[node name="mom" type="Label" parent="Base/menus/credits/boteny_consultants_list"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+theme_override_font_sizes/font_size = 16
+text = "Zoe Goldblatt"
+horizontal_alignment = 2
+
+[node name="playtesters" type="Label" parent="Base/menus/credits"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+text = "Playtesters:"
+
+[node name="playtesters_list" type="VBoxContainer" parent="Base/menus/credits"]
+layout_mode = 2
+
+[node name="playtester1" type="Label" parent="Base/menus/credits/playtesters_list"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+theme_override_font_sizes/font_size = 16
+text = "playtester 1"
+horizontal_alignment = 2
+
+[node name="playtester2" type="Label" parent="Base/menus/credits/playtesters_list"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+theme_override_font_sizes/font_size = 16
+text = "playtester 2"
+horizontal_alignment = 2
+
+[node name="playtester3" type="Label" parent="Base/menus/credits/playtesters_list"]
+layout_mode = 2
+theme = ExtResource("1_4geyq")
+theme_override_font_sizes/font_size = 16
+text = "playtester 3"
+horizontal_alignment = 2
+
+[node name="back_button" type="TextureButton" parent="Base"]
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 370.0
+offset_right = 31.0
+offset_bottom = 400.0
+texture_normal = SubResource("AtlasTexture_ygnii")
+texture_pressed = SubResource("AtlasTexture_n8st6")
+texture_hover = SubResource("AtlasTexture_dkbde")
+stretch_mode = 0
+
+[connection signal="pressed" from="Base/main_settings_list/Visual" to="." method="open_settings_menu" binds= [0]]
+[connection signal="pressed" from="Base/main_settings_list/Audio" to="." method="open_settings_menu" binds= [1]]
+[connection signal="pressed" from="Base/main_settings_list/Gameplay" to="." method="open_settings_menu" binds= [2]]
+[connection signal="pressed" from="Base/main_settings_list/Credits" to="." method="open_settings_menu" binds= [3]]
+[connection signal="pressed" from="Base/back_button" to="." method="close_settings_menus"]
