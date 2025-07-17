@@ -88,6 +88,7 @@ grow_vertical = 2
 script = ExtResource("1_vqv5w")
 
 [node name="grimoire_base" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = -93.0
 offset_top = -40.0
