@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1e38np4ksjvy"]
+
+[ext_resource type="Script" uid="uid://rvxdslpsa41y" path="res://Scripts/UI/Grimoire/recipes.gd" id="1_3dc5o"]
+[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="2_ulany"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7srpm"]
+atlas = ExtResource("2_ulany")
+region = Rect2(611, 83, 42, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xs75"]
+atlas = ExtResource("2_ulany")
+region = Rect2(192, 378, 16, 22)
+
+[node name="recipes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3dc5o")
+
+[node name="recipes_page1" type="TextureRect" parent="."]
+offset_left = 134.0
+offset_top = 103.0
+offset_right = 499.0
+offset_bottom = 518.0
+texture = SubResource("AtlasTexture_7srpm")
+
+[node name="red_ribbon" type="TextureRect" parent="recipes_page1"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = -1.0
+offset_right = 68.0
+offset_bottom = 68.0
+texture = SubResource("AtlasTexture_8xs75")
+expand_mode = 1
+
+[node name="recipes_page2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 103.0
+offset_right = 946.0
+offset_bottom = 518.0
+texture = SubResource("AtlasTexture_7srpm")
+flip_h = true

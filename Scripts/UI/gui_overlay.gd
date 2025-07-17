@@ -2,20 +2,19 @@ extends Control
 
 var grimoire_open: bool
 var dialogue_open: bool
-var catalogue_open: bool
-var recipes_open: bool
 
 @onready var grimoire_button_base: ColorRect = $grimoire_button_background
 
 @onready var grimoire_base: ColorRect = $grimoire_base
 @onready var table_of_contents: Label = $"grimoire_base/Table of Contents"
 
+@onready var page_button_ribbons: Array
+#@onready var catalogue_button: TextureButton = $grimoire_base/catalogue_button
+#@onready var recipes_button: TextureButton = $grimoire_base/recipes_button
 
-@onready var catalogue_button: TextureButton = $grimoire_base/catalogue_button
-@onready var recipes_button: TextureButton = $grimoire_base/recipes_button
-
-@onready var catalogue_base: TextureRect = $grimoire_base/catalogue
-@onready var recipes_base: TextureRect = $grimoire_base/recipes
+@onready var pages: Array
+@onready var catalogue = $grimoire_base/pages/Catalogue
+@onready var recipes = $grimoire_base/pages/recipes
 
 @onready var dialogue_base: ColorRect = $dialogue_base
 
@@ -32,13 +31,18 @@ signal dialogue_ended
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# first we set our arrays
 	player_responses_buttons = player_responses_box.get_children()
+	pages = $grimoire_base/pages.get_children()
+	page_button_ribbons = $grimoire_base/grimoire_initial_image/page_buttons.get_children()
+	
+	# next we connect our signals
 	Global.talk_to.connect(open_dialogue)
-	#generic_npc.talk_button_pressed.connect(open_dialogue) # how to connect the signal?
 	dialogue_ended.connect(Global.emit_done_speaking)
-	close_grimoire()
+	
+	# next we close all menus, just in case
 	close_dialogue()
-	close_catalogue()
+	close_grimoire()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -49,10 +53,10 @@ func _process(delta: float) -> void:
 			close_grimoire()
 		if Global.current_open_menu.back() == dialogue_base.name and dialogue_open:
 			close_dialogue()
-		if Global.current_open_menu.back() == catalogue_base.name and catalogue_open:
-			close_catalogue()
-		if Global.current_open_menu.back() == recipes_base.name and recipes_open:
-			close_recipes()
+		if Global.current_open_menu.back() == catalogue.name and catalogue.visible:
+			close_grimoire_pages()
+		if Global.current_open_menu.back() == recipes.name and recipes.visible:
+			close_grimoire_pages()
 	
 	# opening & closing grimoire via "access_grimoire"
 	if Input.is_action_just_pressed("access_grimoire"):
@@ -62,16 +66,16 @@ func _process(delta: float) -> void:
 			open_grimoire()
 			
 	if Input.is_action_just_pressed("access_catalogue") and grimoire_open:			
-		if catalogue_open:
-			close_catalogue()
+		if catalogue.visible:
+			close_grimoire_pages()
 		else:
-			open_catalogue()
+			open_grimoire_page(0)
 			
 	if Input.is_action_just_pressed("access_recipes") and grimoire_open:
-		if recipes_open:
-			close_recipes()
+		if recipes.visible:
+			close_grimoire_pages()
 		else: 
-			open_recipes()
+			open_grimoire_page(1)
 			
 		
 	if Input.is_action_just_pressed("dialogue_option_1"):
@@ -100,53 +104,12 @@ func open_grimoire():
 	Global.current_open_menu.append(grimoire_base.name)
 	
 func close_grimoire():
+	close_grimoire_pages()
+
 	grimoire_base.visible = false
 	grimoire_open = false
 	Global.current_open_menu.erase(grimoire_base.name)
 	
-func open_catalogue() -> void:
-	if recipes_open:
-		close_recipes()
-	table_of_contents.visible = false
-	catalogue_button.visible = false
-	#recipes_button.visible = false
-	
-	
-	
-	catalogue_open = true
-	catalogue_base.visible = true
-	Global.current_open_menu.append(catalogue_base.name)
-	
-	
-func close_catalogue():
-	table_of_contents.visible = true
-	catalogue_button.visible = true
-	recipes_button.visible = true
-	
-	catalogue_open = false
-	catalogue_base.visible = false
-	Global.current_open_menu.erase(catalogue_base.name)
-	
-func open_recipes() -> void:
-	if catalogue_open:
-		close_catalogue()
-	table_of_contents.visible = false
-	catalogue_button.visible = false
-	recipes_button.visible = false
-	
-	recipes_open = true
-	recipes_base.visible = true
-	Global.current_open_menu.append(recipes_base.name)
-	
-	
-func close_recipes() -> void:
-	table_of_contents.visible = true
-	catalogue_button.visible = true
-	recipes_button.visible = true
-	
-	recipes_open = false
-	recipes_base.visible = false
-	Global.current_open_menu.erase(recipes_base.name)
 	
 func open_dialogue(speaking_with: NPC):
 	dialogue_open = true
@@ -269,3 +232,25 @@ func _on_option_c_pressed() -> void:
 
 func _on_option_d_pressed() -> void:
 	option_chosen.emit(3)
+
+func open_grimoire_page(i: int):
+	#ensure any open grimoire pages are closed
+	close_grimoire_pages()
+	
+	# make the table of contents and any page buttons invisible
+	table_of_contents.visible = false
+	for button in page_button_ribbons:
+		button.visible = false
+	
+	#open the requested page
+	pages[i].open()
+	
+func close_grimoire_pages():
+	table_of_contents.visible = true
+	for button in page_button_ribbons:
+		button.visible = true
+
+	for page in pages:
+		if page.visible:
+			page.close()
+	

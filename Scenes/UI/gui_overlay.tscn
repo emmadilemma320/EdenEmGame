@@ -5,7 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Assets/Entities/chomp_idle.png" id="3_31o6n"]
 [ext_resource type="Theme" uid="uid://csdiw7pvt6axe" path="res://Themes/grimoire_theme.tres" id="3_lbv3i"]
 [ext_resource type="Theme" uid="uid://e24781o5joi4" path="res://Themes/dialogue_theme.tres" id="4_d5ngb"]
+[ext_resource type="PackedScene" uid="uid://cogqmfjhhvpq2" path="res://Scenes/UI/Grimoire/catalogue.tscn" id="4_lfko8"]
 [ext_resource type="Texture2D" uid="uid://d0tbe64g80a2m" path="res://Assets/UI/inventory-slot.png" id="5_4ewqb"]
+[ext_resource type="PackedScene" uid="uid://c1e38np4ksjvy" path="res://Scenes/UI/Grimoire/recipes.tscn" id="5_fxpvh"]
 [ext_resource type="Theme" uid="uid://e6bvrbsl0oqo" path="res://Themes/nameplate_theme.tres" id="5_lbv3i"]
 [ext_resource type="Texture2D" uid="uid://db6utsfxwwvul" path="res://Assets/Character/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="5_oo5r5"]
 [ext_resource type="PackedScene" uid="uid://dsegb2otwpffd" path="res://Scenes/UI/settings.tscn" id="9_gdvwd"]
@@ -29,14 +31,6 @@ region = Rect2(330, 272, 22, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbv3i"]
 atlas = ExtResource("1_2vo66")
 region = Rect2(206, 272, 18, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wrmvy"]
-atlas = ExtResource("1_2vo66")
-region = Rect2(513, 17, 47, 62)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tjw04"]
-atlas = ExtResource("1_2vo66")
-region = Rect2(320, 379, 16, 22)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mmlsp"]
 atlas = ExtResource("1_2vo66")
@@ -88,7 +82,6 @@ grow_vertical = 2
 script = ExtResource("1_vqv5w")
 
 [node name="grimoire_base" type="ColorRect" parent="."]
-visible = false
 layout_mode = 0
 offset_left = -93.0
 offset_top = -40.0
@@ -105,57 +98,34 @@ offset_right = 1049.0
 offset_bottom = 565.0
 texture = SubResource("AtlasTexture_bvooe")
 
-[node name="catalogue_button" type="TextureButton" parent="grimoire_base"]
+[node name="page_buttons" type="Control" parent="grimoire_base/grimoire_initial_image"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="catalogue_button" type="TextureButton" parent="grimoire_base/grimoire_initial_image/page_buttons"]
 layout_mode = 0
-offset_left = 971.0
-offset_top = 128.0
-offset_right = 994.0
-offset_bottom = 144.0
+offset_left = 863.0
+offset_top = 59.0
+offset_right = 886.0
+offset_bottom = 75.0
 scale = Vector2(3, 3)
 theme = ExtResource("3_lbv3i")
 texture_normal = SubResource("AtlasTexture_lfko8")
 texture_pressed = SubResource("AtlasTexture_fxpvh")
 texture_hover = SubResource("AtlasTexture_ej8gj")
 
-[node name="recipes_button" type="TextureButton" parent="grimoire_base"]
+[node name="recipes_button" type="TextureButton" parent="grimoire_base/grimoire_initial_image/page_buttons"]
 layout_mode = 0
-offset_left = 990.0
-offset_top = 187.0
-offset_right = 1009.0
-offset_bottom = 203.0
+offset_left = 882.0
+offset_top = 118.0
+offset_right = 901.0
+offset_bottom = 134.0
 scale = Vector2(3, 3)
 theme = ExtResource("3_lbv3i")
 texture_normal = SubResource("AtlasTexture_lbv3i")
 texture_pressed = SubResource("AtlasTexture_lbv3i")
 texture_hover = SubResource("AtlasTexture_lbv3i")
-
-[node name="catalogue" type="TextureRect" parent="grimoire_base"]
-visible = false
-layout_mode = 0
-offset_left = 95.0
-offset_top = 18.0
-offset_right = 444.0
-offset_bottom = 411.0
-texture = SubResource("AtlasTexture_wrmvy")
-expand_mode = 1
-flip_h = true
-
-[node name="catalogue_green_ribbon" type="TextureRect" parent="grimoire_base/catalogue"]
-layout_mode = 0
-offset_left = 38.0
-offset_top = -1.0
-offset_right = 78.0
-offset_bottom = 39.0
-texture = SubResource("AtlasTexture_tjw04")
-
-[node name="catalogue_pg2" type="TextureRect" parent="grimoire_base/catalogue"]
-layout_mode = 0
-offset_left = 440.0
-offset_top = 6.0
-offset_right = 789.0
-offset_bottom = 399.0
-texture = SubResource("AtlasTexture_wrmvy")
-expand_mode = 1
 
 [node name="recipes" type="TextureRect" parent="grimoire_base"]
 visible = false
@@ -216,6 +186,28 @@ theme_override_colors/font_outline_color = Color(0.992157, 0.819608, 0.47451, 1)
 theme_override_colors/font_color = Color(0.709804, 0.34902, 0.266667, 1)
 text = "Recipes ........................ 5"
 flat = true
+
+[node name="pages" type="Control" parent="grimoire_base"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Catalogue" parent="grimoire_base/pages" instance=ExtResource("4_lfko8")]
+visible = false
+layout_mode = 1
+offset_left = 140.87
+offset_top = -0.869553
+offset_right = 140.87
+offset_bottom = -0.869568
+scale = Vector2(0.8, 0.8)
+
+[node name="recipes" parent="grimoire_base/pages" instance=ExtResource("5_fxpvh")]
+visible = false
+layout_mode = 1
+offset_left = 27.8261
+offset_top = -34.7826
+offset_right = 27.8261
+offset_bottom = -34.7826
 
 [node name="dialogue_base" type="ColorRect" parent="."]
 visible = false
@@ -402,10 +394,10 @@ stretch_mode = 0
 visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="grimoire_base/catalogue_button" to="." method="open_catalogue"]
-[connection signal="pressed" from="grimoire_base/recipes_button" to="." method="open_recipes"]
-[connection signal="pressed" from="grimoire_base/Table of Contents/VBoxContainer/Catalogue" to="." method="open_catalogue"]
-[connection signal="pressed" from="grimoire_base/Table of Contents/VBoxContainer/Recipes" to="." method="open_recipes"]
+[connection signal="pressed" from="grimoire_base/grimoire_initial_image/page_buttons/catalogue_button" to="." method="open_grimoire_page" binds= [0]]
+[connection signal="pressed" from="grimoire_base/grimoire_initial_image/page_buttons/recipes_button" to="." method="open_grimoire_page" binds= [1]]
+[connection signal="pressed" from="grimoire_base/Table of Contents/VBoxContainer/Catalogue" to="." method="open_grimoire_page" binds= [0]]
+[connection signal="pressed" from="grimoire_base/Table of Contents/VBoxContainer/Recipes" to="." method="open_grimoire_page" binds= [1]]
 [connection signal="pressed" from="dialogue_base/dialogue_base/dialogue_background/player_responses/option_a" to="." method="_on_option_a_pressed"]
 [connection signal="pressed" from="dialogue_base/dialogue_base/dialogue_background/player_responses/option_b" to="." method="_on_option_b_pressed"]
 [connection signal="pressed" from="dialogue_base/dialogue_base/dialogue_background/player_responses/option_c" to="." method="_on_option_c_pressed"]
