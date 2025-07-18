@@ -1,6 +1,8 @@
 extends Node
 
-@export var discovered: Array[String]
+@export var discovered_npcs: Array[String]
+@export var discovered_resources: Array[String]
+@export var discovered_recipes: Array[String]
 @onready var current_scene = $"."
 @onready var current_open_menu: Array[String]
 
@@ -15,8 +17,8 @@ signal scene_change_signal(String, Vector2)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	discovered.append("amanita")
-	discovered.append("chom bomb")
+	discovered_resources.append("amanita")
+	discovered_npcs.append("chom bomb")
 	current_open_menu.append("none")
 	
 	#chom_bomb.talk_button_pressed.connect(test)

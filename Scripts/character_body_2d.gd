@@ -48,8 +48,8 @@ func _physics_process(delta: float) -> void:
 func collect(item, num) -> int:
 	var num_left = inventory.insert(item, num)
 	if num_left == 0:
-		if !Global.discovered.has(item.name):
-			Global.discovered.append(item.name)
+		if !Global.discovered_resources.has(item.name):
+			Global.discovered_resources.append(item.name)
 	return num_left
 
 func drop(slot, amt: int):

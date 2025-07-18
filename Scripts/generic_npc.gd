@@ -14,7 +14,7 @@ signal gifting_npc(NPC)
 
 func _ready():
 	name = character.name
-	nametag.text = character.name if Global.discovered.has(character.name) else "???"
+	nametag.text = character.name if Global.discovered_npcs.has(character.name) else "???"
 	gifting_npc.connect(Global.waiting_for_gift)
 	
 func _process(_delta):
@@ -25,8 +25,8 @@ func _on_talk_button_pressed() -> void:
 	#if the player has never talked to this npc, add their name to the discovered list
 	# and update their nametag
 	
-	if !Global.discovered.has(character.name):
-		Global.discovered.append(character.name)
+	if !Global.discovered_npcs.has(character.name):
+		Global.discovered_npcs.append(character.name)
 		nametag.text = character.name
 		
 	# set values 
