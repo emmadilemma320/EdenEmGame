@@ -110,6 +110,7 @@ text = "Visual Setting 3"
 
 [node name="audio_settings" type="VBoxContainer" parent="Base/menus"]
 visible = false
+layout_mode = 0
 offset_left = 410.0
 offset_top = 164.0
 offset_right = 660.0
@@ -133,6 +134,7 @@ text = "Audio Setting 3"
 
 [node name="gameplay_settings" type="VBoxContainer" parent="Base/menus"]
 visible = false
+layout_mode = 0
 offset_left = 410.0
 offset_top = 164.0
 offset_right = 660.0
@@ -156,6 +158,7 @@ text = "Gameplay Setting 3"
 
 [node name="credits" type="VBoxContainer" parent="Base/menus"]
 visible = false
+layout_mode = 0
 offset_left = 410.0
 offset_top = 164.0
 offset_right = 660.0

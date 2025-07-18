@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://cghu7n2y2hci3"]
+[gd_scene load_steps=13 format=3 uid="uid://cghu7n2y2hci3"]
 
 [ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="1_i2xx2"]
 [ext_resource type="Script" uid="uid://bs4kdvibkd4wd" path="res://Scripts/UI/main_menu.gd" id="1_o14dv"]
 [ext_resource type="Theme" uid="uid://dbgpgkqjox11x" path="res://Themes/menu_theme.tres" id="2_o14dv"]
+[ext_resource type="PackedScene" uid="uid://dsegb2otwpffd" path="res://Scenes/UI/settings.tscn" id="4_u7lva"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u7lva"]
 atlas = ExtResource("1_i2xx2")
@@ -89,12 +90,16 @@ texture_normal = SubResource("AtlasTexture_o14dv")
 texture_pressed = SubResource("AtlasTexture_gih0s")
 stretch_mode = 0
 
-[node name="Settings Button" type="TextureButton" parent="."]
+[node name="Settings" parent="." instance=ExtResource("4_u7lva")]
+visible = false
+layout_mode = 1
+
+[node name="Settings_Button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1019.0
-offset_top = 436.0
-offset_right = 1059.0
-offset_bottom = 476.0
+offset_left = 1027.0
+offset_top = 449.0
+offset_right = 1067.0
+offset_bottom = 489.0
 texture_normal = SubResource("AtlasTexture_k33u3")
 texture_pressed = SubResource("AtlasTexture_lrjdf")
 texture_hover = SubResource("AtlasTexture_wqme5")
@@ -102,3 +107,4 @@ stretch_mode = 0
 
 [connection signal="pressed" from="Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Exit Button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Settings_Button" to="Settings" method="_on_settings_button_pressed"]
