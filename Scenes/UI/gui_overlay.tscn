@@ -1,8 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://bk1ic2jri883i"]
+[gd_scene load_steps=19 format=3 uid="uid://bk1ic2jri883i"]
 
 [ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="1_2vo66"]
 [ext_resource type="Script" uid="uid://iwqfrvwvxx51" path="res://Scripts/UI/gui_overlay.gd" id="1_vqv5w"]
-[ext_resource type="Theme" uid="uid://csdiw7pvt6axe" path="res://Themes/grimoire_theme.tres" id="3_lbv3i"]
+[ext_resource type="Theme" uid="uid://csdiw7pvt6axe" path="res://Themes/Grimoire/grimoire_theme.tres" id="3_lbv3i"]
 [ext_resource type="PackedScene" uid="uid://cogqmfjhhvpq2" path="res://Scenes/UI/Grimoire/catalogue.tscn" id="4_lfko8"]
 [ext_resource type="PackedScene" uid="uid://c1e38np4ksjvy" path="res://Scenes/UI/Grimoire/recipes.tscn" id="5_fxpvh"]
 [ext_resource type="PackedScene" uid="uid://dsegb2otwpffd" path="res://Scenes/UI/settings.tscn" id="9_gdvwd"]
@@ -27,14 +27,6 @@ region = Rect2(330, 272, 22, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbv3i"]
 atlas = ExtResource("1_2vo66")
 region = Rect2(206, 272, 18, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mmlsp"]
-atlas = ExtResource("1_2vo66")
-region = Rect2(611, 83, 42, 58)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i7rqk"]
-atlas = ExtResource("1_2vo66")
-region = Rect2(192, 378, 16, 22)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vqv5w"]
 atlas = ExtResource("1_2vo66")
@@ -70,21 +62,19 @@ grow_vertical = 2
 script = ExtResource("1_vqv5w")
 
 [node name="grimoire_base" type="ColorRect" parent="."]
-visible = false
 layout_mode = 0
-offset_left = -93.0
-offset_top = -40.0
-offset_right = 1058.0
-offset_bottom = 611.0
+offset_right = 1007.0
+offset_bottom = 563.0
 scale = Vector2(1.15, 1.15)
 color = Color(0, 0, 0, 0.447059)
 
 [node name="grimoire_initial_image" type="TextureRect" parent="grimoire_base"]
 layout_mode = 0
-offset_left = 108.0
-offset_top = 69.0
-offset_right = 1049.0
-offset_bottom = 565.0
+offset_left = 18.4348
+offset_top = 14.2174
+offset_right = 959.435
+offset_bottom = 510.217
+scale = Vector2(1.03478, 1.10435)
 texture = SubResource("AtlasTexture_bvooe")
 
 [node name="page_buttons" type="Control" parent="grimoire_base/grimoire_initial_image"]
@@ -116,38 +106,13 @@ texture_normal = SubResource("AtlasTexture_lbv3i")
 texture_pressed = SubResource("AtlasTexture_lbv3i")
 texture_hover = SubResource("AtlasTexture_lbv3i")
 
-[node name="recipes" type="TextureRect" parent="grimoire_base"]
-visible = false
-layout_mode = 0
-offset_left = 73.0
-offset_top = 22.0
-offset_right = 438.0
-offset_bottom = 437.0
-texture = SubResource("AtlasTexture_mmlsp")
-
-[node name="map_pg2" type="TextureRect" parent="grimoire_base/recipes"]
-layout_mode = 0
-offset_left = 447.0
-offset_right = 812.0
-offset_bottom = 415.0
-texture = SubResource("AtlasTexture_mmlsp")
-flip_h = true
-
-[node name="TextureRect" type="TextureRect" parent="grimoire_base/recipes"]
-layout_mode = 0
-offset_left = 28.0
-offset_top = -1.0
-offset_right = 68.0
-offset_bottom = 68.0
-texture = SubResource("AtlasTexture_i7rqk")
-expand_mode = 1
-
 [node name="Table of Contents" type="Label" parent="grimoire_base"]
 layout_mode = 0
-offset_left = 227.0
-offset_top = 118.0
-offset_right = 469.0
-offset_bottom = 140.0
+offset_left = 137.435
+offset_top = 63.2174
+offset_right = 379.435
+offset_bottom = 85.2174
+scale = Vector2(1.03478, 1.10435)
 theme = ExtResource("3_lbv3i")
 theme_override_font_sizes/font_size = 24
 text = "Table of Contents"
@@ -178,11 +143,13 @@ flat = true
 
 [node name="pages" type="Control" parent="grimoire_base"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -88.6957
+offset_top = -53.0435
+offset_right = -48.6957
+offset_bottom = -13.0435
+scale = Vector2(1.03478, 1.10435)
 
 [node name="Catalogue" parent="grimoire_base/pages" instance=ExtResource("4_lfko8")]
-visible = false
 layout_mode = 1
 offset_left = 140.87
 offset_top = -0.869553

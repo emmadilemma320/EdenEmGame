@@ -10,6 +10,6 @@ margin = Rect2(0, 0, 0, 1)
 
 [resource]
 script = ExtResource("1_d3ikk")
-name = "apple"
+name = "Apple"
 texture = SubResource("AtlasTexture_02cfe")
 metadata/_custom_type_script = "uid://4tdjcv0tju4u"

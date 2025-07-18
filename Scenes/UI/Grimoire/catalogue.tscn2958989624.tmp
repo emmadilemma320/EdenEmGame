@@ -49,16 +49,20 @@ texture = SubResource("AtlasTexture_cohil")
 
 [node name="entries" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_left = 87.0
-offset_top = 134.0
-offset_right = 127.0
-offset_bottom = 174.0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="grid" type="GridContainer" parent="entries"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 9.35
-anchor_bottom = 9.975
+anchor_left = 0.097
+anchor_top = 0.23
+anchor_right = 0.097
+anchor_bottom = 0.23
+offset_left = 108.12
+offset_top = 139.8
+offset_right = 429.12
+offset_bottom = 511.8
 theme_override_constants/h_separation = 150
 theme_override_constants/v_separation = 75
 columns = 2

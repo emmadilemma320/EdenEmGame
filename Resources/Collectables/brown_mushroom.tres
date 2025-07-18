@@ -15,7 +15,7 @@ margin = Rect2(1, 1, 0, 0)
 
 [resource]
 script = ExtResource("1_184s3")
-name = "brown mushroom"
+name = "Brown Mushroom"
 texture = SubResource("AtlasTexture_r51aw")
 in_world_texture = SubResource("AtlasTexture_k7le5")
 metadata/_custom_type_script = "uid://4tdjcv0tju4u"

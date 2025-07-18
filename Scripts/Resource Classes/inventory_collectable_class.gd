@@ -8,4 +8,7 @@ class_name InventoryCollectable
 @export var in_world_texture: Texture2D
 
 func _to_string() -> String:
-	return  name
+	return name
+
+func return_name() -> String:
+	return name

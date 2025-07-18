@@ -15,7 +15,7 @@ margin = Rect2(0, 1, 0, 0)
 
 [resource]
 script = ExtResource("1_gmey1")
-name = "berry"
+name = "Berry"
 texture = SubResource("AtlasTexture_44jky")
 in_world_texture = SubResource("AtlasTexture_0jcht")
 metadata/_custom_type_script = "uid://4tdjcv0tju4u"

@@ -17,8 +17,8 @@ signal scene_change_signal(String, Vector2)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	discovered_collectables.append("amanita")
-	discovered_npcs.append("chom bomb")
+	discovered_collectables = ["Amanita", "Apple", "Book"]
+	discovered_npcs.append("Chom Bomb")
 	current_open_menu.append("none")
 	
 	#chom_bomb.talk_button_pressed.connect(test)
