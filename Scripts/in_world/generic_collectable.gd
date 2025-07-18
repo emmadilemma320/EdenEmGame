@@ -15,7 +15,7 @@ const STACK_LIMIT: int = 99
 @onready var amount_label: Label = $item_amount
 
 func _ready():
-	label.text = inventory_self.name if Global.discovered_resources.has(inventory_self.name) else "???"
+	label.text = inventory_self.name if Global.discovered_collectables.has(inventory_self.name) else "???"
 	if has_unique_sprite:
 		sprite.visible = false
 	elif inventory_self.in_world_texture != null:
@@ -30,7 +30,7 @@ func _ready():
 		amount_label.visible = true
 
 func _process(delta):
-	if Global.discovered_resources.has(inventory_self.name) and label.text != inventory_self.name:
+	if Global.discovered_collectables.has(inventory_self.name) and label.text != inventory_self.name:
 		label.text = inventory_self.name
 	if player_in_area and Input.is_action_just_pressed("item_pick_up"):
 		# collect returns the amount from the stack that could not be added to player inventory

@@ -21,6 +21,8 @@ extends Panel
 @onready var inventory_ui = self.get_parent().get_parent().get_parent()
 @onready var self_index: int # it's own index in the list of slots
 
+var currently_waiting_on_drop: bool
+var currently_waiting_on_trash: bool
 # gifting
 @export var gifting_mode: bool = false
 signal gift_chosen(gift: int)
@@ -51,9 +53,18 @@ func _on_drop_down_trigger_pressed() -> void:
 		open_drop_down()
 
 func _on_drop_button_pressed() -> void:
-	drop_amount_line.visible = true
-	var amount: int = int(await drop_amount_line.text_submitted)
+	if currently_waiting_on_trash:
+		return
 	
+	var amount: int = 1
+	if !currently_waiting_on_drop:
+		currently_waiting_on_drop = true
+		
+		drop_amount_line.visible = true
+		amount = int(await drop_amount_line.text_submitted)
+	else:
+		currently_waiting_on_drop = false
+
 	drop_amount_line.visible = false
 	drop_amount_line.text = ""
 	
@@ -61,11 +72,20 @@ func _on_drop_button_pressed() -> void:
 	close_drop_down()
 
 func _on_trash_button_pressed() -> void:
-	trash_amount_line.visible = true
-	var amount: int = int(await trash_amount_line.text_submitted)
-	
-	trash_amount_line.visible = false
-	trash_amount_line.text = ""
+	if currently_waiting_on_drop:
+		return
+		
+	var amount: int = 1
+	if !currently_waiting_on_trash:
+		currently_waiting_on_trash = true
+		
+		trash_amount_line.visible = true
+		amount = int(await trash_amount_line.text_submitted)
+		
+		trash_amount_line.visible = false
+		trash_amount_line.text = ""
+	else:
+		currently_waiting_on_trash = false
 	
 	inventory_ui.trash(self_index, amount)
 	close_drop_down()
@@ -93,6 +113,8 @@ func close_drop_down():
 	drop_amount_line.visible = false
 	trash_amount_line.visible = false
 	drop_down_open = false
+	currently_waiting_on_drop = false
+	currently_waiting_on_trash = false
 
 func open_drop_down():
 	Global.current_open_menu.append(name)
