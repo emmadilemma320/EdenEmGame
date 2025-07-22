@@ -22,26 +22,22 @@ script = ExtResource("1_3dc5o")
 
 [node name="recipes_page1" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 134.0
-offset_top = 103.0
-offset_right = 499.0
-offset_bottom = 518.0
+offset_right = 350.0
+offset_bottom = 400.0
 texture = SubResource("AtlasTexture_7srpm")
-
-[node name="red_ribbon" type="TextureRect" parent="recipes_page1"]
-layout_mode = 0
-offset_left = 28.0
-offset_top = -1.0
-offset_right = 68.0
-offset_bottom = 68.0
-texture = SubResource("AtlasTexture_8xs75")
-expand_mode = 1
 
 [node name="recipes_page2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 581.0
-offset_top = 103.0
-offset_right = 946.0
-offset_bottom = 518.0
+offset_left = 450.0
+offset_right = 800.0
+offset_bottom = 400.0
 texture = SubResource("AtlasTexture_7srpm")
 flip_h = true
+
+[node name="red_ribbon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 90.0
+offset_bottom = 60.0
+texture = SubResource("AtlasTexture_8xs75")
+expand_mode = 1

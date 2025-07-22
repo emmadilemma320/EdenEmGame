@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://dd0xj2ra1cvro"]
+
+[ext_resource type="Script" uid="uid://b4mf7f6ryj2f6" path="res://Scripts/UI/Grimoire/address_book_entry.gd" id="1_dmyqq"]
+[ext_resource type="Texture2D" uid="uid://d0tbe64g80a2m" path="res://Assets/UI/inventory-slot.png" id="2_p53bp"]
+[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="3_vlmop"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_botxy"]
+atlas = ExtResource("3_vlmop")
+region = Rect2(64, 32, 16, 16)
+
+[node name="Address_Book_Entry" type="Control"]
+layout_mode = 3
+anchor_right = 0.053
+anchor_bottom = 0.12
+offset_right = -0.0560036
+offset_bottom = 0.239998
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dmyqq")
+
+[node name="portrait_background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+texture = ExtResource("2_p53bp")
+
+[node name="CenterContainer" type="CenterContainer" parent="portrait_background"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 55.0
+offset_bottom = 55.0
+
+[node name="item_portrait" type="TextureRect" parent="portrait_background/CenterContainer"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+texture = SubResource("AtlasTexture_botxy")
+stretch_mode = 1
+
+[node name="description_background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_right = 175.0
+offset_bottom = 60.0
+texture = ExtResource("2_p53bp")
+
+[node name="description" type="Label" parent="description_background"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 110.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 8
+text = "Lorem ipsum iajbregb
+aerigba;krejb  piaeruhg a;eiohurgpi aigouthre g  ia iap pei agpia "
+autowrap_mode = 2
+clip_text = true
+
+[node name="nameplate" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 60.0
+offset_bottom = 76.0
+texture = ExtResource("2_p53bp")
+
+[node name="item_name" type="Label" parent="nameplate"]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 10
+text = "Amanita"
+horizontal_alignment = 1
+vertical_alignment = 1

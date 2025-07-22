@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ce8nwnxv8ncui" path="res://Assets/Character/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes018.png" id="5_5r4a0"]
 [ext_resource type="Texture2D" uid="uid://weo4vens86wd" path="res://Assets/Character/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes019.png" id="6_t7hx0"]
 [ext_resource type="Texture2D" uid="uid://bybmf8jlids5e" path="res://Assets/Character/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes071.png" id="6_uf7m8"]
-[ext_resource type="Script" uid="uid://b1hkwnv6ecb6b" path="res://Scenes/emoter.gd" id="7_m75th"]
+[ext_resource type="Script" uid="uid://b1hkwnv6ecb6b" path="res://Scripts/UI/emoter.gd" id="7_m75th"]
 [ext_resource type="Texture2D" uid="uid://dul4r8uhwir2c" path="res://Assets/Character/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes068.png" id="10_h5w8q"]
 [ext_resource type="Texture2D" uid="uid://3wd6xkjukmkc" path="res://Assets/Character/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes050.png" id="12_4vhrs"]
 [ext_resource type="Texture2D" uid="uid://6xwdc8cy3yjt" path="res://Assets/Character/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes027.png" id="13_5iyfj"]
