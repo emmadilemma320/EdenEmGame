@@ -10,6 +10,7 @@ extends Control
 @onready var pages: Array
 @onready var catalogue = $grimoire_base/pages/Catalogue
 @onready var recipes = $grimoire_base/pages/recipes
+@onready var address_book = $"grimoire_base/pages/address book"
 
 @onready var page_button_ribbons: Array
 
@@ -42,9 +43,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("close_current_menu"):
 		if Global.current_open_menu.back() == grimoire_base.name and grimoire_base.visible:
 			close_grimoire()
-		if Global.current_open_menu.back() == catalogue.name and catalogue.visible:
-			close_grimoire_pages()
-		if Global.current_open_menu.back() == recipes.name and recipes.visible:
+		if Global.current_open_menu.back() == "grimoire page":
 			close_grimoire_pages()
 	
 	# opening & closing grimoire via "access_grimoire"
@@ -65,6 +64,13 @@ func _process(delta: float) -> void:
 			close_grimoire_pages()
 		else: 
 			open_grimoire_page(1)
+			
+	if Input.is_action_just_pressed("access_address_book") and grimoire_base.visible:
+		if address_book.visible:
+			close_grimoire_pages()
+		else: 
+			open_grimoire_page(2)
+	
 	
 
 
@@ -97,6 +103,8 @@ func open_grimoire_page(i: int):
 	#ensure any open grimoire pages are closed
 	close_grimoire_pages()
 	
+	Global.current_open_menu.append("grimoire page")
+	
 	# make the table of contents and any page buttons invisible
 	table_of_contents.visible = false
 	for button in page_button_ribbons:
@@ -106,6 +114,7 @@ func open_grimoire_page(i: int):
 	pages[i].open()
 	
 func close_grimoire_pages():
+	Global.current_open_menu.erase("grimoire page")
 	table_of_contents.visible = true
 	for button in page_button_ribbons:
 		button.visible = true

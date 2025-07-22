@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bk1ic2jri883i"]
+[gd_scene load_steps=23 format=3 uid="uid://bk1ic2jri883i"]
 
 [ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="1_2vo66"]
 [ext_resource type="Script" uid="uid://iwqfrvwvxx51" path="res://Scripts/UI/gui_overlay.gd" id="1_vqv5w"]
@@ -27,7 +27,19 @@ region = Rect2(330, 272, 22, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbv3i"]
 atlas = ExtResource("1_2vo66")
-region = Rect2(206, 272, 18, 16)
+region = Rect2(209, 272, 15, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdvwd"]
+atlas = ExtResource("1_2vo66")
+region = Rect2(273, 272, 15, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrmvy"]
+atlas = ExtResource("1_2vo66")
+region = Rect2(275, 272, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjw04"]
+atlas = ExtResource("1_2vo66")
+region = Rect2(275, 272, 13, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vqv5w"]
 atlas = ExtResource("1_2vo66")
@@ -86,9 +98,9 @@ offset_bottom = 40.0
 [node name="catalogue_button" type="TextureButton" parent="grimoire_base/grimoire_initial_image/page_buttons"]
 layout_mode = 0
 offset_left = 863.0
-offset_top = 59.0
-offset_right = 886.0
-offset_bottom = 75.0
+offset_top = 60.0
+offset_right = 885.0
+offset_bottom = 76.0
 scale = Vector2(3, 3)
 theme = ExtResource("3_lbv3i")
 texture_normal = SubResource("AtlasTexture_lfko8")
@@ -98,14 +110,47 @@ texture_hover = SubResource("AtlasTexture_ej8gj")
 [node name="recipes_button" type="TextureButton" parent="grimoire_base/grimoire_initial_image/page_buttons"]
 layout_mode = 0
 offset_left = 882.0
-offset_top = 118.0
+offset_top = 120.0
 offset_right = 901.0
-offset_bottom = 134.0
+offset_bottom = 136.0
 scale = Vector2(3, 3)
 theme = ExtResource("3_lbv3i")
 texture_normal = SubResource("AtlasTexture_lbv3i")
 texture_pressed = SubResource("AtlasTexture_lbv3i")
 texture_hover = SubResource("AtlasTexture_lbv3i")
+
+[node name="address_book_button" type="TextureButton" parent="grimoire_base/grimoire_initial_image/page_buttons"]
+layout_mode = 0
+offset_left = 882.0
+offset_top = 180.0
+offset_right = 901.0
+offset_bottom = 196.0
+scale = Vector2(3, 3)
+theme = ExtResource("3_lbv3i")
+texture_normal = SubResource("AtlasTexture_gdvwd")
+texture_pressed = SubResource("AtlasTexture_wrmvy")
+texture_hover = SubResource("AtlasTexture_tjw04")
+
+[node name="pages" type="GridContainer" parent="grimoire_base"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 6.0
+offset_right = 905.0
+offset_bottom = 409.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+
+[node name="Catalogue" parent="grimoire_base/pages" instance=ExtResource("4_lfko8")]
+visible = false
+layout_mode = 2
+
+[node name="recipes" parent="grimoire_base/pages" instance=ExtResource("5_fxpvh")]
+visible = false
+layout_mode = 2
+
+[node name="address book" parent="grimoire_base/pages" instance=ExtResource("6_lbv3i")]
+visible = false
+layout_mode = 2
 
 [node name="Table of Contents" type="Label" parent="grimoire_base"]
 layout_mode = 0
@@ -142,26 +187,13 @@ theme_override_colors/font_color = Color(0.709804, 0.34902, 0.266667, 1)
 text = "Recipes ........................ 5"
 flat = true
 
-[node name="pages" type="GridContainer" parent="grimoire_base"]
-layout_mode = 0
-offset_left = 104.0
-offset_top = 6.0
-offset_right = 905.0
-offset_bottom = 409.0
-theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 0
-
-[node name="Catalogue" parent="grimoire_base/pages" instance=ExtResource("4_lfko8")]
-visible = false
+[node name="Address Book" type="Button" parent="grimoire_base/Table of Contents/VBoxContainer"]
 layout_mode = 2
-
-[node name="recipes" parent="grimoire_base/pages" instance=ExtResource("5_fxpvh")]
-visible = false
-layout_mode = 2
-
-[node name="address book" parent="grimoire_base/pages" instance=ExtResource("6_lbv3i")]
-visible = false
-layout_mode = 2
+theme = ExtResource("3_lbv3i")
+theme_override_colors/font_outline_color = Color(0.992157, 0.819608, 0.47451, 1)
+theme_override_colors/font_color = Color(0.0745098, 0.137255, 0.4, 1)
+text = "Address Book ............ 7"
+flat = true
 
 [node name="grimoire_button_background" type="ColorRect" parent="."]
 layout_mode = 0
@@ -203,7 +235,9 @@ stretch_mode = 0
 
 [connection signal="pressed" from="grimoire_base/grimoire_initial_image/page_buttons/catalogue_button" to="." method="open_grimoire_page" binds= [0]]
 [connection signal="pressed" from="grimoire_base/grimoire_initial_image/page_buttons/recipes_button" to="." method="open_grimoire_page" binds= [1]]
+[connection signal="pressed" from="grimoire_base/grimoire_initial_image/page_buttons/address_book_button" to="." method="open_grimoire_page" binds= [2]]
 [connection signal="pressed" from="grimoire_base/Table of Contents/VBoxContainer/Catalogue" to="." method="open_grimoire_page" binds= [0]]
 [connection signal="pressed" from="grimoire_base/Table of Contents/VBoxContainer/Recipes" to="." method="open_grimoire_page" binds= [1]]
+[connection signal="pressed" from="grimoire_base/Table of Contents/VBoxContainer/Address Book" to="." method="open_grimoire_page" binds= [2]]
 [connection signal="pressed" from="grimoire_button_background/grimoire_button" to="." method="_on_grimoire_button_pressed"]
 [connection signal="pressed" from="Settings Button" to="Settings" method="_on_settings_button_pressed"]

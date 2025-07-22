@@ -1,15 +1,14 @@
 extends Control
 
-@export var inventory_self: InventoryCollectable
+@export var character: NPC
 	
 func update():
 	
-	if inventory_self != null:
-		$nameplate/item_name.text = inventory_self.name
-		$portrait_background/CenterContainer/item_portrait.texture = inventory_self.texture
-		#$portrait_background/item_portrait.texture.size = 
+	if character != null:
+		$nameplate/item_name.text = character.name
+		$portrait_background/CenterContainer/item_portrait.texture = character.portrait
 	else:
-		print("Error setting inventory self")
+		print("Error setting character picture")
 	
 	
 func return_size() -> Vector2:

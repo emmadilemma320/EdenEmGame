@@ -12,8 +12,6 @@ func _process(delta: float) -> void:
 	
 func open():
 	visible = true
-	Global.current_open_menu.append(name)
 	
 func close():
 	visible = false
-	Global.current_open_menu.erase(name)

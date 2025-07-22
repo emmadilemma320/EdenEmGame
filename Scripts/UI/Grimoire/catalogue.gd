@@ -35,11 +35,9 @@ func open():
 	update()
 	
 	visible = true
-	Global.current_open_menu.append(name)
 	
 func close():
 	visible = false
-	Global.current_open_menu.erase(name)
 
 func update():
 	# First we check what has been added since we last updated 
