@@ -22,6 +22,7 @@ grow_vertical = 2
 script = ExtResource("1_owo8u")
 
 [node name="address_book_pg1" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 350.0
 offset_bottom = 400.0
@@ -30,6 +31,7 @@ expand_mode = 1
 flip_h = true
 
 [node name="address_book_pg2" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 450.0
 offset_right = 800.0

@@ -21,6 +21,7 @@ grow_vertical = 2
 script = ExtResource("1_otuqn")
 
 [node name="catalogue_pg1" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 350.0
 offset_bottom = 400.0
@@ -29,6 +30,7 @@ expand_mode = 1
 flip_h = true
 
 [node name="catalogue_pg2" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 450.0
 offset_right = 800.0
@@ -52,7 +54,6 @@ offset_right = -99.0
 offset_bottom = -74.0
 theme_override_constants/h_separation = 150
 theme_override_constants/v_separation = 75
-columns = 2
 
 [node name="grid2" type="GridContainer" parent="entries"]
 layout_mode = 1

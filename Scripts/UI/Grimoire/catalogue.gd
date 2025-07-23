@@ -69,7 +69,6 @@ func update():
 			print("First entry added: ", collectable_name, " of size ", new_entry.size)
 			$entries/grid1.add_theme_constant_override("h_separation", int(new_entry.return_size().x) + BUFFER)
 			$entries/grid1.add_theme_constant_override("v_separation", int(new_entry.return_size().y) + BUFFER)
-			$entries/grid1.columns = int($entries/grid1.size.x / $entries/grid1.get_theme_constant("h_separation"))
 		entries.add_child(new_entry)
 		print(collectable_name, " added to catalogue")
 	# i do not erase them inside the loop as that can cause issues when iterating
