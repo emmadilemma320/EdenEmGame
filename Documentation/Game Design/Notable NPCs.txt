@@ -5,7 +5,7 @@ Town NPCs:
 	- snail mail carrier
 	- traveling shopkeep (magpie)
 	- banker (potentially a dragon)
-	- librarian (potentially also a dragon)
+	- librarian (potentially also a dragon) (hydra, her different heads are always reading different books and man different checkout desks)
 	- blacksmiths apprentice (you guessed it, dragon)
 	- fire-resistant baker (surprisingly not a dragon this time) (maybe a tiefling or elementals? unsure)
 	- fisher fish (merman/mermaid)
