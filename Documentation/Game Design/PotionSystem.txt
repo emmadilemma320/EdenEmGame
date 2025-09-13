@@ -13,6 +13,8 @@ READ:
 
 Potion System Design Layout
 
+
+
 Basics:
 	Player has a cauldron and multiple tools to use ingredients in
 	Cauldron gets filled with a BASE and the base determines the type
@@ -25,7 +27,18 @@ Basics:
 	Potions must have use for player as well as for selling/quests
 	Cauldron fire started with wood or fire stones, magical ENERGY used in the process of making
 		To maintain fire, make the potion work, etc.
-	Potions can fail! If adding too many ingredients/too much/ inccorect preparation
+	Potions can fail! If adding too many ingredients/too much/ incorrect preparation
+	
+Healing Others:
+	Occasionally, npcs will ask for / need cures for various illnesses/ailments. There are two aspects for these: 
+	effectivness and pleasantness. NPCs will always be grateful for a working cure, but will be extra happy with a cure that
+	is more pleasant to them. For example, making a medicinal soda using a syrup/tincture and soda water vs. giving a spoonful of syrup, 
+	or making a salve use beeswax vs. grease. This is extra true for children and a great way to customize your creation to not just
+	the ailment but the person you are making it for :)
+	
+Cooking:
+	We do not have a distinction between cooking and alchemy in this game, they blend together by design :)
+	As you level up your space and skills, you unlock more/better ways to make potions and cook. 
 	
 Add-ins for extra small boosts after the potion is made?
 	

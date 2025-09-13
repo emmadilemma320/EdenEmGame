@@ -1,5 +1,22 @@
 General Game Outline/Summary:
-	In this game, "Working Title", you play as a forest witch, foraging and gardening for ingrediants, 
+	The main theme of our game "Forest Witch" is connecting with nature and those around us. Thus, the focus is on gethering plants and herbs
+	to use in potions to help those around you. There is a small town with many interesting characters to meet, befriend, any even romance. 
+	We wanted to avoid a feeling of subduing/taming nature (both by the main character and 'bbeg's), so we have avoided several key features that occur
+	in most cozy, nature-themed games: 
+		1) farming: we will have no tilling or farming in our game. You can still have planters/windboxes, but we want to avoid
+	farming in a grand sense, especially tilling. 
+		2) automation: many farming games add automation such a sprinklers, auto-planters/harvesters, etc. to make it easier
+	for the player late-game; this felt a little too "taming nature" for us, so in our game once you've helped the town enough, they like you enough to have one of the 
+	local kids gather your supplies up and bring it to you; all they ask is you give you a list of what you'll need 
+		3) "big bag evil corporation": many of these games have a big bad evil corporation, that hopes to
+	destroy the nature/town/farm the player lives in. While we do not dislike this in other games, this was a direction we wanted to go in. In our game all characters,
+	be it PCs or NPCs, work in tandem with nature rather than against it. 
+		4) "deforestation start": in many cozy farming games, you start by clearing a plot of land of trees and debris. While I admit these are very satisfying, cutting down 
+	trees in that way goes against the core theme of our game. instead, you start with a small house that expand using magic (more on this in the HouseDesign doc).
+For more info about specific aspects and game mechanics, see the various docs in our GameDesign folder!
+	
+	
+	In this game, "Forest Witch" (working title), you play as a forest witch, foraging and gardening for ingrediants, 
 	making potions, and using them to help ther people in the local town. You can give/sell potions to the 
 	townsfolk in exchange for various gameplay and cosmetic items.
 	
@@ -54,9 +71,10 @@ To Do:
 	 	- lower y value = behind
 	- inventory ui design/theme
 	- improve dialogue options ui
-
-	
-
+	- remove settings icon during dialogue
+	- add handwritten font
+	- remove gift option until first talked to them / not 0 friendship level
+	- add collision to inside furniture
 
 In Progess:
 	
@@ -84,7 +102,7 @@ Done:
 	- make it easier to add collectables
 	- switch discovered to list (rather than bool variable)
 	- gui overview
-	- grimoire gui (initial design)
+	- grimoire gui (prototype design)
 	- stack limit
 	- on-ground stacks
 	- picking up partial stacks

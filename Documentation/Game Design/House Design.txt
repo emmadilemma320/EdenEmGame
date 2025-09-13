@@ -1,7 +1,16 @@
+The player's house starts with just two rooms: a bed/main room and a greenhouse/ magic room. As the player progresses,
+they can magically expand the inside, adding new rooms and even an upstairs/basement. However, the outside stays the same it always was.
+This is a play on how in many cozy games, the inside of your house expands but the outside stays the same. That being said, you can decorate
+the outside of your house and change the roof/style. 
+
+
 Features:
 	- greenhouse/alchemy room
 	- window boxes, flower beds, garden pots (flowers)
 	- herb drying racks
 	- no tilling / farm plots
 	- no deforestation
+	- changing roof /style
+	- room expansions:
+		- kitchen (?)
 	
