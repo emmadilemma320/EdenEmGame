@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" load_steps=11 format=3 uid="uid://i7rq2bhk00wg"]
 
-[ext_resource type="Texture2D" uid="uid://bdoirx5ad7etk" path="res://Assets/Terrain-and-Buildings/Inside/Wooden_House_Walls_Tilset.png" id="1_ai0rh"]
-[ext_resource type="Texture2D" uid="uid://3yw8xjs8lwd" path="res://Assets/Terrain-and-Buildings/Inside/Doors.png" id="2_k5emx"]
-[ext_resource type="Texture2D" uid="uid://dmgbffuv6nuu1" path="res://Assets/Terrain-and-Buildings/Inside/Basic_Furniture.png" id="3_p8kys"]
-[ext_resource type="Texture2D" uid="uid://im8sutqowfur" path="res://Assets/Terrain-and-Buildings/Fences.png" id="4_p8kys"]
-[ext_resource type="Texture2D" uid="uid://bp88m03nl53qk" path="res://Assets/Terrain-and-Buildings/Wooden_House_Roof_Tilset.png" id="5_xnuw2"]
+[ext_resource type="Texture2D" uid="uid://bdoirx5ad7etk" path="res://Pre-Production Assets/Terrain-and-Buildings/Inside/Wooden_House_Walls_Tilset.png" id="1_ai0rh"]
+[ext_resource type="Texture2D" uid="uid://3yw8xjs8lwd" path="res://Pre-Production Assets/Terrain-and-Buildings/Inside/Doors.png" id="2_k5emx"]
+[ext_resource type="Texture2D" uid="uid://dmgbffuv6nuu1" path="res://Pre-Production Assets/Terrain-and-Buildings/Inside/Basic_Furniture.png" id="3_p8kys"]
+[ext_resource type="Texture2D" uid="uid://im8sutqowfur" path="res://Pre-Production Assets/Terrain-and-Buildings/Fences.png" id="4_p8kys"]
+[ext_resource type="Texture2D" uid="uid://bp88m03nl53qk" path="res://Pre-Production Assets/Terrain-and-Buildings/Wooden_House_Roof_Tilset.png" id="5_xnuw2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bghy4"]
 resource_name = "Walls & Floors"

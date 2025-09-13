@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cogqmfjhhvpq2"]
 
-[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="1_5f72v"]
+[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Pre-Production Assets/UI/UI books & more.png" id="1_5f72v"]
 [ext_resource type="Script" uid="uid://idyi5hreqxv0" path="res://Scripts/UI/Grimoire/catalogue.gd" id="1_otuqn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_otuqn"]

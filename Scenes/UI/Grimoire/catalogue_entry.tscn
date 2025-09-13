@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://jrb6lurjjwds"]
 
-[ext_resource type="Texture2D" uid="uid://d0tbe64g80a2m" path="res://Assets/UI/inventory-slot.png" id="1_botxy"]
+[ext_resource type="Texture2D" uid="uid://d0tbe64g80a2m" path="res://Pre-Production Assets/UI/inventory-slot.png" id="1_botxy"]
 [ext_resource type="Script" uid="uid://h1lj51ok24nx" path="res://Scripts/UI/Grimoire/catalogue_entry.gd" id="1_ew64a"]
-[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="3_botxy"]
+[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="3_botxy"]
 [ext_resource type="Theme" uid="uid://csdiw7pvt6axe" path="res://Themes/Grimoire/grimoire_theme.tres" id="4_ew64a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_botxy"]

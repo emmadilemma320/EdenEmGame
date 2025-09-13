@@ -1,7 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://bu56g7v80s2vp"]
 
-[ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Assets/Entities/chomp_idle.png" id="1_ydkgc"]
+[ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Pre-Production Assets/Entities/chomp_idle.png" id="1_ydkgc"]
 [ext_resource type="PackedScene" uid="uid://btr4m6nma1ibh" path="res://Scenes/UI/dialogue_box.tscn" id="2_qf6w4"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qf6w4"]
 atlas = ExtResource("1_ydkgc")

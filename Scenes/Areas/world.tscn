@@ -8,10 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://c11o7l6px5wev" path="res://Scenes/Areas/outside_house.tscn" id="8_vc2e2"]
 [ext_resource type="Resource" uid="uid://ds4q6hr0ck0kd" path="res://Resources/NPCs/chom_bomb.tres" id="9_syva4"]
 [ext_resource type="PackedScene" uid="uid://b5m6r1hsnvd5u" path="res://Scenes/Items/generic_collectable.tscn" id="10_syva4"]
-[ext_resource type="Texture2D" uid="uid://dy814mb0vw05c" path="res://Assets/Entities/forgsheet.png" id="11_kykf2"]
+[ext_resource type="Texture2D" uid="uid://dy814mb0vw05c" path="res://Eden's Assets/NPCs/forgsheet.png" id="11_kykf2"]
 [ext_resource type="Resource" uid="uid://cldm2iavsj2q6" path="res://Resources/NPCs/frog_prince.tres" id="11_sjvcn"]
 [ext_resource type="Resource" uid="uid://c0d3t84xdr1mh" path="res://Resources/Collectables/brown_mushroom.tres" id="11_wcev2"]
-[ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Assets/Entities/chomp_idle.png" id="13_kykf2"]
+[ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Pre-Production Assets/Entities/chomp_idle.png" id="13_kykf2"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_enowb"]
 atlas = ExtResource("11_kykf2")

@@ -2,8 +2,9 @@
 
 [ext_resource type="Resource" uid="uid://bs814ofc12gmd" path="res://Resources/NPCs/dialogues/chom_bomb/introduction.tres" id="1_1dafc"]
 [ext_resource type="Resource" uid="uid://cnjy6gdkahwux" path="res://Resources/NPCs/dialogues/chom_bomb/second_conversation.tres" id="2_ye5hf"]
-[ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Assets/Entities/chomp_idle.png" id="3_rgbhl"]
+[ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Pre-Production Assets/Entities/chomp_idle.png" id="3_rgbhl"]
 [ext_resource type="Script" uid="uid://o73xrdsy2tu6" path="res://Scripts/Resource Classes/npc_class.gd" id="4_n0qt6"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1832o"]
 atlas = ExtResource("3_rgbhl")

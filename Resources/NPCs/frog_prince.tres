@@ -1,8 +1,9 @@
 [gd_resource type="Resource" script_class="NPC" load_steps=5 format=3 uid="uid://cldm2iavsj2q6"]
 
-[ext_resource type="Texture2D" uid="uid://dy814mb0vw05c" path="res://Assets/Entities/forgsheet.png" id="1_hhmxx"]
+[ext_resource type="Texture2D" uid="uid://dy814mb0vw05c" path="res://Eden's Assets/NPCs/forgsheet.png" id="1_hhmxx"]
 [ext_resource type="Resource" uid="uid://55pnvh2nmx2x" path="res://Resources/NPCs/dialogues/frog/introduction.tres" id="1_vkcvb"]
 [ext_resource type="Script" uid="uid://o73xrdsy2tu6" path="res://Scripts/Resource Classes/npc_class.gd" id="2_vkcvb"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lviaw"]
 atlas = ExtResource("1_hhmxx")

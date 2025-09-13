@@ -1,11 +1,12 @@
 [gd_resource type="TileSet" load_steps=10 format=3 uid="uid://qavwmbkuyrlo"]
 
-[ext_resource type="Texture2D" uid="uid://i108pjojih5n" path="res://Assets/Terrain-and-Buildings/Raven Fantasy/64x64.png" id="1_4taog"]
+[ext_resource type="Texture2D" uid="uid://i108pjojih5n" path="res://Pre-Production Assets/Terrain-and-Buildings/Raven Fantasy/64x64.png" id="1_4taog"]
 [ext_resource type="PackedScene" uid="uid://cm8mpp8jdahj4" path="res://Scenes/Items/Animated Terrain Items/large_waterfall_64x64.tscn" id="2_5tnjw"]
 [ext_resource type="PackedScene" uid="uid://jx8dgtgwdsy4" path="res://Scenes/Items/Animated Terrain Items/skinny_waterfall_64x64.tscn" id="3_abb60"]
 [ext_resource type="PackedScene" uid="uid://dyul0i4iq6rbg" path="res://Scenes/Items/Animated Terrain Items/pond_64x64.tscn" id="4_agrlg"]
 [ext_resource type="PackedScene" uid="uid://bahg5sedvg0f0" path="res://Scenes/Items/Animated Terrain Items/fire.tscn" id="5_agrlg"]
 [ext_resource type="PackedScene" uid="uid://du7gds3fvqw63" path="res://Scenes/Items/Animated Terrain Items/campfire.tscn" id="6_yp7qv"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2ck3"]
 resource_name = "Raven Fantasy"

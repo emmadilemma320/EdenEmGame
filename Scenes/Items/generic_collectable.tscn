@@ -1,8 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://b5m6r1hsnvd5u"]
 
 [ext_resource type="Script" uid="uid://opnux1gwdxj3" path="res://Scripts/in_world/generic_collectable.gd" id="1_2xoiy"]
-[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="2_smhd8"]
+[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="2_smhd8"]
 [ext_resource type="Theme" uid="uid://y1l8bqsf7l6w" path="res://Themes/in_world_theme.tres" id="3_v2q8c"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x7ob8"]
 atlas = ExtResource("2_smhd8")

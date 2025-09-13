@@ -1,10 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://bo3k7fhttle"]
 
 [ext_resource type="Script" uid="uid://cf62ym5mnip0j" path="res://Scripts/generic_npc.gd" id="1_7w1dc"]
-[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="2_gkk53"]
+[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Pre-Production Assets/UI/UI books & more.png" id="2_gkk53"]
 [ext_resource type="Theme" uid="uid://y1l8bqsf7l6w" path="res://Themes/in_world_theme.tres" id="4_iflxh"]
-[ext_resource type="Texture2D" uid="uid://b2e1wshmqym3j" path="res://Assets/Items/Tiny Wonder Forest items&objects/summer and spring items.png" id="5_aw84y"]
+[ext_resource type="Texture2D" uid="uid://b2e1wshmqym3j" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/summer and spring items.png" id="5_aw84y"]
 [ext_resource type="PackedScene" uid="uid://0caqxwd3bslv" path="res://Scenes/emoter.tscn" id="5_nwoq2"]
+
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iflxh"]
 radius = 54.0833

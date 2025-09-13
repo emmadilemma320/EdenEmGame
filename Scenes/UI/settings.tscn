@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://dwpkmw76owkos" path="res://Themes/settings_theme.tres" id="1_4geyq"]
 [ext_resource type="Script" uid="uid://cm3k2vqounwcn" path="res://Scripts/UI/settings.gd" id="1_ma1v7"]
-[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="3_p46qs"]
+[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Pre-Production Assets/UI/UI books & more.png" id="3_p46qs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ygnii"]
 atlas = ExtResource("3_p46qs")

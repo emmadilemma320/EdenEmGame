@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="InventoryCollectable" load_steps=4 format=3 uid="uid://d1cdu6q8wpa5k"]
 
 [ext_resource type="Script" uid="uid://4tdjcv0tju4u" path="res://Scripts/Resource Classes/inventory_collectable_class.gd" id="1_d3ikk"]
-[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="2_fvgtw"]
+[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="2_fvgtw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_02cfe"]
 atlas = ExtResource("2_fvgtw")

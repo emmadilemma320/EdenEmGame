@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://bk1ic2jri883i"]
 
-[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="1_2vo66"]
+[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Pre-Production Assets/UI/UI books & more.png" id="1_2vo66"]
 [ext_resource type="Script" uid="uid://iwqfrvwvxx51" path="res://Scripts/UI/gui_overlay.gd" id="1_vqv5w"]
 [ext_resource type="Theme" uid="uid://csdiw7pvt6axe" path="res://Themes/Grimoire/grimoire_theme.tres" id="3_lbv3i"]
 [ext_resource type="PackedScene" uid="uid://cogqmfjhhvpq2" path="res://Scenes/UI/Grimoire/catalogue.tscn" id="4_lfko8"]

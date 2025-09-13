@@ -1,6 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dqymqkvgx4q3r"]
 
-[ext_resource type="Texture2D" uid="uid://dy814mb0vw05c" path="res://Assets/Entities/forgsheet.png" id="1_wcxq0"]
+[ext_resource type="Texture2D" uid="uid://dy814mb0vw05c" path="res://Eden's Assets/NPCs/forgsheet.png" id="1_wcxq0"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lnsp4"]
 atlas = ExtResource("1_wcxq0")

@@ -1,11 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://db3lagfeju34i"]
 
 [ext_resource type="Script" uid="uid://biyh4klt0wjg7" path="res://Scripts/UI/dialogue.gd" id="1_msmgm"]
-[ext_resource type="Texture2D" uid="uid://d0tbe64g80a2m" path="res://Assets/UI/inventory-slot.png" id="1_tg5y5"]
-[ext_resource type="Texture2D" uid="uid://db6utsfxwwvul" path="res://Assets/Character/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="2_msmgm"]
+[ext_resource type="Texture2D" uid="uid://d0tbe64g80a2m" path="res://Pre-Production Assets/UI/inventory-slot.png" id="1_tg5y5"]
+[ext_resource type="Texture2D" uid="uid://db6utsfxwwvul" path="res://Pre-Production Assets/Character/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="2_msmgm"]
 [ext_resource type="Theme" uid="uid://e6bvrbsl0oqo" path="res://Themes/nameplate_theme.tres" id="3_o8urk"]
-[ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Assets/Entities/chomp_idle.png" id="4_ag7w6"]
+[ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Pre-Production Assets/Entities/chomp_idle.png" id="4_ag7w6"]
 [ext_resource type="Theme" uid="uid://e24781o5joi4" path="res://Themes/dialogue_theme.tres" id="5_ip23y"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_10uok"]
 atlas = ExtResource("2_msmgm")

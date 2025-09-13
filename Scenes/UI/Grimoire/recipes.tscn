@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c1e38np4ksjvy"]
 
 [ext_resource type="Script" uid="uid://rvxdslpsa41y" path="res://Scripts/UI/Grimoire/recipes.gd" id="1_3dc5o"]
-[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Assets/UI/UI books & more.png" id="2_ulany"]
+[ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Pre-Production Assets/UI/UI books & more.png" id="2_ulany"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7srpm"]
 atlas = ExtResource("2_ulany")
