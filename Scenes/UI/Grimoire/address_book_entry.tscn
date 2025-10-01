@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://d0tbe64g80a2m" path="res://Pre-Production Assets/UI/inventory-slot.png" id="2_p53bp"]
 [ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="3_vlmop"]
 
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_botxy"]
 atlas = ExtResource("3_vlmop")
 region = Rect2(64, 32, 16, 16)

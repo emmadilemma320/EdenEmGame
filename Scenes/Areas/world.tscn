@@ -13,7 +13,6 @@
 [ext_resource type="Resource" uid="uid://c0d3t84xdr1mh" path="res://Resources/Collectables/brown_mushroom.tres" id="11_wcev2"]
 [ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Pre-Production Assets/Entities/chomp_idle.png" id="13_kykf2"]
 
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_enowb"]
 atlas = ExtResource("11_kykf2")
 region = Rect2(0, 0, 64, 64)

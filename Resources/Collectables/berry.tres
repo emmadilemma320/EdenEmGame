@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="InventoryCollectable" load_steps=6 format=3 uid="uid://dd43r8tv6ltxe"]
 
 [ext_resource type="Script" uid="uid://4tdjcv0tju4u" path="res://Scripts/Resource Classes/inventory_collectable_class.gd" id="1_gmey1"]
-[ext_resource type="Texture2D" uid="uid://dj87pdcshud40" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/autumn items.png" id="1_roh0a"]
-[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="2_4rhjy"]
+[ext_resource type="Texture2D" uid="uid://b2e1wshmqym3j" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/summer and spring items.png" id="1_roh0a"]
+[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="3_0jcht"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0jcht"]
 atlas = ExtResource("1_roh0a")
-region = Rect2(38, 132, 6, 7)
+region = Rect2(64, 208, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_44jky"]
-atlas = ExtResource("2_4rhjy")
+atlas = ExtResource("3_0jcht")
 region = Rect2(17, 32, 15, 17)
 margin = Rect2(0, 1, 0, 0)
 

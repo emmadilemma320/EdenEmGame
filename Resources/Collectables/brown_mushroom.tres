@@ -2,20 +2,19 @@
 
 [ext_resource type="Script" uid="uid://4tdjcv0tju4u" path="res://Scripts/Resource Classes/inventory_collectable_class.gd" id="1_184s3"]
 [ext_resource type="Texture2D" uid="uid://dj87pdcshud40" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/autumn items.png" id="1_btmcq"]
-[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="2_2as2n"]
+[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="3_k7le5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k7le5"]
 atlas = ExtResource("1_btmcq")
 region = Rect2(19, 100, 10, 10)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r51aw"]
-atlas = ExtResource("2_2as2n")
-region = Rect2(48, 32, 17, 18)
-margin = Rect2(1, 1, 0, 0)
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7wup"]
+atlas = ExtResource("3_k7le5")
+region = Rect2(48, 32, 16, 16)
 
 [resource]
 script = ExtResource("1_184s3")
 name = "Brown Mushroom"
-texture = SubResource("AtlasTexture_r51aw")
+texture = SubResource("AtlasTexture_j7wup")
 in_world_texture = SubResource("AtlasTexture_k7le5")
 metadata/_custom_type_script = "uid://4tdjcv0tju4u"

@@ -4,7 +4,6 @@
 [ext_resource type="Resource" uid="uid://55pnvh2nmx2x" path="res://Resources/NPCs/dialogues/frog/introduction.tres" id="1_vkcvb"]
 [ext_resource type="Script" uid="uid://o73xrdsy2tu6" path="res://Scripts/Resource Classes/npc_class.gd" id="2_vkcvb"]
 
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_lviaw"]
 atlas = ExtResource("1_hhmxx")
 region = Rect2(19, 29, 29, 20)

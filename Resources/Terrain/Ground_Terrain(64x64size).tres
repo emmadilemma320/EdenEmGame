@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bahg5sedvg0f0" path="res://Scenes/Items/Animated Terrain Items/fire.tscn" id="5_agrlg"]
 [ext_resource type="PackedScene" uid="uid://du7gds3fvqw63" path="res://Scenes/Items/Animated Terrain Items/campfire.tscn" id="6_yp7qv"]
 
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2ck3"]
 resource_name = "Raven Fantasy"
 texture = ExtResource("1_4taog")

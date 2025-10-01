@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Pre-Production Assets/UI/UI books & more.png" id="2_owo8u"]
 [ext_resource type="PackedScene" uid="uid://dd0xj2ra1cvro" path="res://Scenes/UI/Grimoire/address_book_entry.tscn" id="3_owo8u"]
 
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_otuqn"]
 atlas = ExtResource("2_owo8u")
 region = Rect2(513, 17, 47, 62)

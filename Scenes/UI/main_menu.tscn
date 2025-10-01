@@ -67,7 +67,7 @@ offset_top = 76.0
 offset_right = 972.0
 offset_bottom = 122.0
 theme = ExtResource("2_o14dv")
-text = "Eden and Em's Game"
+text = "Forest Witch"
 horizontal_alignment = 1
 
 [node name="Start Button" type="TextureButton" parent="."]

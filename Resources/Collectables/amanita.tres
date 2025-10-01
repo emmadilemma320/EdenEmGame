@@ -2,15 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://dj87pdcshud40" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/autumn items.png" id="1_0ywnp"]
 [ext_resource type="Script" uid="uid://4tdjcv0tju4u" path="res://Scripts/Resource Classes/inventory_collectable_class.gd" id="1_joxf1"]
-[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="2_xu7wu"]
+[ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="3_8h2c0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8h2c0"]
 atlas = ExtResource("1_0ywnp")
 region = Rect2(3, 114, 10, 12)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kygen"]
-atlas = ExtResource("2_xu7wu")
-region = Rect2(64, 32, 18, 18)
+atlas = ExtResource("3_8h2c0")
+region = Rect2(64, 32, 16, 16)
 margin = Rect2(1, 1, 0, 0)
 
 [resource]
