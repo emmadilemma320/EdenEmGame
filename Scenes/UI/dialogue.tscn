@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bmdawhrjubk8y" path="res://Pre-Production Assets/Entities/chomp_idle.png" id="4_ag7w6"]
 [ext_resource type="Theme" uid="uid://e24781o5joi4" path="res://Themes/dialogue_theme.tres" id="5_ip23y"]
 
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_10uok"]
 atlas = ExtResource("2_msmgm")
 region = Rect2(64, 16, 16, 17)
@@ -26,6 +25,7 @@ grow_vertical = 2
 script = ExtResource("1_msmgm")
 
 [node name="dialogue_base" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 0.34902)

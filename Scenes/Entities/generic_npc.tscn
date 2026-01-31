@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://b2e1wshmqym3j" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/summer and spring items.png" id="5_aw84y"]
 [ext_resource type="PackedScene" uid="uid://0caqxwd3bslv" path="res://Scenes/emoter.tscn" id="5_nwoq2"]
 
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_iflxh"]
 radius = 54.0833
 

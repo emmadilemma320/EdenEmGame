@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://bfupbvypxhutp" path="res://Pre-Production Assets/Terrain-and-Buildings/World of Solaria New Style DEMO.png" id="1_1bobb"]
 [ext_resource type="PackedScene" uid="uid://bfwdrqxb0q1op" path="res://Scenes/teleport_trigger.tscn" id="2_pkja8"]
 
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_r8pu6"]
 atlas = ExtResource("1_1bobb")
 region = Rect2(8, 8, 96, 88)
