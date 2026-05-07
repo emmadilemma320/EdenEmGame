@@ -32,7 +32,7 @@ func scene_change(next_scene: String, player_position: Vector2):
 	for child in get_children():
 		child.queue_free()
 	
-	# create an instance of the scene and add it to self
+	# create an instance of the new scene and add it to self
 	var scene_instance = load(scenes[next_scene]).instantiate()
 	self.add_child(scene_instance)
 	

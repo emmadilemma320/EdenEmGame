@@ -75,6 +75,22 @@ To Do:
 	- add handwritten font
 	- remove gift option until first talked to them / not 0 friendship level
 	- add collision to inside furniture
+	- alter drop behavior: default drop whole stack
+		- shift+click to select an amount
+	- add above for trashing items
+	- potentially transfer some of the global behavior/signals to the scene manager
+	- rename player script to match scene
+	- redo scene/script organizing to three categories: areas, global, and ui 
+		- areas will have one sub-folder per in-world location
+		- global will have in-world scenes/scripts that are/can be in all/multiple locations (ex. scene manager, player)
+		- ui is ui, may have subfolders (ex. main menu, inventory)
+		- scripts will also have one for resources
+	- add use case: 'effect' variable; remove use button for items with no effect
+	- chests w/ inventory space
+		- option a) each chest has it's own instance of an inventory, which appears when the chest is open
+		- option b) each chest stores a list of it's contains, and an inventory is propagated when the chest is open
+			ex) [("apple", 1), ("mushroom", 3), ...]
+	- add controls to transfer items to/from chests
 
 In Progess:
 	
