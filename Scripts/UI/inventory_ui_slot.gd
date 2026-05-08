@@ -19,6 +19,7 @@ extends Panel
 
 @onready var drop_down_open: bool = false
 @onready var inventory_ui = self.get_parent().get_parent().get_parent()
+var self_inventory_slot: InventorySlot
 @onready var self_index: int # it's own index in the list of slots
 
 var currently_waiting_on_drop: bool
@@ -56,13 +57,13 @@ func _on_drop_button_pressed() -> void:
 	if currently_waiting_on_trash:
 		return
 	
-	var amount: int = 1
+	var amount: int = self_inventory_slot.amount
 	if !currently_waiting_on_drop:
 		currently_waiting_on_drop = true
-		
-		drop_amount_line.visible = true
-		amount = int(await drop_amount_line.text_submitted)
-	else:
+		if Input.is_action_pressed("alt_action"):
+			drop_amount_line.visible = true
+			amount = int(await drop_amount_line.text_submitted)
+	else: # may be irrelevent
 		currently_waiting_on_drop = false
 
 	drop_amount_line.visible = false
@@ -75,12 +76,13 @@ func _on_trash_button_pressed() -> void:
 	if currently_waiting_on_drop:
 		return
 		
-	var amount: int = 1
+	var amount: int = self_inventory_slot.amount
 	if !currently_waiting_on_trash:
 		currently_waiting_on_trash = true
 		
-		trash_amount_line.visible = true
-		amount = int(await trash_amount_line.text_submitted)
+		if Input.is_action_pressed("alt_action"):
+			trash_amount_line.visible = true
+			amount = int(await trash_amount_line.text_submitted)
 		
 		trash_amount_line.visible = false
 		trash_amount_line.text = ""
@@ -90,19 +92,19 @@ func _on_trash_button_pressed() -> void:
 	inventory_ui.trash(self_index, amount)
 	close_drop_down()
 
-func update(slot: InventorySlot):
-	if !slot.item:
+func update():
+	if !self_inventory_slot.item:
 		item_visual.visible = false
 		amount_text.visible = false
-		item_name.text = "(empty)"
+		item_name.text = ""
 		for button in buttons:
 			button.visible = false
 	else:
 		item_visual.visible = true
-		item_visual.texture = slot.item.texture
-		item_name.text = slot.item.name
-		amount_text.text = str(slot.amount)
-		amount_text.visible = (slot.amount > 1)
+		item_visual.texture = self_inventory_slot.item.texture
+		item_name.text = self_inventory_slot.item.name
+		amount_text.text = str(self_inventory_slot.amount)
+		amount_text.visible = (self_inventory_slot.amount > 1)
 
 		for button in buttons:
 			button.visible = true
@@ -117,9 +119,10 @@ func close_drop_down():
 	currently_waiting_on_trash = false
 
 func open_drop_down():
-	Global.current_open_menu.append(name)
-	drop_down_menu.visible = true
-	drop_down_open = true
+	if self_inventory_slot.item:
+		Global.current_open_menu.append(name)
+		drop_down_menu.visible = true
+		drop_down_open = true
 
 
 func _on_drop_amount_edit_text_changed(new_text: String) -> void:

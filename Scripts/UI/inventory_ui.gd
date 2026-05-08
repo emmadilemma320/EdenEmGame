@@ -3,7 +3,6 @@ extends Control
 @onready var inventory: Inventory = preload("res://Resources/player_inventory.tres")
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
 
-
 var is_open = false
 
 func _ready():
@@ -11,6 +10,7 @@ func _ready():
 	Global.get_gift.connect(open_gift_mode)
 	Global.gift_is.connect(close_gift_mode)
 	for i in range(slots.size()):
+		slots[i].self_inventory_slot = inventory.slots[i]
 		slots[i].self_index = i
 		
 	Global.talking.connect(close)
@@ -24,13 +24,15 @@ func _process(delta):
 		else:
 			open()
 			
-	if Input.is_action_just_pressed("close_current_menu") and Global.current_open_menu.back() == name:
+	if Global.current_open_menu.back() == name and Input.is_action_just_pressed("close_current_menu"):
 		if is_open:
 			close()
 
 func update_slots():
-	for i in range(min(inventory.slots.size(), slots.size())):
-		slots[i].update(inventory.slots[i])
+	for s in slots:
+		s.update()
+	#for i in range(min(inventory.slots.size(), slots.size())):
+		#slots[i].update()
 
 func open():
 	visible = true

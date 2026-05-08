@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="NPC" load_steps=6 format=3 uid="uid://ds4q6hr0ck0kd"]
+[gd_resource type="Resource" script_class="NPC" format=3 uid="uid://ds4q6hr0ck0kd"]
 
 [ext_resource type="Resource" uid="uid://bs814ofc12gmd" path="res://Resources/NPCs/dialogues/chom_bomb/introduction.tres" id="1_1dafc"]
 [ext_resource type="Resource" uid="uid://cnjy6gdkahwux" path="res://Resources/NPCs/dialogues/chom_bomb/second_conversation.tres" id="2_ye5hf"]
@@ -14,15 +14,9 @@ script = ExtResource("4_n0qt6")
 name = "chom bomb"
 portrait = SubResource("AtlasTexture_1832o")
 favorite_gift = "apple"
-liked_gifts = Array[String]([])
-disliked_gifts = Array[String]([])
-friendship_points = 0
-romancable = false
-romance_points = 0
 wants_to_talk = true
 conversations = {
 "intro": ExtResource("1_1dafc"),
 "second convo": ExtResource("2_ye5hf")
 }
-next_conversation = "intro"
 metadata/_custom_type_script = "uid://o73xrdsy2tu6"

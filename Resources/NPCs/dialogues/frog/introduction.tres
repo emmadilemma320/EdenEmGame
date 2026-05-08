@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Dialogue" load_steps=6 format=3 uid="uid://55pnvh2nmx2x"]
+[gd_resource type="Resource" script_class="Dialogue" format=3 uid="uid://55pnvh2nmx2x"]
 
 [ext_resource type="Script" uid="uid://do2wrj4s7k08k" path="res://Scripts/Resource Classes/reply_pattern_class.gd" id="1_g1kqs"]
 [ext_resource type="Script" uid="uid://c5f4n1u6mfiyg" path="res://Scripts/Resource Classes/dialogue_class.gd" id="2_wlhff"]
@@ -6,13 +6,11 @@
 [sub_resource type="Resource" id="Resource_g1kqs"]
 script = ExtResource("1_g1kqs")
 quotes = Array[String](["*ribbit ribbit*"])
-point_values = Array[int]([])
 metadata/_custom_type_script = "uid://do2wrj4s7k08k"
 
 [sub_resource type="Resource" id="Resource_wlhff"]
 script = ExtResource("1_g1kqs")
 quotes = Array[String](["*ribbit*"])
-point_values = Array[int]([])
 metadata/_custom_type_script = "uid://do2wrj4s7k08k"
 
 [sub_resource type="Resource" id="Resource_3p28a"]

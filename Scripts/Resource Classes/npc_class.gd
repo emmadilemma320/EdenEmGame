@@ -3,22 +3,26 @@ extends Resource
 class_name NPC
 
 # character info
+@export_category("Basic Info")
 @export var name: String
 @export var portrait: Texture2D
 
 # gifting info
+@export_category("Gifts")
 @export var favorite_gift: String
 @export var liked_gifts: Array[String]
 @export var disliked_gifts: Array[String]
 
 #relationship info
+@export_category("Relationsip")
 @export var friendship_points: int
 @export var romancable: bool
 @export var romance_points: int
 @export var wants_to_talk: bool
 
 # character conversation (dictionary of Dialogue resources)
-@export var conversations: Dictionary
+@export_category("Dialogue")
+@export var conversations: Dictionary[String, Dialogue]
 @export var next_conversation: String = "intro"
 
 # CONSTANT relationship status and poits

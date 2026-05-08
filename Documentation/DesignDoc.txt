@@ -75,9 +75,6 @@ To Do:
 	- add handwritten font
 	- remove gift option until first talked to them / not 0 friendship level
 	- add collision to inside furniture
-	- alter drop behavior: default drop whole stack
-		- shift+click to select an amount
-	- add above for trashing items
 	- potentially transfer some of the global behavior/signals to the scene manager
 	- rename player script to match scene
 	- redo scene/script organizing to three categories: areas, global, and ui 
@@ -91,6 +88,14 @@ To Do:
 		- option b) each chest stores a list of it's contains, and an inventory is propagated when the chest is open
 			ex) [("apple", 1), ("mushroom", 3), ...]
 	- add controls to transfer items to/from chests
+	- update inputs to built-in ones
+	- add export category to classes w/ a lot of exported variables (npcs, etc.) using @export_category("Example")
+	- look over specific export calls and see if any match better
+	- potentially: update trash and drop to be drag&drop features
+	- what about using a priority queue instead of a dictionary for conversations? 
+		that way each conversation could act indepentdently of the other (i.e. not need to point to a valid 'next convo')
+		also would remove the need for each convo to be pointed *to*
+		i think this is the way go to
 
 In Progess:
 	

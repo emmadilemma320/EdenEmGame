@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="NPC" load_steps=5 format=3 uid="uid://cldm2iavsj2q6"]
+[gd_resource type="Resource" script_class="NPC" format=3 uid="uid://cldm2iavsj2q6"]
 
 [ext_resource type="Texture2D" uid="uid://dy814mb0vw05c" path="res://Eden's Assets/NPCs/forgsheet.png" id="1_hhmxx"]
 [ext_resource type="Resource" uid="uid://55pnvh2nmx2x" path="res://Resources/NPCs/dialogues/frog/introduction.tres" id="1_vkcvb"]
@@ -15,12 +15,8 @@ portrait = SubResource("AtlasTexture_lviaw")
 favorite_gift = "berry"
 liked_gifts = Array[String](["book"])
 disliked_gifts = Array[String](["blue mushroom"])
-friendship_points = 0
-romancable = false
-romance_points = 0
 wants_to_talk = true
 conversations = {
 "intro": ExtResource("1_vkcvb")
 }
-next_conversation = "intro"
 metadata/_custom_type_script = "uid://o73xrdsy2tu6"
