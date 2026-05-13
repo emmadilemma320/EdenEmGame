@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bs50gw37jns1u"]
+[gd_scene format=3 uid="uid://bs50gw37jns1u"]
 
 [ext_resource type="Script" uid="uid://c0ps2s0lxstsi" path="res://Scripts/UI/Grimoire/address_book.gd" id="1_owo8u"]
 [ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Pre-Production Assets/UI/UI books & more.png" id="2_owo8u"]
@@ -12,7 +12,7 @@ region = Rect2(513, 17, 47, 62)
 atlas = ExtResource("2_owo8u")
 region = Rect2(257, 378, 15, 22)
 
-[node name="Address Book" type="Control"]
+[node name="Address Book" type="Control" unique_id=390575103]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_owo8u")
 
-[node name="address_book_pg1" type="TextureRect" parent="."]
+[node name="address_book_pg1" type="TextureRect" parent="." unique_id=1018170921]
 visible = false
 layout_mode = 0
 offset_right = 350.0
@@ -30,7 +30,7 @@ texture = SubResource("AtlasTexture_otuqn")
 expand_mode = 1
 flip_h = true
 
-[node name="address_book_pg2" type="TextureRect" parent="."]
+[node name="address_book_pg2" type="TextureRect" parent="." unique_id=958159387]
 visible = false
 layout_mode = 0
 offset_left = 450.0
@@ -39,14 +39,14 @@ offset_bottom = 400.0
 texture = SubResource("AtlasTexture_otuqn")
 expand_mode = 1
 
-[node name="entries" type="NinePatchRect" parent="."]
+[node name="entries" type="NinePatchRect" parent="." unique_id=992092130]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 50.0
 offset_right = 70.0
 offset_bottom = 90.0
 
-[node name="grid1" type="GridContainer" parent="entries"]
+[node name="grid1" type="GridContainer" parent="entries" unique_id=1647792809]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 9.35
@@ -57,13 +57,13 @@ theme_override_constants/h_separation = 150
 theme_override_constants/v_separation = 75
 columns = 2
 
-[node name="test_1" parent="entries/grid1" instance=ExtResource("3_owo8u")]
+[node name="test_1" parent="entries/grid1" unique_id=810189638 instance=ExtResource("3_owo8u")]
 layout_mode = 2
 
-[node name="test_2" parent="entries/grid1" instance=ExtResource("3_owo8u")]
+[node name="test_2" parent="entries/grid1" unique_id=1132457646 instance=ExtResource("3_owo8u")]
 layout_mode = 2
 
-[node name="grid2" type="GridContainer" parent="entries"]
+[node name="grid2" type="GridContainer" parent="entries" unique_id=1541624902]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 9.35
@@ -75,13 +75,13 @@ theme_override_constants/h_separation = 150
 theme_override_constants/v_separation = 75
 columns = 2
 
-[node name="test_1" parent="entries/grid2" instance=ExtResource("3_owo8u")]
+[node name="test_1" parent="entries/grid2" unique_id=1929931932 instance=ExtResource("3_owo8u")]
 layout_mode = 2
 
-[node name="test_2" parent="entries/grid2" instance=ExtResource("3_owo8u")]
+[node name="test_2" parent="entries/grid2" unique_id=627766851 instance=ExtResource("3_owo8u")]
 layout_mode = 2
 
-[node name="blue_ribbon" type="TextureRect" parent="."]
+[node name="blue_ribbon" type="TextureRect" parent="." unique_id=1090628543]
 layout_mode = 0
 offset_left = 50.0
 offset_right = 90.0

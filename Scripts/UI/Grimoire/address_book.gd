@@ -3,8 +3,8 @@ extends Control
 # including information about them such as recipes they can be used in, ways the turn them into potion ingrediants, etc.
 
 const NPC_LIST: Dictionary = {
-	"chom bomb": "res://Resources/NPCs/chom_bomb.tres", 
-	"frog": "res://Resources/NPCs/frog_prince.tres"
+	"chom bomb": "res://Resources/NPCs/characters/chom_bomb.tres", 
+	"frog": "res://Resources/NPCs/characters/frog_prince.tres"
 }
 
 @onready var blank_entry = preload("res://Scenes/UI/Grimoire/address_book_entry.tscn")
