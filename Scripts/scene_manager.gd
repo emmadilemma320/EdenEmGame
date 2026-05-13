@@ -2,7 +2,7 @@ extends Node
 
 var current_scene: String
 var scenes: Dictionary
-@onready var player = preload("res://Scenes/player.tscn")
+@onready var player = preload("res://Scenes/Entities/player.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
