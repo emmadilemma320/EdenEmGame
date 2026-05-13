@@ -75,20 +75,20 @@ To Do:
 	- add handwritten font
 	- remove gift option until first talked to them / not 0 friendship level
 	- add collision to inside furniture
-	- potentially transfer some of the global behavior/signals to the scene manager
+	- transfer global.gd behavior/signals to the scene manager
 	- redo scene/script organizing to three categories: areas, global, and ui 
 		- areas will have one sub-folder per in-world location
 		- global will have in-world scenes/scripts that are/can be in all/multiple locations (ex. scene manager, player)
 		- ui is ui, may have subfolders (ex. main menu, inventory)
 		- scripts will also have one for resources
-	- add use case: 'effect' variable; remove use button for items with no effect
+	- remove use button
+	- add 'type' drop-down to collectable ("ingrediant", "tool", "potion", etc.)
 	- chests w/ inventory space
 		- option a) each chest has it's own instance of an inventory, which appears when the chest is open
 		- option b) each chest stores a list of it's contains, and an inventory is propagated when the chest is open
 			ex) [("apple", 1), ("mushroom", 3), ...]
 	- add controls to transfer items to/from chests
 	- update inputs to built-in ones
-	- add export category to classes w/ a lot of exported variables (npcs, etc.) using @export_category("Example")
 	- look over specific export calls and see if any match better
 	- potentially: update trash, drop, and use to be drag&drop (or keyboard-push) features rather than a drop-down menu
 	
@@ -139,3 +139,4 @@ Done:
 	- disable buttons behind inventory
 	- scene changes
 	- rename player script to match scene
+	- add export category to classes w/ a lot of exported variables (npcs, etc.) using @export_category("Example")
