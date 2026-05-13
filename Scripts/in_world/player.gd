@@ -13,20 +13,20 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	# left & right
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("ui_left"):
 		velocity.x = current_speed*-1 #move left
 		$AnimatedSprite2D.play("left_facing_walk")
-	elif Input.is_action_pressed("move_right"):
+	elif Input.is_action_pressed("ui_right"):
 		velocity.x = current_speed #move right
 		$AnimatedSprite2D.play("right_facing_walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, current_speed)
 	
 	#up & down
-	if Input.is_action_pressed("move_up"):
+	if Input.is_action_pressed("ui_up"):
 		velocity.y = current_speed*-1 #move up
 		$AnimatedSprite2D.play("back_facing_walk")
-	elif Input.is_action_pressed("move_down"):
+	elif Input.is_action_pressed("ui_down"):
 		velocity.y = current_speed #move down
 		$AnimatedSprite2D.play("front_facing_walk")
 	else:
