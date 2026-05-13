@@ -6,7 +6,7 @@ extends Node
 @onready var current_scene = $"."
 @onready var current_open_menu: Array[String]
 
-@onready var inventory: Inventory = preload("res://Resources/player_inventory.tres")
+@onready var inventory: Inventory = preload("res://Resources/Inventories/player_inventory.tres")
 
 signal talk_to(NPC)
 signal talking
