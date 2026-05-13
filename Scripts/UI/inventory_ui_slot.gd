@@ -36,7 +36,7 @@ func _ready():
 	gift_chosen.connect(Global.emit_gift_is)
 	
 func _process(delta):
-	if Input.is_action_just_pressed("ui_escape") and Global.current_open_menu.back() == name:
+	if Input.is_action_just_pressed("ui_cancel") and Global.current_open_menu.back() == name:
 		if drop_down_open:
 			close_drop_down()
 	if Global.current_open_menu.back() != name:
