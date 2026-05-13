@@ -1,10 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bo3k7fhttle"]
+[gd_scene format=3 uid="uid://bo3k7fhttle"]
 
 [ext_resource type="Script" uid="uid://cf62ym5mnip0j" path="res://Scripts/generic_npc.gd" id="1_7w1dc"]
 [ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Pre-Production Assets/UI/UI books & more.png" id="2_gkk53"]
 [ext_resource type="Theme" uid="uid://y1l8bqsf7l6w" path="res://Themes/in_world_theme.tres" id="4_iflxh"]
 [ext_resource type="Texture2D" uid="uid://b2e1wshmqym3j" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/summer and spring items.png" id="5_aw84y"]
-[ext_resource type="PackedScene" uid="uid://0caqxwd3bslv" path="res://Scenes/emoter.tscn" id="5_nwoq2"]
+[ext_resource type="PackedScene" uid="uid://0caqxwd3bslv" path="res://Scenes/UI/emoter.tscn" id="5_nwoq2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iflxh"]
 radius = 54.0833
@@ -33,13 +33,13 @@ region = Rect2(17, 208, 13, 15)
 atlas = ExtResource("5_aw84y")
 region = Rect2(17, 208, 13, 15)
 
-[node name="Generic NPC" type="Area2D"]
+[node name="Generic NPC" type="Area2D" unique_id=810118307]
 script = ExtResource("1_7w1dc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=619351018]
 shape = SubResource("CircleShape2D_iflxh")
 
-[node name="talk_button" type="TextureButton" parent="."]
+[node name="talk_button" type="TextureButton" parent="." unique_id=234422401]
 visible = false
 offset_left = -14.0
 offset_top = -59.0
@@ -49,7 +49,7 @@ texture_normal = SubResource("AtlasTexture_7w1dc")
 texture_pressed = SubResource("AtlasTexture_iflxh")
 texture_hover = SubResource("AtlasTexture_nwoq2")
 
-[node name="nametag" type="Label" parent="."]
+[node name="nametag" type="Label" parent="." unique_id=668885170]
 visible = false
 offset_left = -49.0
 offset_top = 39.0
@@ -59,11 +59,11 @@ theme = ExtResource("4_iflxh")
 text = "npc name"
 horizontal_alignment = 1
 
-[node name="emoter" parent="." instance=ExtResource("5_nwoq2")]
+[node name="emoter" parent="." unique_id=1582796819 instance=ExtResource("5_nwoq2")]
 visible = false
 position = Vector2(1, -44)
 
-[node name="gift_button" type="TextureButton" parent="."]
+[node name="gift_button" type="TextureButton" parent="." unique_id=2105297827]
 visible = false
 custom_minimum_size = Vector2(13, 15)
 offset_left = 32.0
