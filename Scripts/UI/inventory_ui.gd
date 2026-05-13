@@ -24,7 +24,7 @@ func _process(delta):
 		else:
 			open()
 			
-	if Global.current_open_menu.back() == name and Input.is_action_just_pressed("close_current_menu"):
+	if Global.current_open_menu.back() == name and Input.is_action_just_pressed("ui_cancel"):
 		if is_open:
 			close()
 
