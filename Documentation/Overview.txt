@@ -76,7 +76,6 @@ To Do:
 	- remove gift option until first talked to them / not 0 friendship level
 	- add collision to inside furniture
 	- potentially transfer some of the global behavior/signals to the scene manager
-	- rename player script to match scene
 	- redo scene/script organizing to three categories: areas, global, and ui 
 		- areas will have one sub-folder per in-world location
 		- global will have in-world scenes/scripts that are/can be in all/multiple locations (ex. scene manager, player)
@@ -139,3 +138,4 @@ Done:
 	- close inventory during dialogue
 	- disable buttons behind inventory
 	- scene changes
+	- rename player script to match scene
