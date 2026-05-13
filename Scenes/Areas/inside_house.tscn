@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=4 uid="uid://disjsgabxupu0"]
+[gd_scene format=4 uid="uid://disjsgabxupu0"]
 
-[ext_resource type="PackedScene" uid="uid://bfwdrqxb0q1op" path="res://Scenes/teleport_trigger.tscn" id="1_3lu36"]
+[ext_resource type="PackedScene" uid="uid://bfwdrqxb0q1op" path="res://Scenes/Areas/teleport_trigger.tscn" id="1_3lu36"]
 [ext_resource type="TileSet" uid="uid://i7rq2bhk00wg" path="res://Resources/Terrain/inside_house.tres" id="1_bghy4"]
 
 [node name="Inside_House" type="Node2D"]
