@@ -91,11 +91,8 @@ To Do:
 	- update inputs to built-in ones
 	- add export category to classes w/ a lot of exported variables (npcs, etc.) using @export_category("Example")
 	- look over specific export calls and see if any match better
-	- potentially: update trash and drop to be drag&drop features
-	- what about using a priority queue instead of a dictionary for conversations? 
-		that way each conversation could act indepentdently of the other (i.e. not need to point to a valid 'next convo')
-		also would remove the need for each convo to be pointed *to*
-		i think this is the way go to
+	- potentially: update trash, drop, and use to be drag&drop (or keyboard-push) features rather than a drop-down menu
+	
 
 In Progess:
 	

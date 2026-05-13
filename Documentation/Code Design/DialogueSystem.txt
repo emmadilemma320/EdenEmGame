@@ -1,0 +1,11 @@
+For each NPC, conversations are held in a Priority Queue. At the start, each NPCs may have some generic conversations, each with a priority of 0.
+Additionally, each NPC has an introduction dialogue, with a high enough priority that it does not get overwritten.
+Some conversations may also have requirements (friendship levels, starting/finishing a quest, etc.). Would it be better to add this to the queue as it goes, 
+	or have them at the start but simply locked? unsure --> could have them at 'priority -1' which is unattainable but then is changed
+Some conversations may be go back into the queue after being had
+
+Priority Ranking: 
+	0 - generic, placeholder dialogue
+	3 - side quest
+	4 - main quest
+	5 - introduction
