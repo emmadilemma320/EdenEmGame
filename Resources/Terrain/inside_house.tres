@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://i7rq2bhk00wg"]
+[gd_resource type="TileSet" format=3 uid="uid://i7rq2bhk00wg"]
 
 [ext_resource type="Texture2D" uid="uid://bdoirx5ad7etk" path="res://Pre-Production Assets/Terrain-and-Buildings/Inside/Wooden_House_Walls_Tilset.png" id="1_ai0rh"]
 [ext_resource type="Texture2D" uid="uid://3yw8xjs8lwd" path="res://Pre-Production Assets/Terrain-and-Buildings/Inside/Doors.png" id="2_k5emx"]

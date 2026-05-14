@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cptr0ko6qkkb8"]
+
+[ext_resource type="Texture2D" uid="uid://dtt3f5oso21bl" path="res://Pre-Production Assets/UI/UI cooking.png" id="1_ngcf7"]
+[ext_resource type="Script" uid="uid://bw23apyad2kbn" path="res://Scripts/in_world/cauldron.gd" id="1_vregf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vregf"]
+atlas = ExtResource("1_ngcf7")
+region = Rect2(272, 33, 48, 77)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4yias"]
+size = Vector2(48, 76)
+
+[node name="Cauldron" type="StaticBody2D" unique_id=1247297523]
+script = ExtResource("1_vregf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2102734321]
+texture = SubResource("AtlasTexture_vregf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1230406606]
+shape = SubResource("RectangleShape2D_4yias")
