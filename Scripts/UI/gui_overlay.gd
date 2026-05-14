@@ -40,7 +40,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# closing current ui menu via "close_current_menu"
-	if Input.is_action_just_pressed("close_current_menu"):
+	if Input.is_action_just_pressed("ui_cancel"):
 		if Global.current_open_menu.back() == grimoire_base.name and grimoire_base.visible:
 			close_grimoire()
 		if Global.current_open_menu.back() == "grimoire page":

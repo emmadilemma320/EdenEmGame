@@ -16,7 +16,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("close_current_menu"):
+	if Input.is_action_just_pressed("ui_cancel"):
 		if Global.current_open_menu.back()==name and visible:
 			close()
 		for i in range(menus.size()):

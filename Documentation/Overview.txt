@@ -88,7 +88,6 @@ To Do:
 		- option b) each chest stores a list of it's contains, and an inventory is propagated when the chest is open
 			ex) [("apple", 1), ("mushroom", 3), ...]
 	- add controls to transfer items to/from chests
-	- update inputs to built-in ones
 	- look over specific export calls and see if any match better
 	- potentially: update trash, drop, and use to be drag&drop (or keyboard-push) features rather than a drop-down menu
 	
@@ -140,3 +139,4 @@ Done:
 	- scene changes
 	- rename player script to match scene
 	- add export category to classes w/ a lot of exported variables (npcs, etc.) using @export_category("Example")
+	- update inputs to built-in ones
