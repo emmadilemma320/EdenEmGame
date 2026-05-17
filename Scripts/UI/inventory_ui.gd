@@ -24,7 +24,7 @@ func _process(delta):
 		else:
 			open()
 			
-	if Global.current_open_menu.back() == name and Input.is_action_just_pressed("ui_cancel"):
+	if SceneManager.current_open_menu.back() == name and Input.is_action_just_pressed("ui_cancel"):
 		if is_open:
 			close()
 
@@ -37,14 +37,14 @@ func update_slots():
 func open():
 	visible = true
 	is_open = true
-	Global.current_open_menu.append(name)
+	SceneManager.current_open_menu.append(name)
 
 func close():
 	for slot in slots:
 		slot.close_drop_down()
 	visible = false
 	is_open = false
-	Global.current_open_menu.erase(name)
+	SceneManager.current_open_menu.erase(name)
 	
 func trash(slot_i: int, amount: int):
 	inventory.trash(slot_i, amount)

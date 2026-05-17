@@ -36,10 +36,10 @@ func _ready():
 	gift_chosen.connect(Global.emit_gift_is)
 	
 func _process(delta):
-	if Input.is_action_just_pressed("ui_cancel") and Global.current_open_menu.back() == name:
+	if Input.is_action_just_pressed("ui_cancel") and SceneManager.current_open_menu.back() == name:
 		if drop_down_open:
 			close_drop_down()
-	if Global.current_open_menu.back() != name:
+	if SceneManager.current_open_menu.back() != name:
 		close_drop_down()
 
 		
@@ -110,7 +110,7 @@ func update():
 			button.visible = true
 
 func close_drop_down():
-	Global.current_open_menu.erase(name)
+	SceneManager.current_open_menu.erase(name)
 	drop_down_menu.visible = false
 	drop_amount_line.visible = false
 	trash_amount_line.visible = false
@@ -120,7 +120,7 @@ func close_drop_down():
 
 func open_drop_down():
 	if self_inventory_slot.item:
-		Global.current_open_menu.append(name)
+		SceneManager.current_open_menu.append(name)
 		drop_down_menu.visible = true
 		drop_down_open = true
 
