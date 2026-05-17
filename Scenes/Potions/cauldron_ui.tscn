@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dh5e7sjyxgjme"]
+
+[ext_resource type="PackedScene" uid="uid://b5sc642axrbmr" path="res://Scenes/UI/inventory_ui.tscn" id="1_5uco5"]
+[ext_resource type="Theme" uid="uid://d3l5kwxe8w48i" path="res://Themes/inventory_theme.tres" id="2_kcyps"]
+[ext_resource type="Texture2D" uid="uid://dl1n04ksbbx65" path="res://Pre-Production Assets/UI/inventory-background.png" id="3_fq4nq"]
+[ext_resource type="PackedScene" uid="uid://bi2d1e14l124x" path="res://Scenes/UI/inventory_ui_slot.tscn" id="4_fq4nq"]
+
+[node name="CauldronUi" type="Panel" unique_id=1205152593]
+
+[node name="Inventory UI" parent="." unique_id=1978861353 instance=ExtResource("1_5uco5")]
+layout_mode = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1462449821]
+layout_mode = 0
+offset_left = -170.0
+offset_right = -85.0
+offset_bottom = 66.0
+scale = Vector2(2, 2)
+theme = ExtResource("2_kcyps")
+texture = ExtResource("3_fq4nq")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect" unique_id=393411118]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -28.5
+offset_right = 37.5
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="slot_0" parent="NinePatchRect/GridContainer" unique_id=277813327 instance=ExtResource("4_fq4nq")]
+layout_mode = 2
+
+[node name="slot_1" parent="NinePatchRect/GridContainer" unique_id=1466967589 instance=ExtResource("4_fq4nq")]
+layout_mode = 2
+
+[node name="slot_2" parent="NinePatchRect/GridContainer" unique_id=769850627 instance=ExtResource("4_fq4nq")]
+visible = false
+layout_mode = 2
+
+[node name="slot_3" parent="NinePatchRect/GridContainer" unique_id=1099671655 instance=ExtResource("4_fq4nq")]
+visible = false
+layout_mode = 2
+
+[node name="slot_4" parent="NinePatchRect/GridContainer" unique_id=1657787297 instance=ExtResource("4_fq4nq")]
+visible = false
+layout_mode = 2
+
+[node name="slot_5" parent="NinePatchRect/GridContainer" unique_id=1543925038 instance=ExtResource("4_fq4nq")]
+visible = false
+layout_mode = 2
+
+[node name="slot_6" parent="NinePatchRect/GridContainer" unique_id=1820472014 instance=ExtResource("4_fq4nq")]
+visible = false
+layout_mode = 2
+
+[node name="slot_7" parent="NinePatchRect/GridContainer" unique_id=902445404 instance=ExtResource("4_fq4nq")]
+visible = false
+layout_mode = 2
+
+[node name="slot_8" parent="NinePatchRect/GridContainer" unique_id=2099356622 instance=ExtResource("4_fq4nq")]
+visible = false
+layout_mode = 2
+
+[node name="slot_9" parent="NinePatchRect/GridContainer" unique_id=1485689896 instance=ExtResource("4_fq4nq")]
+visible = false
+layout_mode = 2
+
+[node name="slot_10" parent="NinePatchRect/GridContainer" unique_id=720850115 instance=ExtResource("4_fq4nq")]
+visible = false
+layout_mode = 2
+
+[node name="slot_11" parent="NinePatchRect/GridContainer" unique_id=335325767 instance=ExtResource("4_fq4nq")]
+visible = false
+layout_mode = 2
