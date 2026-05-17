@@ -1,4 +1,9 @@
-extends Node
+# grimoire progress
+var discovered_collectables: Array[bool]
+var discovered_recipes: Array[bool]
+
+# town progress 
+var discovered_npcs: Dictionary[String, int]
 
 
 # Called when the node enters the scene tree for the first time.

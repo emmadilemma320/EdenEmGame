@@ -23,6 +23,7 @@ config/icon="uid://cv8aafvxhc84o"
 
 Global="*res://Scripts/in_world/global.gd"
 SceneManager="*uid://b1vw2ir4es7pi"
+Save="*uid://brxbfsjo2uy6y"
 
 [display]
 
