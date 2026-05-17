@@ -75,7 +75,6 @@ To Do:
 	- add handwritten font
 	- remove gift option until first talked to them / not 0 friendship level
 	- add collision to inside furniture
-	- transfer global.gd behavior/signals to the scene manager
 	- redo scene/script organizing to three categories: areas, global, and ui 
 		- areas will have one sub-folder per in-world location
 		- global will have in-world scenes/scripts that are/can be in all/multiple locations (ex. scene manager, player)
@@ -90,10 +89,11 @@ To Do:
 	- add controls to transfer items to/from chests
 	- look over specific export calls and see if any match better
 	- potentially: update trash, drop, and use to be drag&drop (or keyboard-push) features rather than a drop-down menu
+	- add Save global script for discovered collectibles and npcs
 	
 
 In Progess:
-	
+	- transfer global.gd behavior/signals to the scene manager
 
 Done:
 	- character movement
