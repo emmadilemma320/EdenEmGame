@@ -10,7 +10,10 @@ const COLLECTABLE_LIST: Dictionary = {
 	"Book": "res://Resources/Collectables/book.tres"
 }
 const recipes_master_list = []
-const npc_master = ["Frog", "Chom Bomb"]
+const NPC_LIST: Dictionary = {
+	"chom bomb": "res://Resources/NPCs/characters/chom_bomb.tres", 
+	"frog": "res://Resources/NPCs/characters/frog_prince.tres"
+}
 
 # grimoire progress
 var discovered_collectables: Array[bool]

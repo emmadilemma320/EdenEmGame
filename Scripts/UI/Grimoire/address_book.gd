@@ -2,11 +2,6 @@ extends Control
 # The catalogue displays a list of all the different npcs the player has discovered, 
 # including information about them such as recipes they can be used in, ways the turn them into potion ingrediants, etc.
 
-const NPC_LIST: Dictionary = {
-	"chom bomb": "res://Resources/NPCs/characters/chom_bomb.tres", 
-	"frog": "res://Resources/NPCs/characters/frog_prince.tres"
-}
-
 @onready var blank_entry = preload("res://Scenes/UI/Grimoire/address_book_entry.tscn")
 @onready var entries = $entries/grid1
 
@@ -58,7 +53,7 @@ func update():
 		# First we create a new entry for the npc and populate it with data
 		var new_entry = blank_entry.instantiate()
 		
-		new_entry.character = load(NPC_LIST[npc_name])
+		new_entry.character = load(Save.NPC_LIST[npc_name])
 		new_entry.update()
 		
 		if entries.get_children().size() == 0:
