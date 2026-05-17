@@ -1,3 +1,5 @@
+extends Node
+
 # master list - could move to it's own 'game info' script just for constants
 const collectables_master_list = ["Apple", "Amanita"]
 const recipes_master_list = []
