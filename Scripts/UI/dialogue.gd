@@ -23,8 +23,8 @@ func _ready() -> void:
 	dialogue_ended.connect(Global.emit_done_speaking)
 	
 	# next we make sure the menu is closed at the start
-	if Global.current_open_menu.has(name):
-		Global.current_open_menu.erase(name)
+	if SceneManager.current_open_menu.has(name):
+		SceneManager.current_open_menu.erase(name)
 	visible = false
 
 
