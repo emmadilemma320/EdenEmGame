@@ -12,8 +12,6 @@ const SETTINGS_MENU_NAMES: Array = ["Visual Settings", "Audio Settings", "Gamepl
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	menus = $Base/menus.get_children()
-		
-	#print("settings manager: ", SceneManager.name)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
