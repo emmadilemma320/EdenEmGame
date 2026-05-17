@@ -89,11 +89,11 @@ To Do:
 	- add controls to transfer items to/from chests
 	- look over specific export calls and see if any match better
 	- potentially: update trash, drop, and use to be drag&drop (or keyboard-push) features rather than a drop-down menu
-	- add Save global script for discovered collectibles and npcs
 	
 
 In Progess:
 	- transfer global.gd behavior/signals to the scene manager
+	- add Save global script for discovered collectibles and npcs
 
 Done:
 	- character movement
