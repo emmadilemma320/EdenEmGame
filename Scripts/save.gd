@@ -9,7 +9,9 @@ const COLLECTABLE_LIST: Dictionary = {
 	"Brown Mushroom": "res://Resources/Collectables/brown_mushroom.tres", 
 	"Book": "res://Resources/Collectables/book.tres"
 }
-const recipes_master_list = []
+const RECIPE_LIST: Dictionary = {
+	"recipe_name": "recipe_resource_path"
+}
 const NPC_LIST: Dictionary = {
 	"chom bomb": "res://Resources/NPCs/characters/chom_bomb.tres", 
 	"frog": "res://Resources/NPCs/characters/frog_prince.tres"
@@ -34,7 +36,7 @@ func new_save() -> void:
 	discovered_collectables.resize(COLLECTABLE_LIST.keys().size())
 	discovered_collectables.fill(false)
 	
-	discovered_recipes.resize(recipes_master_list.size())
+	discovered_recipes.resize(RECIPE_LIST.keys().size())
 	discovered_recipes.fill(false)
 	
 	discovered_npcs = {}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cogqmfjhhvpq2"]
+[gd_scene format=3 uid="uid://cogqmfjhhvpq2"]
 
 [ext_resource type="Texture2D" uid="uid://dvbcq48ohdrex" path="res://Pre-Production Assets/UI/UI books & more.png" id="1_5f72v"]
 [ext_resource type="Script" uid="uid://idyi5hreqxv0" path="res://Scripts/UI/Grimoire/catalogue.gd" id="1_otuqn"]
@@ -11,7 +11,7 @@ region = Rect2(513, 17, 47, 62)
 atlas = ExtResource("1_5f72v")
 region = Rect2(320, 379, 16, 22)
 
-[node name="Catalogue" type="Control"]
+[node name="Catalogue" type="Control" unique_id=912180019]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,7 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_otuqn")
 
-[node name="catalogue_pg1" type="TextureRect" parent="."]
+[node name="catalogue_pg1" type="TextureRect" parent="." unique_id=1065614675]
 visible = false
 layout_mode = 0
 offset_right = 350.0
@@ -29,7 +29,7 @@ texture = SubResource("AtlasTexture_otuqn")
 expand_mode = 1
 flip_h = true
 
-[node name="catalogue_pg2" type="TextureRect" parent="."]
+[node name="catalogue_pg2" type="TextureRect" parent="." unique_id=61837670]
 visible = false
 layout_mode = 0
 offset_left = 450.0
@@ -38,14 +38,14 @@ offset_bottom = 400.0
 texture = SubResource("AtlasTexture_otuqn")
 expand_mode = 1
 
-[node name="entries" type="NinePatchRect" parent="."]
+[node name="entries" type="NinePatchRect" parent="." unique_id=1516974768]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 50.0
 offset_right = 70.0
 offset_bottom = 90.0
 
-[node name="grid1" type="GridContainer" parent="entries"]
+[node name="grid1" type="GridContainer" parent="entries" unique_id=2002277741]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 9.35
@@ -55,7 +55,7 @@ offset_bottom = -74.0
 theme_override_constants/h_separation = 150
 theme_override_constants/v_separation = 75
 
-[node name="grid2" type="GridContainer" parent="entries"]
+[node name="grid2" type="GridContainer" parent="entries" unique_id=1230706977]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 9.35
@@ -67,7 +67,7 @@ theme_override_constants/h_separation = 150
 theme_override_constants/v_separation = 75
 columns = 2
 
-[node name="catalogue_green_ribbon" type="TextureRect" parent="."]
+[node name="catalogue_green_ribbon" type="TextureRect" parent="." unique_id=2057399625]
 layout_mode = 0
 offset_left = 50.0
 offset_right = 90.0
