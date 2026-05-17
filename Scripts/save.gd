@@ -1,3 +1,8 @@
+# master list - could move to it's own 'game info' script just for constants
+const collectables_master_list = ["Apple", "Amanita"]
+const recipes_master_list = []
+const npc_master = ["Frog", "Chom Bomb"]
+
 # grimoire progress
 var discovered_collectables: Array[bool]
 var discovered_recipes: Array[bool]
