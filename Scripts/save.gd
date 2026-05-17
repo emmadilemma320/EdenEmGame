@@ -1,7 +1,14 @@
 extends Node
 
 # master list - could move to it's own 'game info' script just for constants
-const collectables_master_list = ["Apple", "Amanita"]
+const COLLECTABLE_LIST: Dictionary = {
+	"Amanita": "res://Resources/Collectables/amanita.tres", 
+	"Apple": "res://Resources/Collectables/apple.tres", 
+	"Berry": "res://Resources/Collectables/berry.tres", 
+	"Blue Mushroom": "res://Resources/Collectables/blue_mushroom.tres",
+	"Brown Mushroom": "res://Resources/Collectables/brown_mushroom.tres", 
+	"Book": "res://Resources/Collectables/book.tres"
+}
 const recipes_master_list = []
 const npc_master = ["Frog", "Chom Bomb"]
 
@@ -21,7 +28,7 @@ func _process(_delta: float) -> void:
 	pass
 
 func new_save() -> void:
-	discovered_collectables.resize(collectables_master_list.size())
+	discovered_collectables.resize(COLLECTABLE_LIST.keys().size())
 	discovered_collectables.fill(false)
 	
 	discovered_recipes.resize(recipes_master_list.size())

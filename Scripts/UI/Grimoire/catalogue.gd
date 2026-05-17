@@ -2,15 +2,6 @@ extends Control
 # The catalogue displays a list of all the different collectables the player has discovered, 
 # including information about them such as recipes they can be used in, ways the turn them into potion ingrediants, etc.
 
-const COLLECTABLE_LIST: Dictionary = {
-	"Amanita": "res://Resources/Collectables/amanita.tres", 
-	"Apple": "res://Resources/Collectables/apple.tres", 
-	"Berry": "res://Resources/Collectables/berry.tres", 
-	"Blue Mushroom": "res://Resources/Collectables/blue_mushroom.tres",
-	"Brown Mushroom": "res://Resources/Collectables/brown_mushroom.tres", 
-	"Book": "res://Resources/Collectables/book.tres"
-}
-
 @onready var blank_entry = preload("res://Scenes/UI/Grimoire/catalogue_entry.tscn")
 @onready var entries = $entries/grid1
 
@@ -62,7 +53,7 @@ func update():
 		# First we create a new entry for the collectable and populate it with data
 		var new_entry = blank_entry.instantiate()
 		
-		new_entry.inventory_self = load(COLLECTABLE_LIST[collectable_name])
+		new_entry.inventory_self = load(Save.COLLECTABLE_LIST[collectable_name])
 		new_entry.update()
 		
 		if entries.get_children().size() == 0:
