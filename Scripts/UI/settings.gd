@@ -12,27 +12,29 @@ const SETTINGS_MENU_NAMES: Array = ["Visual Settings", "Audio Settings", "Gamepl
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	menus = $Base/menus.get_children()
+		
+	#print("settings manager: ", SceneManager.name)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
-		if Global.current_open_menu.back()==name and visible:
+		if SceneManager.current_open_menu.back()==name and visible:
 			close()
 		for i in range(menus.size()):
-			if Global.current_open_menu.back()==menus[i].name and menus[i].visible:
+			if SceneManager.current_open_menu.back()==menus[i].name and menus[i].visible:
 				close_settings_menus()
 	
 func open():
 	visible = true
-	Global.current_open_menu.append(name)
+	SceneManager.current_open_menu.append(name)
 	
 func close():
 	visible = false
 	for i in range(menus.size()):
 		if menus[i].visible:
 			close_settings_menus()
-	Global.current_open_menu.erase(name)
+	SceneManager.current_open_menu.erase(name)
 
 
 func _on_settings_button_pressed() -> void:
@@ -48,7 +50,7 @@ func open_settings_menu(i: int):
 	menus[i].visible = true
 	settings_label.text = SETTINGS_MENU_NAMES[i]
 	
-	Global.current_open_menu.append(menus[i].name)
+	SceneManager.current_open_menu.append(menus[i].name)
 	
 func close_settings_menus():
 	main_settings_menu.visible = true
@@ -56,7 +58,7 @@ func close_settings_menus():
 	for i in range(menus.size()):
 		if menus[i].visible:
 			menus[i].visible = false
-			Global.current_open_menu.erase(menus[i].name)
+			SceneManager.current_open_menu.erase(menus[i].name)
 	settings_label.text = "Settings"
 	
 	

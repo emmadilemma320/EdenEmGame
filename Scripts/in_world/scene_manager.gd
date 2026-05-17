@@ -1,8 +1,14 @@
 extends Node
 
+# scene info
 var current_scene: String
 var scenes: Dictionary
+
+# player scene
 @onready var player = preload("res://Scenes/Entities/player.tscn")
+
+# global info
+@onready var current_open_menu: Array[String]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,6 +26,9 @@ func _ready() -> void:
 	
 	# connect the signal for future scene changes
 	Global.scene_change_signal.connect(scene_change)
+	
+	# add the base ui menu
+	current_open_menu.append("none")
 	
 
 func scene_change(next_scene: String, player_position: Vector2):
