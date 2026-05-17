@@ -41,9 +41,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	# closing current ui menu via "close_current_menu"
 	if Input.is_action_just_pressed("ui_cancel"):
-		if Global.current_open_menu.back() == grimoire_base.name and grimoire_base.visible:
+		if SceneManager.current_open_menu.back() == grimoire_base.name and grimoire_base.visible:
 			close_grimoire()
-		if Global.current_open_menu.back() == "grimoire page":
+		if SceneManager.current_open_menu.back() == "grimoire page":
 			close_grimoire_pages()
 	
 	# opening & closing grimoire via "access_grimoire"
@@ -82,13 +82,13 @@ func _on_grimoire_button_pressed() -> void: # grimoire opening button
 
 func open_grimoire():
 	grimoire_base.visible = true
-	Global.current_open_menu.append(grimoire_base.name)
+	SceneManager.current_open_menu.append(grimoire_base.name)
 	
 func close_grimoire():
 	close_grimoire_pages()
 
 	grimoire_base.visible = false
-	Global.current_open_menu.erase(grimoire_base.name)
+	SceneManager.current_open_menu.erase(grimoire_base.name)
 	
 	
 func open_dialogue(speaking_with: NPC):
@@ -103,7 +103,7 @@ func open_grimoire_page(i: int):
 	#ensure any open grimoire pages are closed
 	close_grimoire_pages()
 	
-	Global.current_open_menu.append("grimoire page")
+	SceneManager.current_open_menu.append("grimoire page")
 	
 	# make the table of contents and any page buttons invisible
 	table_of_contents.visible = false
@@ -114,7 +114,7 @@ func open_grimoire_page(i: int):
 	pages[i].open()
 	
 func close_grimoire_pages():
-	Global.current_open_menu.erase("grimoire page")
+	SceneManager.current_open_menu.erase("grimoire page")
 	table_of_contents.visible = true
 	for button in page_button_ribbons:
 		button.visible = true
