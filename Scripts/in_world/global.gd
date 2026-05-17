@@ -4,7 +4,6 @@ extends Node
 @export var discovered_collectables: Array[String]
 @export var discovered_recipes: Array[String]
 @onready var current_scene = $"."
-@onready var current_open_menu: Array[String]
 
 @onready var inventory: Inventory = preload("res://Resources/Inventories/player_inventory.tres")
 
@@ -19,7 +18,6 @@ signal scene_change_signal(String, Vector2)
 func _ready() -> void:
 	discovered_collectables = ["Amanita", "Apple", "Book"]
 	discovered_npcs.append("chom bomb")
-	current_open_menu.append("none")
 	
 	#chom_bomb.talk_button_pressed.connect(test)
 	#connect_signal(frog)
