@@ -38,7 +38,7 @@ func _ready() -> void:
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# closing current ui menu via "close_current_menu"
 	if Input.is_action_just_pressed("ui_cancel"):
 		if SceneManager.current_open_menu.back() == grimoire_base.name and grimoire_base.visible:
@@ -91,7 +91,7 @@ func close_grimoire():
 	SceneManager.current_open_menu.erase(grimoire_base.name)
 	
 	
-func open_dialogue(speaking_with: NPC):
+func open_dialogue(_speaking_with: NPC):
 	grimoire_button_base.visible = false
 	#settings_button.visible = false
 	

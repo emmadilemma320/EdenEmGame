@@ -29,7 +29,7 @@ func _ready():
 	if amount > 1:
 		amount_label.visible = true
 
-func _process(delta):
+func _process(_delta):
 	if Global.discovered_collectables.has(inventory_self.name) and label.text != inventory_self.name:
 		label.text = inventory_self.name
 	if player_in_area and Input.is_action_just_pressed("item_pick_up"):
@@ -56,5 +56,5 @@ func _on_body_entered(body: Node2D) -> void:
 	player = body
 	player_in_area = true
 	
-func _on_body_exited(body: Node2D) -> void:
+func _on_body_exited(_body: Node2D) -> void:
 	player_in_area = false

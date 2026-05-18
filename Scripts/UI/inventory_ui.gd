@@ -17,7 +17,7 @@ func _ready():
 	update_slots()
 	close()
 	
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("open_inventory"):
 		if is_open:
 			close()
@@ -58,7 +58,7 @@ func open_gift_mode():
 		slot.gifting_mode = true
 	visible = true # then we make ourselves visible
 	
-func close_gift_mode(temp: String):
+func close_gift_mode(_temp: String):
 	visible = false
 	for slot in slots: # then we let the slots know we are in gifting mode
 		slot.gifting_mode = false

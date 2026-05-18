@@ -47,7 +47,7 @@ func emit_gift_is(gift_i: int):
 	var gift: String = inventory.slots[gift_i].item.name
 	gift_is.emit(gift)
 
-func waiting_for_gift(npc: NPC):
+func waiting_for_gift(_npc: NPC):
 	get_gift.emit()
 
 func emit_scene_change_signal(next_scene: String, player_position: Vector2):

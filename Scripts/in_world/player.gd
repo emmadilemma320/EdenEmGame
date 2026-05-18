@@ -11,7 +11,7 @@ var current_speed = 300.0
 func _ready():
 	inventory.player_drop.connect(drop)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	# left & right
 	if Input.is_action_pressed("ui_left"):
 		velocity.x = current_speed*-1 #move left

@@ -54,7 +54,7 @@ func _on_mouse_entered() -> void:
 func _on_mouse_exited() -> void:
 	nametag.visible = false
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	if character.wants_to_talk:
 		talk_button.visible = true
 	if !connected:
@@ -62,6 +62,6 @@ func _on_body_entered(body: Node2D) -> void:
 		connected = true
 	gift_button.visible = true
 
-func _on_body_exited(body: Node2D) -> void:
+func _on_body_exited(_body: Node2D) -> void:
 	talk_button.visible = false
 	gift_button.visible = false

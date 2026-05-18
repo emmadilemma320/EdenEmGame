@@ -35,7 +35,7 @@ func _ready():
 	buttons = [use, info, drop, trash]
 	gift_chosen.connect(Global.emit_gift_is)
 	
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel") and SceneManager.current_open_menu.back() == name:
 		if drop_down_open:
 			close_drop_down()
