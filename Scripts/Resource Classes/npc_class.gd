@@ -68,14 +68,14 @@ func get_friendship_status() -> String:
 func emit_talk_signal():
 	talk_button_pressed.emit(self)
 	
-func receive_gift(gift: String):
+func receive_gift(gift_name: String):
 	var temp = friendship_points
-	if gift == favorite_gift:
+	if gift_name == favorite_gift:
 		friendship_points += POINTS_FOR_FAV_GIFT
-	elif liked_gifts.has(gift):
+	elif liked_gifts.has(gift_name):
 		friendship_points += POINTS_FOR_LIKED_GIFT
-	elif disliked_gifts.has(gift):
+	elif disliked_gifts.has(gift_name):
 		friendship_points += POINTS_FOR_DISLIKED_GIFT
 	else:
 		friendship_points += POINTS_FOR_NEUTRAL_GIFT
-	print("gave gift ", gift, " friendship points increased by ", (friendship_points - temp))
+	print("gave gift ", gift_name, " friendship points increased by ", (friendship_points - temp))

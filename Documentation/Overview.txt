@@ -94,6 +94,7 @@ To Do:
 In Progess:
 	- transfer global.gd behavior/signals to the scene manager
 	- add Save global script for discovered collectibles and npcs
+	- removing warnings from Debug
 
 Done:
 	- character movement
