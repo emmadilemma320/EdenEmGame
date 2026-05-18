@@ -94,7 +94,6 @@ To Do:
 In Progess:
 	- transfer global.gd behavior/signals to the scene manager
 	- add Save global script for discovered collectibles and npcs
-	- removing warnings from Debug
 
 Done:
 	- character movement
@@ -141,3 +140,4 @@ Done:
 	- rename player script to match scene
 	- add export category to classes w/ a lot of exported variables (npcs, etc.) using @export_category("Example")
 	- update inputs to built-in ones
+	- removing warnings from Debug
