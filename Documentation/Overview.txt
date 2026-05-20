@@ -94,6 +94,8 @@ To Do:
 In Progess:
 	- transfer global.gd behavior/signals to the scene manager
 	- rewrite grimoire scripts to use Save script instead of Global
+	- rewrite catalogue entry creation
+		- write "reveal" function
 
 
 Done:
