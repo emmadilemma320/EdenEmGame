@@ -9,42 +9,44 @@
 atlas = ExtResource("3_botxy")
 region = Rect2(64, 32, 16, 16)
 
-[node name="Catalogue_Entry" type="Control"]
+[node name="Catalogue_Entry" type="Control" unique_id=1107166453]
 layout_mode = 3
-anchor_right = 0.053
-anchor_bottom = 0.12
-offset_right = -0.0560036
-offset_bottom = 0.239998
+anchor_right = 0.17300001
+anchor_bottom = 0.093
+offset_right = 2.7039948
+offset_bottom = -0.26399994
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ew64a")
 
-[node name="portrait_background" type="TextureRect" parent="."]
+[node name="portrait_background" type="TextureRect" parent="." unique_id=790636772]
 layout_mode = 0
 offset_right = 80.0
 offset_bottom = 80.0
+scale = Vector2(0.7599992, 0.76000047)
 texture = ExtResource("1_botxy")
 
-[node name="CenterContainer" type="CenterContainer" parent="portrait_background"]
+[node name="CenterContainer" type="CenterContainer" parent="portrait_background" unique_id=1114758461]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 5.0
 offset_right = 75.0
 offset_bottom = 75.0
 
-[node name="item_portrait" type="TextureRect" parent="portrait_background/CenterContainer"]
+[node name="item_portrait" type="TextureRect" parent="portrait_background/CenterContainer" unique_id=822416841]
 custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
 texture = SubResource("AtlasTexture_botxy")
 stretch_mode = 1
 
-[node name="description_background" type="TextureRect" parent="."]
+[node name="description_background" type="TextureRect" parent="." unique_id=1949157626]
 layout_mode = 0
-offset_left = 80.0
-offset_right = 280.0
+offset_left = 62.0
+offset_right = 262.0
 offset_bottom = 100.0
+scale = Vector2(0.7599992, 0.76000047)
 
-[node name="description" type="Label" parent="description_background"]
+[node name="description" type="Label" parent="description_background" unique_id=811158157]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 5.0
@@ -57,14 +59,15 @@ aerigba;krejb  piaeruhg a;eiohurgpi aigouthre g  ia iap pei agpia ouhat gabuhgat
 autowrap_mode = 2
 clip_text = true
 
-[node name="nameplate" type="TextureRect" parent="."]
+[node name="nameplate" type="TextureRect" parent="." unique_id=977953219]
 layout_mode = 0
-offset_top = 80.0
+offset_top = 61.0
 offset_right = 80.0
-offset_bottom = 100.0
+offset_bottom = 81.0
+scale = Vector2(0.7599992, 0.76000047)
 theme = ExtResource("4_ew64a")
 
-[node name="item_name" type="Label" parent="nameplate"]
+[node name="item_name" type="Label" parent="nameplate" unique_id=260175707]
 layout_mode = 0
 offset_right = 80.0
 offset_bottom = 20.0
