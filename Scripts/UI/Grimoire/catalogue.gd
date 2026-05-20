@@ -5,6 +5,8 @@ extends Control
 @onready var blank_entry = preload("res://Scenes/UI/Grimoire/catalogue_entry.tscn")
 @onready var entries = $entries/grid1
 
+const ENTRY_BUFFER = 5
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# To start, we make a list of all collectables (not just the discovered ones)
@@ -21,11 +23,18 @@ func create_entry(collectable: String) -> void:
 	var curr_index = 0
 	print("Creating entry for ", collectable)
 	
-	if Save.discovered_collectables[curr_index]:
-		reveal(curr_index)
+	var new_entry = blank_entry.instantiate()
+	new_entry.inventory_self = load(Save.COLLECTABLE_LIST[collectable])
+	new_entry.update()
 	
-func reveal(i: int) -> void:
-	print("Entry ", i, " revealed!")
+	if entries.get_children().size() == 0:
+		$entries/grid1.add_theme_constant_override("h_separation", int(new_entry.return_size().x) + ENTRY_BUFFER)
+		$entries/grid1.add_theme_constant_override("v_separation", int(new_entry.return_size().y) + ENTRY_BUFFER)
+
+	if Save.discovered_collectables[curr_index]:
+		new_entry.reveal()
+		
+	entries.add_child(new_entry)
 
 func open():
 	visible = true
