@@ -87,5 +87,15 @@ visible = false
 layout_mode = 2
 
 [node name="Node2D" parent="." unique_id=1260738403 instance=ExtResource("6_xo4bj")]
-position = Vector2(-67, 99)
+position = Vector2(-27, 94)
 scale = Vector2(0.5, 0.5)
+
+[node name="Button" type="Button" parent="." unique_id=1032252367]
+layout_mode = 0
+offset_left = -111.0
+offset_top = 90.0
+offset_right = -59.0
+offset_bottom = 113.0
+text = "Brew"
+
+[connection signal="pressed" from="Button" to="." method="_on_brew_pressed"]
