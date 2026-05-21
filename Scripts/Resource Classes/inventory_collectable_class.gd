@@ -5,6 +5,7 @@ class_name InventoryCollectable
 
 @export_category("Basic Info")
 @export var name: String = ""
+@export_enum("Ingrediant", "Processed", "Consumable") var type: int
 
 @export_category("Textures")
 @export var texture: Texture2D
