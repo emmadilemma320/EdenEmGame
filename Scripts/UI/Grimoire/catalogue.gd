@@ -31,7 +31,7 @@ func create_entry(collectable: String) -> void:
 	
 	var new_entry = blank_entry.instantiate()
 	new_entry.inventory_self = load(Save.COLLECTABLE_LIST[collectable])
-	new_entry.update()
+	new_entry.set_portrait()
 	
 	if Save.discovered_collectables[curr_index]:
 		new_entry.reveal()

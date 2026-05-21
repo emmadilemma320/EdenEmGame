@@ -34,6 +34,7 @@ offset_right = 75.0
 offset_bottom = 75.0
 
 [node name="item_portrait" type="TextureRect" parent="portrait_background/CenterContainer" unique_id=822416841]
+visible = false
 custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
 texture = SubResource("AtlasTexture_botxy")
@@ -75,6 +76,6 @@ theme = ExtResource("4_ew64a")
 theme_override_colors/font_color = Color(0.456464, 0.456464, 0.456464, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_font_sizes/font_size = 15
-text = "Amanita"
+text = "???"
 horizontal_alignment = 1
 vertical_alignment = 1
