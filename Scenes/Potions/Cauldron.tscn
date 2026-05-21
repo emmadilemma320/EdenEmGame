@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dtt3f5oso21bl" path="res://Pre-Production Assets/UI/UI cooking.png" id="1_ngcf7"]
 [ext_resource type="Script" uid="uid://bw23apyad2kbn" path="res://Scripts/in_world/cauldron.gd" id="1_vregf"]
+[ext_resource type="PackedScene" uid="uid://dh5e7sjyxgjme" path="res://Scenes/Potions/cauldron_ui.tscn" id="3_4yias"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vregf"]
 atlas = ExtResource("1_ngcf7")
@@ -18,3 +19,15 @@ texture = SubResource("AtlasTexture_vregf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1230406606]
 shape = SubResource("RectangleShape2D_4yias")
+
+[node name="Button" type="Button" parent="." unique_id=663815711]
+offset_left = -24.0
+offset_top = -38.0
+offset_right = 24.0
+offset_bottom = 38.0
+
+[node name="CauldronUi" parent="." unique_id=1205152593 instance=ExtResource("3_4yias")]
+offset_top = -189.0
+offset_bottom = -189.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

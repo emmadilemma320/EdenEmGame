@@ -3,16 +3,15 @@ extends StaticBody2D
 @onready var player
 @onready var inventory: Inventory = preload("res://Resources/Inventories/player_inventory.tres")
 
-var is_open = false
+signal cauldron_ui_open
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("item_pick_up"):
-		open()
+func _process(_delta: float) -> void:
+	cauldron_ui_open.connect(Global.open_cauldron_ui)
 
-func open():
-	is_open = true
+func _on_button_pressed() -> void:
+	cauldron_ui_open.emit()

@@ -6,6 +6,7 @@ extends Node
 @onready var current_scene = $"."
 
 @onready var inventory: Inventory = preload("res://Resources/Inventories/player_inventory.tres")
+@onready var cauldron_ui = $CauldronUi
 
 signal talk_to(NPC)
 signal talking
@@ -13,6 +14,7 @@ signal done_speaking
 signal gift_is(String)
 signal get_gift
 signal scene_change_signal(String, Vector2)
+signal cauldron_ui_open
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -53,3 +55,6 @@ func waiting_for_gift(_npc: NPC):
 func emit_scene_change_signal(next_scene: String, player_position: Vector2):
 	print("Global speaking: initiated player teleport to ", next_scene)
 	scene_change_signal.emit(next_scene, player_position)
+
+func open_cauldron_ui():
+	cauldron_ui.open.emit()
