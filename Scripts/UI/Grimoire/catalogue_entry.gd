@@ -1,16 +1,15 @@
 extends Control
 
 @export var inventory_self: InventoryCollectable
-	
-func update():
-	if inventory_self != null:
-		$nameplate/item_name.text = inventory_self.name
-		$portrait_background/CenterContainer/item_portrait.texture = inventory_self.texture
-		#$portrait_background/item_portrait.texture.size = 
-	else:
-		print("Error setting inventory self")
+
+func set_portrait():
+	if inventory_self == null:
+		return
+	$portrait_background/CenterContainer/item_portrait.texture = inventory_self.texture
 	
 func reveal():
+	$nameplate/item_name.text = inventory_self.name
+	$portrait_background/CenterContainer/item_portrait.modulate = Color(1, 1, 1, 1)
 	print("Entry ", inventory_self.name, " revealed!")
 	
 func return_size() -> Vector2:
