@@ -10,7 +10,6 @@ func set_portrait():
 func reveal():
 	$nameplate/item_name.text = inventory_self.name
 	$portrait_background/CenterContainer/item_portrait.modulate = Color(1, 1, 1, 1)
-	print("Entry ", inventory_self.name, " revealed!")
 	
 func return_size() -> Vector2:
 	return Vector2($portrait_background.size.x + $description_background.size.x, $portrait_background.size.y + $nameplate.size.y)

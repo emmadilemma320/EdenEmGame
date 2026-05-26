@@ -13,6 +13,12 @@ var catalogue_index = -1
 @export var in_world_texture: Texture2D
 	
 func get_catalogue_index() -> int:
+	if catalogue_index == -1:
+		#print("\tcatalogue index of ", name, " unset!")
+		var keys: Array = Save.COLLECTABLE_LIST.keys()
+		keys.sort()
+		catalogue_index = keys.find(name)
+		#print("\tcatalogue index set to ", catalogue_index)
 	return catalogue_index 
 
 func set_catalogue_index(index: int):

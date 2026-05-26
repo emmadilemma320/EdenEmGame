@@ -33,7 +33,7 @@ func create_entry(collectable: String) -> void:
 	new_entry.inventory_self = load(Save.COLLECTABLE_LIST[collectable])
 	new_entry.set_portrait()
 	
-	if Save.discovered_collectables[curr_index]:
+	if Save.discovered_collectables[new_entry.inventory_self.get_catalogue_index()]:
 		new_entry.reveal()
 	
 	if current_page_num == 0 and current_page.get_children().size() == 0:
@@ -41,14 +41,14 @@ func create_entry(collectable: String) -> void:
 		current_page.add_theme_constant_override("v_separation", int(new_entry.return_size().y) + ENTRY_BUFFER)
 		max_entries_per_page[0] = int(current_page.size.x) / current_page.get_theme_constant("h_separation")
 		max_entries_per_page[1] = int(current_page.size.y) / current_page.get_theme_constant("v_separation")
-		print(max_entries_per_page)
+		#print(max_entries_per_page)
 	
 	if curr_index + 1 > max_entries_per_page.y:
 		# if our entries could extend off the page, we create a new page to add them too
 		# first we create a new GridContainer to be the page
 		var new_page = GridContainer.new()
-		print("Collectable ", collectable, " extends off of page!")
-		print("Moving to page ", current_page_num+1)
+		#print("Collectable ", collectable, " extends off of page!")
+		#print("Moving to page ", current_page_num+1)
 		
 		# next we set the horizontal and vertical separation to match our calculated values
 		new_page.add_theme_constant_override("h_separation", current_page.get_theme_constant("h_separation"))
@@ -60,7 +60,7 @@ func create_entry(collectable: String) -> void:
 		
 		if current_page_num % 1 == 0:
 			# if it is a right page, we move it to the right side 
-			print("This is a right page")
+			#print("This is a right page")
 			new_page.position.x += RIGHT_PAGE_POSITION
 			
 		# if the current page is > 1, it is default invisible, since the catalogue starts on pages 0,1
@@ -73,7 +73,7 @@ func create_entry(collectable: String) -> void:
 		
 		
 	current_page.add_child(new_entry)
-	print("Created entry for ", collectable, " at index ", curr_index, " on page ", current_page_num)
+	#print("Created entry for ", collectable, " at index ", curr_index, " on page ", current_page_num)
 	
 
 func open():
