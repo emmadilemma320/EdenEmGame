@@ -25,9 +25,17 @@ var discovered_recipes: Array[bool]
 var discovered_npcs: Dictionary[String, int]
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready() -> void:	
+	# since we have not written the code for save files yet, so create a new save each time
 	new_save()
-	discovered_collectables[1] = true
+	discovered_collectables[1] = true # i set one to discovered for testing
+	
+	# we set the catalogue_index value for each resource
+	var collectable_keys = COLLECTABLE_LIST.keys()
+	collectable_keys.sort() # first i take the list of keys and sort it
+	for i in range(0, collectable_keys.size()):
+		var curr_collectable : InventoryCollectable = load(COLLECTABLE_LIST[collectable_keys[i]])
+		curr_collectable.set_catalogue_index(i)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

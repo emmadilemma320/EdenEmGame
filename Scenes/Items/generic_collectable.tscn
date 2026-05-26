@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5m6r1hsnvd5u"]
+[gd_scene format=3 uid="uid://b5m6r1hsnvd5u"]
 
 [ext_resource type="Script" uid="uid://opnux1gwdxj3" path="res://Scripts/in_world/generic_collectable.gd" id="1_2xoiy"]
 [ext_resource type="Texture2D" uid="uid://bi1h2daaue5u1" path="res://Pre-Production Assets/Items/Tiny Wonder Forest items&objects/objects.png" id="2_smhd8"]
@@ -12,25 +12,25 @@ margin = Rect2(0, 1, 1, 0)
 [sub_resource type="CircleShape2D" id="CircleShape2D_paidv"]
 radius = 15.0
 
-[node name="GenericCollectable" type="Area2D"]
+[node name="GenericCollectable" type="Area2D" unique_id=1165833178]
 script = ExtResource("1_2xoiy")
 
-[node name="generic_sprite" type="Sprite2D" parent="."]
+[node name="generic_sprite" type="Sprite2D" parent="." unique_id=1087777117]
 visible = false
 scale = Vector2(2, 2)
 texture = SubResource("AtlasTexture_x7ob8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=184767508]
 shape = SubResource("CircleShape2D_paidv")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1276687460]
 visible = false
 offset_right = 51.0
 offset_bottom = 15.0
 theme = ExtResource("3_v2q8c")
 text = "berry"
 
-[node name="item_amount" type="Label" parent="."]
+[node name="item_amount" type="Label" parent="." unique_id=972139147]
 visible = false
 offset_left = 7.0
 offset_top = 4.0
