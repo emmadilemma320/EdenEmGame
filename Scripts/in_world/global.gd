@@ -21,6 +21,8 @@ func _ready() -> void:
 	discovered_collectables = ["Amanita", "Apple", "Book"]
 	discovered_npcs.append("chom bomb")
 	
+	get_tree().root.remove_child.call_deferred(get_tree().root.get_child(3))
+	
 	#chom_bomb.talk_button_pressed.connect(test)
 	#connect_signal(frog)
 	#frog.talk_button_pressed.connect(test)
